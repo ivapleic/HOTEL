@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_login));
             picBox_BlueHotel_Logo = new PictureBox();
             gbox_login = new GroupBox();
-            lbl_login_description = new Label();
             txt_pswd = new MaskedTextBox();
             lbl_stat_pswd = new Label();
-            pictureBox_pswd = new PictureBox();
             btn_EXIT = new Button();
             btn_OK = new Button();
-            textbox_description = new TextBox();
             lbl_time = new Label();
             link_help = new LinkLabel();
             link_about = new LinkLabel();
@@ -45,54 +43,43 @@
             panel_login = new Panel();
             ((System.ComponentModel.ISupportInitialize)picBox_BlueHotel_Logo).BeginInit();
             gbox_login.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox_pswd).BeginInit();
             panel_login.SuspendLayout();
             SuspendLayout();
             // 
             // picBox_BlueHotel_Logo
             // 
+            picBox_BlueHotel_Logo.BackColor = Color.FromArgb(0, 192, 0);
+            picBox_BlueHotel_Logo.Image = (Image)resources.GetObject("picBox_BlueHotel_Logo.Image");
             picBox_BlueHotel_Logo.Location = new Point(23, 31);
             picBox_BlueHotel_Logo.Name = "picBox_BlueHotel_Logo";
             picBox_BlueHotel_Logo.Size = new Size(396, 97);
+            picBox_BlueHotel_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
             picBox_BlueHotel_Logo.TabIndex = 0;
             picBox_BlueHotel_Logo.TabStop = false;
             picBox_BlueHotel_Logo.Click += picBox_BlueHotel_Logo_Click;
             // 
             // gbox_login
             // 
-            gbox_login.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gbox_login.BackColor = Color.FromArgb(252, 252, 252);
-            gbox_login.Controls.Add(lbl_login_description);
             gbox_login.Controls.Add(txt_pswd);
             gbox_login.Controls.Add(lbl_stat_pswd);
-            gbox_login.Controls.Add(pictureBox_pswd);
             gbox_login.Controls.Add(btn_EXIT);
             gbox_login.Controls.Add(btn_OK);
-            gbox_login.Location = new Point(331, 40);
+            gbox_login.Location = new Point(286, 29);
             gbox_login.Margin = new Padding(4, 3, 4, 3);
             gbox_login.Name = "gbox_login";
-            gbox_login.Size = new Size(649, 329);
+            gbox_login.Size = new Size(599, 324);
             gbox_login.TabIndex = 3;
             gbox_login.TabStop = false;
             gbox_login.Text = "Log in";
-            // 
-            // lbl_login_description
-            // 
-            lbl_login_description.AutoSize = true;
-            lbl_login_description.ForeColor = Color.FromArgb(154, 97, 40);
-            lbl_login_description.Location = new Point(23, 38);
-            lbl_login_description.Margin = new Padding(4, 3, 4, 3);
-            lbl_login_description.Name = "lbl_login_description";
-            lbl_login_description.Size = new Size(544, 25);
-            lbl_login_description.TabIndex = 16;
-            lbl_login_description.Text = "Neki tekst koji govori opis logiranja u sustav i moze biti u vise linija.";
-            lbl_login_description.TextAlign = ContentAlignment.MiddleLeft;
+            gbox_login.Enter += gbox_login_Enter_1;
             // 
             // txt_pswd
             // 
-            txt_pswd.Location = new Point(149, 141);
+            txt_pswd.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txt_pswd.Location = new Point(195, 50);
             txt_pswd.Name = "txt_pswd";
-            txt_pswd.Size = new Size(240, 31);
+            txt_pswd.Size = new Size(341, 31);
             txt_pswd.TabIndex = 0;
             txt_pswd.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
@@ -100,7 +87,7 @@
             // 
             lbl_stat_pswd.AutoSize = true;
             lbl_stat_pswd.ForeColor = Color.Black;
-            lbl_stat_pswd.Location = new Point(27, 141);
+            lbl_stat_pswd.Location = new Point(77, 53);
             lbl_stat_pswd.Name = "lbl_stat_pswd";
             lbl_stat_pswd.Size = new Size(91, 25);
             lbl_stat_pswd.TabIndex = 1;
@@ -108,18 +95,11 @@
             lbl_stat_pswd.TextAlign = ContentAlignment.MiddleRight;
             lbl_stat_pswd.Click += label1_Click;
             // 
-            // pictureBox_pswd
-            // 
-            pictureBox_pswd.Location = new Point(421, 106);
-            pictureBox_pswd.Name = "pictureBox_pswd";
-            pictureBox_pswd.Size = new Size(150, 75);
-            pictureBox_pswd.TabIndex = 2;
-            pictureBox_pswd.TabStop = false;
-            // 
             // btn_EXIT
             // 
+            btn_EXIT.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btn_EXIT.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            btn_EXIT.Location = new Point(437, 238);
+            btn_EXIT.Location = new Point(440, 251);
             btn_EXIT.Name = "btn_EXIT";
             btn_EXIT.Size = new Size(112, 34);
             btn_EXIT.TabIndex = 5;
@@ -128,8 +108,9 @@
             // 
             // btn_OK
             // 
+            btn_OK.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btn_OK.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            btn_OK.Location = new Point(296, 238);
+            btn_OK.Location = new Point(97, 251);
             btn_OK.Name = "btn_OK";
             btn_OK.Size = new Size(112, 34);
             btn_OK.TabIndex = 4;
@@ -137,24 +118,13 @@
             btn_OK.UseVisualStyleBackColor = true;
             btn_OK.Click += button1_Click;
             // 
-            // textbox_description
-            // 
-            textbox_description.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textbox_description.ForeColor = Color.Wheat;
-            textbox_description.Location = new Point(637, 31);
-            textbox_description.Margin = new Padding(4, 3, 4, 3);
-            textbox_description.Name = "textbox_description";
-            textbox_description.Size = new Size(523, 31);
-            textbox_description.TabIndex = 17;
-            textbox_description.Text = "Neki tekst koji govori opis logiranja u sustav i može biti u više linija. Neki tekst koji govori opis logiranja u sustav i može biti u više linija.";
-            // 
             // lbl_time
             // 
             lbl_time.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            lbl_time.BackColor = Color.Transparent;
+            lbl_time.BackColor = Color.Gray;
             lbl_time.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            lbl_time.ForeColor = Color.Wheat;
-            lbl_time.Location = new Point(30, 562);
+            lbl_time.ForeColor = Color.FromArgb(0, 192, 192);
+            lbl_time.Location = new Point(30, 557);
             lbl_time.Margin = new Padding(4, 3, 4, 3);
             lbl_time.Name = "lbl_time";
             lbl_time.Size = new Size(304, 39);
@@ -205,10 +175,11 @@
             // panel_login
             // 
             panel_login.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel_login.BackColor = Color.FromArgb(192, 64, 0);
             panel_login.Controls.Add(gbox_login);
             panel_login.Location = new Point(30, 150);
             panel_login.Name = "panel_login";
-            panel_login.Size = new Size(1276, 406);
+            panel_login.Size = new Size(1226, 401);
             panel_login.TabIndex = 9;
             // 
             // form_login
@@ -216,26 +187,22 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(62, 81, 113);
-            ClientSize = new Size(1359, 613);
+            ClientSize = new Size(1309, 608);
             Controls.Add(panel_login);
             Controls.Add(link_exit);
             Controls.Add(link_uvjeti_koristenja);
             Controls.Add(link_about);
             Controls.Add(link_help);
             Controls.Add(lbl_time);
-            Controls.Add(textbox_description);
             Controls.Add(picBox_BlueHotel_Logo);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             Location = new Point(30, 86);
             Name = "form_login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Log in";
-            WindowState = FormWindowState.Maximized;
             Load += form_login_Load;
             ((System.ComponentModel.ISupportInitialize)picBox_BlueHotel_Logo).EndInit();
             gbox_login.ResumeLayout(false);
             gbox_login.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox_pswd).EndInit();
             panel_login.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -247,9 +214,6 @@
         private GroupBox gbox_login;
         private Label lbl_stat_pswd;
         private MaskedTextBox txt_pswd;
-        private PictureBox pictureBox_pswd;
-        private TextBox textbox_description;
-        private Label lbl_login_description;
         private Button btn_EXIT;
         private Button btn_OK;
         private Label lbl_time;

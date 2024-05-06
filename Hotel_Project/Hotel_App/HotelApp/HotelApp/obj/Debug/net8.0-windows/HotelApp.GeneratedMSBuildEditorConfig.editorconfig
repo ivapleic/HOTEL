@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HotelApp
-build_property.ProjectDir = C:\Users\Korisnik\Desktop\Hotel_Iva\Hotel_Project\Hotel_App\HotelApp\HotelApp\
+build_property.ProjectDir = C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\Hotel_App\HotelApp\HotelApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

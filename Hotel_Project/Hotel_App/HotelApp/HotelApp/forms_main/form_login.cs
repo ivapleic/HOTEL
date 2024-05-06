@@ -51,15 +51,15 @@ namespace HotelApp.forms_main
         public form_login()
         {
             InitializeComponent();
-        
+
             Form_Close_OK = false;
             lbl_time.Text = "";
         }
 
         private void form_login_Load(object sender, EventArgs e)
         {
-           
-        }   
+
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -102,6 +102,11 @@ namespace HotelApp.forms_main
         }
 
         private void picBox_BlueHotel_Logo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbox_login_Enter_1(object sender, EventArgs e)
         {
 
         }

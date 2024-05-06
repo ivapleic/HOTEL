@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Korisnik\\Desktop\\Hotel_Iva\\Hotel_Project\\Hotel_App\\HotelApp\\HotelApp\\HotelApp.csproj": {}
+    "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\Hotel_App\\HotelApp\\HotelApp\\HotelApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Korisnik\\Desktop\\Hotel_Iva\\Hotel_Project\\Hotel_App\\HotelApp\\HotelApp\\HotelApp.csproj": {
+    "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\Hotel_App\\HotelApp\\HotelApp\\HotelApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\Hotel_Iva\\Hotel_Project\\Hotel_App\\HotelApp\\HotelApp\\HotelApp.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\Hotel_App\\HotelApp\\HotelApp\\HotelApp.csproj",
         "projectName": "HotelApp",
-        "projectPath": "C:\\Users\\Korisnik\\Desktop\\Hotel_Iva\\Hotel_Project\\Hotel_App\\HotelApp\\HotelApp\\HotelApp.csproj",
+        "projectPath": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\Hotel_App\\HotelApp\\HotelApp\\HotelApp.csproj",
         "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Korisnik\\Desktop\\Hotel_Iva\\Hotel_Project\\Hotel_App\\HotelApp\\HotelApp\\obj\\",
+        "outputPath": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\Hotel_App\\HotelApp\\HotelApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
