@@ -43,10 +43,10 @@
             label7 = new Label();
             loginButton = new Button();
             panel5 = new Panel();
-            textBox2 = new TextBox();
+            pswdTextBox = new TextBox();
             pictureBox3 = new PictureBox();
             panel3 = new Panel();
-            textBox1 = new TextBox();
+            usernameTextBox = new TextBox();
             pictureBox2 = new PictureBox();
             label6 = new Label();
             close_btn = new Button();
@@ -210,27 +210,28 @@
             loginButton.TabIndex = 5;
             loginButton.Text = "LOGIN";
             loginButton.UseVisualStyleBackColor = false;
+            loginButton.Click += loginButton_Click;
             // 
             // panel5
             // 
             panel5.BackColor = Color.White;
-            panel5.Controls.Add(textBox2);
+            panel5.Controls.Add(pswdTextBox);
             panel5.Controls.Add(pictureBox3);
             panel5.Location = new Point(0, 335);
             panel5.Name = "panel5";
             panel5.Size = new Size(522, 60);
             panel5.TabIndex = 4;
             // 
-            // textBox2
+            // pswdTextBox
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = Color.FromArgb(41, 128, 185);
-            textBox2.Location = new Point(75, 19);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(420, 25);
-            textBox2.TabIndex = 6;
-            textBox2.UseSystemPasswordChar = true;
+            pswdTextBox.BorderStyle = BorderStyle.None;
+            pswdTextBox.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            pswdTextBox.ForeColor = Color.FromArgb(41, 128, 185);
+            pswdTextBox.Location = new Point(75, 19);
+            pswdTextBox.Name = "pswdTextBox";
+            pswdTextBox.Size = new Size(420, 25);
+            pswdTextBox.TabIndex = 6;
+            pswdTextBox.UseSystemPasswordChar = true;
             // 
             // pictureBox3
             // 
@@ -244,22 +245,22 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(usernameTextBox);
             panel3.Controls.Add(pictureBox2);
             panel3.Location = new Point(0, 260);
             panel3.Name = "panel3";
             panel3.Size = new Size(522, 60);
             panel3.TabIndex = 3;
             // 
-            // textBox1
+            // usernameTextBox
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.FromArgb(41, 128, 185);
-            textBox1.Location = new Point(75, 16);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(420, 25);
-            textBox1.TabIndex = 5;
+            usernameTextBox.BorderStyle = BorderStyle.None;
+            usernameTextBox.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            usernameTextBox.ForeColor = Color.FromArgb(41, 128, 185);
+            usernameTextBox.Location = new Point(75, 16);
+            usernameTextBox.Name = "usernameTextBox";
+            usernameTextBox.Size = new Size(420, 25);
+            usernameTextBox.TabIndex = 5;
             // 
             // pictureBox2
             // 
@@ -339,8 +340,8 @@
         private PictureBox pictureBox2;
         private Panel panel5;
         private PictureBox pictureBox3;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox usernameTextBox;
+        private TextBox pswdTextBox;
         private Button loginButton;
         private Label label9;
         private Label label8;
