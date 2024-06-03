@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using HotelApp.forms_main;
 using System.Data;
+using HotelApp.classes_main;
 
 namespace HotelApp
 {
@@ -15,16 +16,14 @@ namespace HotelApp
             InitializeComponent();
         }
 
-        private bool AuthenticateUser(string username, string password, out bool isAdmin)
+        private Employee AuthenticateUser(string username, string password)
         {
-            isAdmin = false;
-
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                return false; // ovdje stavit neku custom exception da je prazno polje 
+                return null; // Ovdje staviti neku custom exception da je prazno polje 
             }
 
-            string checkUserQuery = "SELECT em_password, em_is_admin FROM EMPLOYEES WHERE em_username=@Username";
+            string checkUserQuery = "SELECT * FROM EMPLOYEES WHERE em_username=@Username";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -38,17 +37,37 @@ namespace HotelApp
                     if (reader.Read())
                     {
                         string storedPassword = reader["em_password"].ToString();
-                        isAdmin = Convert.ToBoolean(reader["em_is_admin"]);
 
                         if (storedPassword == password)
                         {
-                            return true;
+                            return new Employee
+                            {
+                                ID = Convert.ToInt32(reader["em_id_pk"]),
+                                Gender = reader["em_gender"].ToString(),
+                                FirstName = reader["em_first_name"].ToString(),
+                                LastName = reader["em_last_name"].ToString(),
+                                OIB = reader["em_oib"].ToString(),
+                                PhoneNumber = reader["em_phone"].ToString(),
+                                Email = reader["em_email"].ToString(),
+                                DateOfBirth = reader["em_date_of_birth"] != DBNull.Value ? Convert.ToDateTime(reader["em_date_of_birth"]) : (DateTime?)null,
+                                Address = reader["em_address"].ToString(),
+                                City = reader["em_city"].ToString(),
+                                CountryID = Convert.ToInt32(reader["em_country_id_fk"]),
+                                Work_Start = reader["em_work_start"] != DBNull.Value ? Convert.ToDateTime(reader["em_work_start"]) : (DateTime?)null,
+                                Work_End = reader["em_work_end"] != DBNull.Value ? Convert.ToDateTime(reader["em_work_end"]) : (DateTime?)null,
+                                Password = storedPassword,
+                                Username= username,
+                                IsAdmin = Convert.ToBoolean(reader["em_is_admin"]),
+                                IsActive = Convert.ToBoolean(reader["em_is_active"]),
+                                Description = reader["em_description"].ToString()
+                            };
                         }
                     }
                 }
-                return false;
+                return null;
             }
         }
+
 
         private void close_btn_Click(object sender, EventArgs e)
         {
@@ -62,22 +81,21 @@ namespace HotelApp
 
             try
             {
-                bool isAdmin;  // prenosi se kao referenca u funkciju isAuthenticated
-                bool isAuthenticated = AuthenticateUser(username, password, out isAdmin);
+                Employee employee = AuthenticateUser(username, password);
 
-                if (isAuthenticated)
+                if (employee != null)
                 {
-                    if (isAdmin)
+                    if (employee.IsAdmin)
                     {
                         MessageBox.Show("Uspjesna prijava kao admin.");
-                        AdminForm adminForm = new AdminForm();
+                        AdminForm adminForm = new AdminForm(employee);
                         adminForm.Show();
                         this.Hide();
                     }
                     else
                     {
                         MessageBox.Show("Uspjesna prijava kao zaposlenik.");
-                        UserForm userForm = new UserForm();
+                        UserForm userForm = new UserForm(employee);
                         userForm.Show();
                         this.Hide();
                     }
@@ -92,5 +110,6 @@ namespace HotelApp
                 MessageBox.Show("Greska pri prijavi: " + ex.Message);
             }
         }
+
     }
 }

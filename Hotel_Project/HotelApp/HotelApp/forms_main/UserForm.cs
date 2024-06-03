@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelApp.classes_main;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace HotelApp.forms_main
         public UserForm()
         {
             InitializeComponent();
+        }
+
+        public UserForm(Employee employee)
+        {
+            
         }
     }
 }
