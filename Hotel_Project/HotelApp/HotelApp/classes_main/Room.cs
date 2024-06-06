@@ -28,8 +28,6 @@ namespace HotelApp.classes_main
 
         public Room()
         {
-            try
-            {
                 ID = -1;
                 Number = 0;
                 ID_RoomType = -1;
@@ -45,12 +43,7 @@ namespace HotelApp.classes_main
                 Image_5 = null;
                 SortKey = 0;
                 RoomAccesories_DTable = CreateRoomAccesories_Empty();
-                RoomAccesories_DView = RoomAccesories_DTable.DefaultView;
-            }
-            catch (Exception ex)
-            {
-                // Handle exception
-            }
+                RoomAccesories_DView = RoomAccesories_DTable.DefaultView;     
         }
         public DataTable CreateRoomAccesories_Empty()
         {
@@ -72,21 +65,11 @@ namespace HotelApp.classes_main
 
         public void Update_RoomID_To_RoomAccesoriesDView()
         {
-            try
+            int cntr = RoomAccesories_DView.Count;
+            for (int i = 0; i < cntr; i++)
             {
-                int cntr = RoomAccesories_DView.Count;
-                for (int i = 0; i < cntr; i++)
-                {
-                    RoomAccesories_DView[i]["ar_rm_id_fk"] = ID;
-                }
-            }
-            catch (Exception ex)
-            {
-                // Handle exception
+                RoomAccesories_DView[i]["ar_rm_id_fk"] = ID;
             }
         }
-
-
-
     }
 }
