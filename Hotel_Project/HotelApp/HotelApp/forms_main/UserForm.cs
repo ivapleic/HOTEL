@@ -1,5 +1,4 @@
 ﻿using HotelApp.classes_main;
-using HotelApp.forms_items;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,20 +14,25 @@ namespace HotelApp.forms_main
     public partial class UserForm : Form
     {
         private System.Windows.Forms.Timer timerTime;
+
         public UserForm()
         {
             InitializeComponent();
-            InitializeDropDownMenus();
             label_UserName.Text = "";
             label_DateTime.Text = "";
             InitializeTimer();
-            InitializeDropDownMenus();
-        }
 
+            subpanelMenu.Visible = false;
+            subpanelManagement.Visible = false;
+            subpanelReservations.Visible = false;
+            subpanelInformations.Visible = false;
+        }
         public UserForm(Employee employee) : this()
         {
             label_UserName.Text = $"{employee.FirstName} {employee.LastName}";
         }
+
+        #region Timer
 
         private void InitializeTimer()
         {
@@ -43,17 +47,115 @@ namespace HotelApp.forms_main
             label_DateTime.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
         }
 
-        private void InitializeDropDownMenus()
-        {
-            // Kreirajte DropDownMenu instance
-            DropDownMenu managementMenu = new DropDownMenu(btnManagement, new List<string> { "Rooms", "Floors", "Tariff Types" });
-            DropDownMenu settingsMenu = new DropDownMenu(btnSettings, new List<string> { "Preferences", "User Settings" });
+        #endregion
 
-            // Dodajte panele na formu
-            this.Controls.Add(managementMenu.GetMenuPanel());
-            this.Controls.Add(settingsMenu.GetMenuPanel());
+        #region Panel Visibility
+
+        private void MakePanelVisible(Panel panel)
+        {
+            panel.Visible = true;
+            HideOtherSubmenus(panel);
         }
 
+        private void MakePanelNonVisible(Panel panel)
+        {
+            panel.Visible = false;
+        }
 
+        private void HideOtherSubmenus(Panel visiblePanel)
+        {
+            if (subpanelMenu != visiblePanel && !MouseIsOverPanelOrButton(subpanelMenu)) subpanelMenu.Visible = false;
+            if (subpanelManagement != visiblePanel && !MouseIsOverPanelOrButton(subpanelManagement)) subpanelManagement.Visible = false;
+            if (subpanelReservations != visiblePanel && !MouseIsOverPanelOrButton(subpanelReservations)) subpanelReservations.Visible = false;
+            if (subpanelInformations != visiblePanel && !MouseIsOverPanelOrButton(subpanelInformations)) subpanelInformations.Visible = false;
+        }
+
+        #endregion
+
+        #region Mouse Event Handlers
+
+        private void btnMenu_MouseEnter(object sender, EventArgs e)
+        {
+            MakePanelVisible(subpanelMenu);
+        }
+
+        private void subpanelMenu_MouseEnter(object sender, EventArgs e)
+        {
+            MakePanelVisible(subpanelMenu);
+        }
+
+        private void subpanelMenu_MouseLeave(object sender, EventArgs e)
+        {
+            if (!MouseIsOverPanelOrButton(subpanelMenu))
+            {
+                MakePanelNonVisible(subpanelMenu);
+            }
+        }
+
+        private void btnManagement_MouseEnter(object sender, EventArgs e)
+        {
+            MakePanelVisible(subpanelManagement);
+        }
+
+        private void subpanelManagement_MouseEnter(object sender, EventArgs e)
+        {
+            MakePanelVisible(subpanelManagement);
+        }
+
+        private void subpanelManagement_MouseLeave(object sender, EventArgs e)
+        {
+            if (!MouseIsOverPanelOrButton(subpanelManagement))
+            {
+                MakePanelNonVisible(subpanelManagement);
+            }
+        }
+
+        private void btnReservations_MouseEnter(object sender, EventArgs e)
+        {
+            MakePanelVisible(subpanelReservations);
+        }
+
+        private void subpanelReservations_MouseEnter(object sender, EventArgs e)
+        {
+            MakePanelVisible(subpanelReservations);
+        }
+
+        private void subpanelReservations_MouseLeave(object sender, EventArgs e)
+        {
+            if (!MouseIsOverPanelOrButton(subpanelReservations))
+            {
+                MakePanelNonVisible(subpanelReservations);
+            }
+        }
+
+        private void btnInformations_MouseEnter(object sender, EventArgs e)
+        {
+            MakePanelVisible(subpanelInformations);
+        }
+
+        private void subpanelInformations_MouseEnter(object sender, EventArgs e)
+        {
+            MakePanelVisible(subpanelInformations);
+        }
+
+        private void subpanelInformations_MouseLeave(object sender, EventArgs e)
+        {
+            if (!MouseIsOverPanelOrButton(subpanelInformations))
+            {
+                MakePanelNonVisible(subpanelInformations);
+            }
+        }
+
+        #endregion
+
+        #region Helper Method
+
+        private bool MouseIsOverPanelOrButton(Panel panel)
+        {
+            return panel.ClientRectangle.Contains(panel.PointToClient(Control.MousePosition))
+                || panel.ClientRectangle.Contains(panel.PointToClient(panel.Parent.PointToClient(Control.MousePosition)));
+        }
+
+        #endregion
     }
 }
