@@ -1,4 +1,5 @@
 ﻿using HotelApp.classes_main;
+using HotelApp.forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -157,5 +158,12 @@ namespace HotelApp.forms_main
         }
 
         #endregion
+
+        private void btnRooms_Click(object sender, EventArgs e)
+        {
+            RoomsForm roomsForm = new RoomsForm();
+            roomsForm.Show();
+            this.Hide();
+        }
     }
 }

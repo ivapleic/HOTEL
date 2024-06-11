@@ -319,6 +319,7 @@
             btnRooms.TabIndex = 2;
             btnRooms.Text = "Rooms";
             btnRooms.UseVisualStyleBackColor = true;
+            btnRooms.Click += btnRooms_Click;
             // 
             // btnFloors
             // 
