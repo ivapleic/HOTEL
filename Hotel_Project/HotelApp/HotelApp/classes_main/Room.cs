@@ -47,8 +47,7 @@ namespace HotelApp.classes_main
         }
         public DataTable CreateRoomAccesories_Empty()
         {
-            try
-            {
+            
                 DataTable newTable = new DataTable();
                 newTable.TableName = "RoomAccesories";
                 newTable.Columns.Add("ar_id_pk", typeof(int));
@@ -56,11 +55,7 @@ namespace HotelApp.classes_main
                 newTable.Columns.Add("ar_ac_id_fk", typeof(int));
                 newTable.Columns.Add("ac_name", typeof(string));
                 return newTable;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
+           
         }
 
         public void Update_RoomID_To_RoomAccesoriesDView()

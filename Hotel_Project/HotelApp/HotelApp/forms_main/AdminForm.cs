@@ -11,27 +11,14 @@ namespace HotelApp.forms_main
         public AdminForm()
         {
             InitializeComponent();
-            label_UserName.Text = "";
-            label_DateTime.Text = "";
-            InitializeTimer();
+          
+           
+        }
+        public AdminForm(Employee employee) :base()
+        {
+           
         }
 
-        public AdminForm(Employee employee) : this()
-        {
-            label_UserName.Text = $"{employee.FirstName} {employee.LastName}";
-        }
 
-        private void InitializeTimer()
-        {
-            timerTime = new System.Windows.Forms.Timer();
-            timerTime.Interval = 1000;
-            timerTime.Tick += TimerTime_Tick;
-            timerTime.Start();
-        }
-
-        private void TimerTime_Tick(object sender, EventArgs e)
-        {
-            label_DateTime.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
-        }
     }
 }

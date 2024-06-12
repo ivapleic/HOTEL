@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HotelApp.classes;
+using HotelApp.classes_main;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,13 @@ namespace HotelApp.forms
 {
     public partial class RoomsForm : Form
     {
-        public RoomsForm()
+        private Employee employee;
+
+        public RoomsForm(Employee employee)
         {
             InitializeComponent();
+            this.employee = employee; 
+            SetGUI.InitializeFormGUI(this, employee);
         }
     }
 }
