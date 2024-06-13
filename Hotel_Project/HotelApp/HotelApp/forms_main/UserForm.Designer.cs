@@ -30,111 +30,91 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
-            navbar = new Panel();
-            btnHam = new Button();
-            sideBar = new Panel();
-            MngmtPanel = new Panel();
-            button6 = new Button();
-            button7 = new Button();
+            pnl_navbar = new Panel();
+            btn_ham = new Button();
+            btn_rooms = new Button();
+            btn_floors = new Button();
             btn_management = new Button();
-            SettingsPanel = new Panel();
-            btnSettings = new Button();
-            AboutPanel = new Panel();
-            btnAbout = new Button();
-            LogoutPanel = new Panel();
-            btnLogout = new Button();
-            dashboardPanel = new Panel();
-            btnDashboard = new Button();
+            pnl_settings = new Panel();
+            btn_settings = new Button();
+            pnl_about = new Panel();
+            btn_about = new Button();
+            pnl_logout = new Panel();
+            btn_logout = new Button();
+            pnl_dashboard = new Panel();
+            btn_dashboard = new Button();
             managementTransition = new System.Windows.Forms.Timer(components);
             sidebarTransition = new System.Windows.Forms.Timer(components);
-            navbar.SuspendLayout();
-            sideBar.SuspendLayout();
-            MngmtPanel.SuspendLayout();
-            SettingsPanel.SuspendLayout();
-            AboutPanel.SuspendLayout();
-            LogoutPanel.SuspendLayout();
-            dashboardPanel.SuspendLayout();
+            pnl_sidebar = new FlowLayoutPanel();
+            pnl_management = new FlowLayoutPanel();
+            pnl_exit = new Panel();
+            btn_exit = new Button();
+            pnl_navbar.SuspendLayout();
+            pnl_settings.SuspendLayout();
+            pnl_about.SuspendLayout();
+            pnl_logout.SuspendLayout();
+            pnl_dashboard.SuspendLayout();
+            pnl_sidebar.SuspendLayout();
+            pnl_management.SuspendLayout();
+            pnl_exit.SuspendLayout();
             SuspendLayout();
             // 
-            // navbar
+            // pnl_navbar
             // 
-            navbar.BackColor = Color.FromArgb(28, 78, 128);
-            navbar.Controls.Add(btnHam);
-            navbar.Dock = DockStyle.Top;
-            navbar.Location = new Point(0, 0);
-            navbar.Name = "navbar";
-            navbar.Size = new Size(1580, 64);
-            navbar.TabIndex = 0;
+            pnl_navbar.BackColor = Color.FromArgb(28, 78, 128);
+            pnl_navbar.Controls.Add(btn_ham);
+            pnl_navbar.Dock = DockStyle.Top;
+            pnl_navbar.Location = new Point(0, 0);
+            pnl_navbar.Name = "pnl_navbar";
+            pnl_navbar.Size = new Size(1121, 64);
+            pnl_navbar.TabIndex = 0;
             // 
-            // btnHam
+            // btn_ham
             // 
-            btnHam.BackgroundImage = (Image)resources.GetObject("btnHam.BackgroundImage");
-            btnHam.FlatAppearance.BorderSize = 0;
-            btnHam.FlatStyle = FlatStyle.Flat;
-            btnHam.Image = (Image)resources.GetObject("btnHam.Image");
-            btnHam.Location = new Point(12, 12);
-            btnHam.Name = "btnHam";
-            btnHam.Size = new Size(47, 42);
-            btnHam.TabIndex = 0;
-            btnHam.UseVisualStyleBackColor = true;
-            btnHam.Click += btnHam_Click;
+            btn_ham.BackgroundImage = (Image)resources.GetObject("btn_ham.BackgroundImage");
+            btn_ham.FlatAppearance.BorderSize = 0;
+            btn_ham.FlatStyle = FlatStyle.Flat;
+            btn_ham.Image = (Image)resources.GetObject("btn_ham.Image");
+            btn_ham.Location = new Point(12, 12);
+            btn_ham.Name = "btn_ham";
+            btn_ham.Size = new Size(47, 42);
+            btn_ham.TabIndex = 0;
+            btn_ham.UseVisualStyleBackColor = true;
+            btn_ham.Click += btnHam_Click;
             // 
-            // sideBar
+            // btn_rooms
             // 
-            sideBar.BackColor = Color.FromArgb(28, 78, 128);
-            sideBar.Controls.Add(MngmtPanel);
-            sideBar.Controls.Add(SettingsPanel);
-            sideBar.Controls.Add(AboutPanel);
-            sideBar.Controls.Add(LogoutPanel);
-            sideBar.Controls.Add(dashboardPanel);
-            sideBar.Dock = DockStyle.Left;
-            sideBar.Location = new Point(0, 64);
-            sideBar.Name = "sideBar";
-            sideBar.Size = new Size(265, 606);
-            sideBar.TabIndex = 1;
+            btn_rooms.FlatAppearance.BorderSize = 0;
+            btn_rooms.FlatStyle = FlatStyle.Flat;
+            btn_rooms.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_rooms.ForeColor = Color.White;
+            btn_rooms.Image = (Image)resources.GetObject("btn_rooms.Image");
+            btn_rooms.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_rooms.Location = new Point(3, 127);
+            btn_rooms.Name = "btn_rooms";
+            btn_rooms.Padding = new Padding(10, 0, 0, 0);
+            btn_rooms.Size = new Size(265, 56);
+            btn_rooms.TabIndex = 1;
+            btn_rooms.Text = "Rooms";
+            btn_rooms.UseVisualStyleBackColor = true;
+            btn_rooms.Click += btn_rooms_Click;
             // 
-            // MngmtPanel
+            // btn_floors
             // 
-            MngmtPanel.BackColor = Color.FromArgb(28, 78, 128);
-            MngmtPanel.Controls.Add(button6);
-            MngmtPanel.Controls.Add(button7);
-            MngmtPanel.Controls.Add(btn_management);
-            MngmtPanel.Location = new Point(0, 96);
-            MngmtPanel.Name = "MngmtPanel";
-            MngmtPanel.Size = new Size(268, 41);
-            MngmtPanel.TabIndex = 3;
-            // 
-            // button6
-            // 
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.White;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.ImageAlign = ContentAlignment.MiddleLeft;
-            button6.Location = new Point(0, 90);
-            button6.Name = "button6";
-            button6.Padding = new Padding(10, 0, 0, 0);
-            button6.Size = new Size(265, 41);
-            button6.TabIndex = 1;
-            button6.Text = "Sub Menu 2";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.ForeColor = Color.White;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(0, 43);
-            button7.Name = "button7";
-            button7.Padding = new Padding(10, 0, 0, 0);
-            button7.Size = new Size(265, 41);
-            button7.TabIndex = 2;
-            button7.Text = "Sub Menu 1";
-            button7.UseVisualStyleBackColor = true;
+            btn_floors.FlatAppearance.BorderSize = 0;
+            btn_floors.FlatStyle = FlatStyle.Flat;
+            btn_floors.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_floors.ForeColor = Color.White;
+            btn_floors.Image = (Image)resources.GetObject("btn_floors.Image");
+            btn_floors.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_floors.Location = new Point(3, 65);
+            btn_floors.Name = "btn_floors";
+            btn_floors.Padding = new Padding(10, 0, 0, 0);
+            btn_floors.Size = new Size(265, 56);
+            btn_floors.TabIndex = 2;
+            btn_floors.Text = "Floors";
+            btn_floors.UseVisualStyleBackColor = true;
+            btn_floors.Click += btn_floors_Click;
             // 
             // btn_management
             // 
@@ -144,114 +124,117 @@
             btn_management.ForeColor = Color.White;
             btn_management.Image = (Image)resources.GetObject("btn_management.Image");
             btn_management.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_management.Location = new Point(0, 0);
+            btn_management.Location = new Point(3, 3);
             btn_management.Name = "btn_management";
             btn_management.Padding = new Padding(10, 0, 0, 0);
-            btn_management.Size = new Size(265, 41);
+            btn_management.Size = new Size(265, 56);
             btn_management.TabIndex = 0;
             btn_management.Text = "Management";
             btn_management.UseVisualStyleBackColor = true;
             btn_management.Click += btn_management_Click;
             // 
-            // SettingsPanel
+            // pnl_settings
             // 
-            SettingsPanel.BackColor = Color.FromArgb(28, 78, 128);
-            SettingsPanel.Controls.Add(btnSettings);
-            SettingsPanel.Location = new Point(0, 218);
-            SettingsPanel.Name = "SettingsPanel";
-            SettingsPanel.Size = new Size(265, 56);
-            SettingsPanel.TabIndex = 3;
+            pnl_settings.BackColor = Color.FromArgb(28, 78, 128);
+            pnl_settings.Controls.Add(btn_settings);
+            pnl_settings.Location = new Point(3, 127);
+            pnl_settings.Name = "pnl_settings";
+            pnl_settings.Size = new Size(265, 56);
+            pnl_settings.TabIndex = 3;
             // 
-            // btnSettings
+            // btn_settings
             // 
-            btnSettings.BackColor = Color.FromArgb(28, 78, 128);
-            btnSettings.FlatAppearance.BorderSize = 0;
-            btnSettings.FlatStyle = FlatStyle.Flat;
-            btnSettings.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSettings.ForeColor = Color.White;
-            btnSettings.Image = (Image)resources.GetObject("btnSettings.Image");
-            btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSettings.Location = new Point(0, 3);
-            btnSettings.Name = "btnSettings";
-            btnSettings.Padding = new Padding(10, 0, 0, 0);
-            btnSettings.Size = new Size(265, 41);
-            btnSettings.TabIndex = 0;
-            btnSettings.Text = "Settings";
-            btnSettings.UseVisualStyleBackColor = false;
+            btn_settings.BackColor = Color.FromArgb(28, 78, 128);
+            btn_settings.FlatAppearance.BorderSize = 0;
+            btn_settings.FlatStyle = FlatStyle.Flat;
+            btn_settings.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_settings.ForeColor = Color.White;
+            btn_settings.Image = (Image)resources.GetObject("btn_settings.Image");
+            btn_settings.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_settings.Location = new Point(0, 3);
+            btn_settings.Name = "btn_settings";
+            btn_settings.Padding = new Padding(10, 0, 0, 0);
+            btn_settings.Size = new Size(265, 41);
+            btn_settings.TabIndex = 0;
+            btn_settings.Text = "Settings";
+            btn_settings.UseVisualStyleBackColor = false;
             // 
-            // AboutPanel
+            // pnl_about
             // 
-            AboutPanel.BackColor = Color.FromArgb(28, 78, 128);
-            AboutPanel.Controls.Add(btnAbout);
-            AboutPanel.Location = new Point(3, 156);
-            AboutPanel.Name = "AboutPanel";
-            AboutPanel.Size = new Size(265, 56);
-            AboutPanel.TabIndex = 2;
+            pnl_about.BackColor = Color.FromArgb(28, 78, 128);
+            pnl_about.Controls.Add(btn_about);
+            pnl_about.Location = new Point(3, 189);
+            pnl_about.Name = "pnl_about";
+            pnl_about.Size = new Size(265, 56);
+            pnl_about.TabIndex = 2;
             // 
-            // btnAbout
+            // btn_about
             // 
-            btnAbout.FlatAppearance.BorderSize = 0;
-            btnAbout.FlatStyle = FlatStyle.Flat;
-            btnAbout.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAbout.ForeColor = Color.White;
-            btnAbout.Image = (Image)resources.GetObject("btnAbout.Image");
-            btnAbout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAbout.Location = new Point(0, 3);
-            btnAbout.Name = "btnAbout";
-            btnAbout.Padding = new Padding(10, 0, 0, 0);
-            btnAbout.Size = new Size(265, 41);
-            btnAbout.TabIndex = 0;
-            btnAbout.Text = "About";
-            btnAbout.UseVisualStyleBackColor = true;
+            btn_about.FlatAppearance.BorderSize = 0;
+            btn_about.FlatStyle = FlatStyle.Flat;
+            btn_about.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_about.ForeColor = Color.White;
+            btn_about.Image = (Image)resources.GetObject("btn_about.Image");
+            btn_about.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_about.Location = new Point(0, 3);
+            btn_about.Name = "btn_about";
+            btn_about.Padding = new Padding(10, 0, 0, 0);
+            btn_about.Size = new Size(265, 41);
+            btn_about.TabIndex = 0;
+            btn_about.Text = "About";
+            btn_about.UseVisualStyleBackColor = true;
             // 
-            // LogoutPanel
+            // pnl_logout
             // 
-            LogoutPanel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            LogoutPanel.Controls.Add(btnLogout);
-            LogoutPanel.Location = new Point(0, 547);
-            LogoutPanel.Name = "LogoutPanel";
-            LogoutPanel.Size = new Size(265, 56);
-            LogoutPanel.TabIndex = 1;
+            pnl_logout.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            pnl_logout.BackColor = Color.FromArgb(28, 78, 128);
+            pnl_logout.Controls.Add(btn_logout);
+            pnl_logout.Location = new Point(3, 251);
+            pnl_logout.Name = "pnl_logout";
+            pnl_logout.Size = new Size(265, 56);
+            pnl_logout.TabIndex = 1;
             // 
-            // btnLogout
+            // btn_logout
             // 
-            btnLogout.FlatAppearance.BorderSize = 0;
-            btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogout.ForeColor = Color.White;
-            btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
-            btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogout.Location = new Point(0, 3);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Padding = new Padding(10, 0, 0, 0);
-            btnLogout.Size = new Size(265, 41);
-            btnLogout.TabIndex = 0;
-            btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = true;
+            btn_logout.FlatAppearance.BorderSize = 0;
+            btn_logout.FlatStyle = FlatStyle.Flat;
+            btn_logout.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_logout.ForeColor = Color.White;
+            btn_logout.Image = (Image)resources.GetObject("btn_logout.Image");
+            btn_logout.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_logout.Location = new Point(0, 3);
+            btn_logout.Name = "btn_logout";
+            btn_logout.Padding = new Padding(10, 0, 0, 0);
+            btn_logout.Size = new Size(265, 41);
+            btn_logout.TabIndex = 0;
+            btn_logout.Text = "Logout";
+            btn_logout.UseVisualStyleBackColor = true;
+            btn_logout.Click += btn_logout_Click;
             // 
-            // dashboardPanel
+            // pnl_dashboard
             // 
-            dashboardPanel.Controls.Add(btnDashboard);
-            dashboardPanel.Location = new Point(0, 23);
-            dashboardPanel.Name = "dashboardPanel";
-            dashboardPanel.Size = new Size(265, 56);
-            dashboardPanel.TabIndex = 0;
+            pnl_dashboard.BackColor = Color.FromArgb(28, 78, 128);
+            pnl_dashboard.Controls.Add(btn_dashboard);
+            pnl_dashboard.Location = new Point(3, 3);
+            pnl_dashboard.Name = "pnl_dashboard";
+            pnl_dashboard.Size = new Size(265, 56);
+            pnl_dashboard.TabIndex = 0;
             // 
-            // btnDashboard
+            // btn_dashboard
             // 
-            btnDashboard.FlatAppearance.BorderSize = 0;
-            btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDashboard.ForeColor = Color.White;
-            btnDashboard.Image = (Image)resources.GetObject("btnDashboard.Image");
-            btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.Location = new Point(0, 12);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Padding = new Padding(10, 0, 0, 0);
-            btnDashboard.Size = new Size(265, 41);
-            btnDashboard.TabIndex = 0;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = true;
+            btn_dashboard.FlatAppearance.BorderSize = 0;
+            btn_dashboard.FlatStyle = FlatStyle.Flat;
+            btn_dashboard.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_dashboard.ForeColor = Color.White;
+            btn_dashboard.Image = (Image)resources.GetObject("btn_dashboard.Image");
+            btn_dashboard.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_dashboard.Location = new Point(0, 12);
+            btn_dashboard.Name = "btn_dashboard";
+            btn_dashboard.Padding = new Padding(10, 0, 0, 0);
+            btn_dashboard.Size = new Size(265, 41);
+            btn_dashboard.TabIndex = 0;
+            btn_dashboard.Text = "Dashboard";
+            btn_dashboard.UseVisualStyleBackColor = true;
             // 
             // managementTransition
             // 
@@ -263,47 +246,104 @@
             sidebarTransition.Interval = 10;
             sidebarTransition.Tick += sidebarTransition_Tick;
             // 
+            // pnl_sidebar
+            // 
+            pnl_sidebar.BackColor = Color.FromArgb(28, 78, 128);
+            pnl_sidebar.Controls.Add(pnl_dashboard);
+            pnl_sidebar.Controls.Add(pnl_management);
+            pnl_sidebar.Controls.Add(pnl_settings);
+            pnl_sidebar.Controls.Add(pnl_about);
+            pnl_sidebar.Controls.Add(pnl_logout);
+            pnl_sidebar.Controls.Add(pnl_exit);
+            pnl_sidebar.Dock = DockStyle.Left;
+            pnl_sidebar.Location = new Point(0, 64);
+            pnl_sidebar.Name = "pnl_sidebar";
+            pnl_sidebar.Size = new Size(265, 517);
+            pnl_sidebar.TabIndex = 2;
+            // 
+            // pnl_management
+            // 
+            pnl_management.BackColor = Color.FromArgb(28, 78, 128);
+            pnl_management.Controls.Add(btn_management);
+            pnl_management.Controls.Add(btn_floors);
+            pnl_management.Controls.Add(btn_rooms);
+            pnl_management.Location = new Point(3, 65);
+            pnl_management.Name = "pnl_management";
+            pnl_management.Size = new Size(265, 56);
+            pnl_management.TabIndex = 4;
+            // 
+            // pnl_exit
+            // 
+            pnl_exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            pnl_exit.BackColor = Color.FromArgb(28, 78, 128);
+            pnl_exit.Controls.Add(btn_exit);
+            pnl_exit.Location = new Point(3, 313);
+            pnl_exit.Name = "pnl_exit";
+            pnl_exit.Size = new Size(265, 56);
+            pnl_exit.TabIndex = 5;
+            // 
+            // btn_exit
+            // 
+            btn_exit.FlatAppearance.BorderSize = 0;
+            btn_exit.FlatStyle = FlatStyle.Flat;
+            btn_exit.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_exit.ForeColor = Color.White;
+            btn_exit.Image = (Image)resources.GetObject("btn_exit.Image");
+            btn_exit.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_exit.Location = new Point(0, 3);
+            btn_exit.Name = "btn_exit";
+            btn_exit.Padding = new Padding(10, 0, 0, 0);
+            btn_exit.Size = new Size(265, 41);
+            btn_exit.TabIndex = 0;
+            btn_exit.Text = "Exit";
+            btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.Click += btn_exit_Click;
+            // 
             // UserForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1580, 670);
-            Controls.Add(sideBar);
-            Controls.Add(navbar);
+            ClientSize = new Size(1121, 581);
+            Controls.Add(pnl_sidebar);
+            Controls.Add(pnl_navbar);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            IsMdiContainer = true;
             Name = "UserForm";
             Text = "UserForm";
             WindowState = FormWindowState.Maximized;
-            navbar.ResumeLayout(false);
-            sideBar.ResumeLayout(false);
-            MngmtPanel.ResumeLayout(false);
-            SettingsPanel.ResumeLayout(false);
-            AboutPanel.ResumeLayout(false);
-            LogoutPanel.ResumeLayout(false);
-            dashboardPanel.ResumeLayout(false);
+            pnl_navbar.ResumeLayout(false);
+            pnl_settings.ResumeLayout(false);
+            pnl_about.ResumeLayout(false);
+            pnl_logout.ResumeLayout(false);
+            pnl_dashboard.ResumeLayout(false);
+            pnl_sidebar.ResumeLayout(false);
+            pnl_management.ResumeLayout(false);
+            pnl_exit.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel navbar;
-        private Panel sideBar;
-        private Panel dashboardPanel;
-        private Button btnDashboard;
+        private Panel pnl_navbar;
+        private Panel pnl_dashboard;
+        private Button btn_dashboard;
         private Button btn_management;
-        private Panel LogoutPanel;
-        private Button btnLogout;
-        private Panel AboutPanel;
-        private Button btnAbout;
-        private Panel SettingsPanel;
-        private Button btnSettings;
-        private Button button7;
-        private Button button6;
+        private Panel pnl_logout;
+        private Button btn_logout;
+        private Panel pnl_about;
+        private Button btn_about;
+        private Panel pnl_settings;
+        private Button btn_settings;
+        private Button btn_floors;
+        private Button btn_rooms;
         private System.Windows.Forms.Timer managementTransition;
-        private Button btnHam;
+        private Button btn_ham;
         private System.Windows.Forms.Timer sidebarTransition;
-        private Panel MngmtPanel;
+        private FlowLayoutPanel pnl_sidebar;
+        private FlowLayoutPanel pnl_management;
+        private Panel pnl_exit;
+        private Button btn_exit;
     }
 }

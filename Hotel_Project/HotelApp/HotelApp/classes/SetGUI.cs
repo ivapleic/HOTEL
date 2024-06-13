@@ -286,7 +286,7 @@ namespace HotelApp.classes
 
         private static void OpenRoomsForm(Form form)
         {
-            RoomsForm roomForm = new RoomsForm(employee);
+            RoomsForm roomForm = new RoomsForm();
             roomForm.Show();
             form.Close();
         }

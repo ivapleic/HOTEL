@@ -1,6 +1,6 @@
 ﻿namespace HotelApp.forms
 {
-    partial class RoomsForm
+    partial class Form_Floors
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,22 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(420, 265);
+            label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(114, 184);
             label1.Name = "label1";
-            label1.Size = new Size(342, 65);
+            label1.Size = new Size(513, 96);
             label1.TabIndex = 0;
-            label1.Text = "ROOMS FORM";
+            label1.Text = "FLOORS FORM";
             // 
-            // RoomsForm
+            // Form_Floors
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1132, 597);
+            ClientSize = new Size(895, 514);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "RoomsForm";
-            Text = "Rooms";
+            Name = "Form_Floors";
+            Text = "Form_Floors";
             ResumeLayout(false);
             PerformLayout();
         }

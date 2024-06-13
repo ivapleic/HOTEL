@@ -64,3 +64,4 @@ C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms_main.AdminForm.resources
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms_main.UserForm.resources
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.RoomsForm.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.Form_Floors.resources
