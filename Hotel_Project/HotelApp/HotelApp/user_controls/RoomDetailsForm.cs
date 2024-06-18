@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HotelApp.forms
+namespace HotelApp.user_controls
 {
-    public partial class Form_Floors : Form
+    public partial class RoomDetailsForm : Form
     {
-        public Form_Floors()
+        public RoomDetailsForm()
         {
             InitializeComponent();
-        }
-
-        private void Form_Floors_Load(object sender, EventArgs e)
-        {
-            this.ControlBox = false;
         }
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace HotelApp.forms
 {
-    public partial class Form_Floors : Form
+    public partial class Form_Dashboard : Form
     {
-        public Form_Floors()
+        public Form_Dashboard()
         {
             InitializeComponent();
-        }
-
-        private void Form_Floors_Load(object sender, EventArgs e)
-        {
-            this.ControlBox = false;
         }
     }
 }

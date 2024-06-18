@@ -235,6 +235,7 @@
             btn_dashboard.TabIndex = 0;
             btn_dashboard.Text = "Dashboard";
             btn_dashboard.UseVisualStyleBackColor = true;
+            btn_dashboard.Click += btn_dashboard_Click;
             // 
             // managementTransition
             // 

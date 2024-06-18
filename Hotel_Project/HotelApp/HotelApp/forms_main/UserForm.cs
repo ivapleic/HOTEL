@@ -1,5 +1,7 @@
-﻿using HotelApp.classes_main;
+﻿using HotelApp.classes;
+using HotelApp.classes_main;
 using HotelApp.forms;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -10,6 +12,7 @@ namespace HotelApp.forms_main
     {
         RoomsForm roomsForm;
         Form_Floors floorsForm;
+        Form_Dashboard dashboardForm;
         Employee employee;
         public UserForm()
         {
@@ -18,11 +21,16 @@ namespace HotelApp.forms_main
 
         public UserForm(Employee employee) : this()
         {
-            //SetGUI.InitializeFormGUI(this, employee);
             employee = employee;
         }
 
         bool managementExpand = false;
+
+        private void mdiProp()
+        {
+            this.SetBevel(false);
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.White;
+        }
 
         private void managementTransition_Tick(object sender, EventArgs e)
         {
@@ -149,6 +157,26 @@ namespace HotelApp.forms_main
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_dashboard_Click(object sender, EventArgs e)
+        {
+            if (dashboardForm == null)
+            {
+                dashboardForm = new Form_Dashboard();
+                dashboardForm.FormClosed += Form_Dashboard_FormClosed;
+                dashboardForm.MdiParent = this;
+                dashboardForm.Dock = DockStyle.Fill;
+                dashboardForm.Show();
+            }
+            else
+            {
+                dashboardForm.Activate();
+            }
+        }
+        private void Form_Dashboard_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            dashboardForm = null;
         }
     }
 }

@@ -65,3 +65,11 @@ C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms_main.UserForm.resources
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.RoomsForm.resources
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.Form_Floors.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.Form_Dashboard.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\bin\Debug\net8.0-windows\Bunifu.Licensing.dll
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\bin\Debug\net8.0-windows\Bunifu.UI.WinForms.dll
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\bin\Debug\net8.0-windows\RestSharp.dll
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.RoomDetailsForm.resources
