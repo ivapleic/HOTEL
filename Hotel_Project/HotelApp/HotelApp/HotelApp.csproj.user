@@ -19,6 +19,12 @@
     <Compile Update="forms_main\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="user_controls\Floor_AddNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\Floor_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="user_controls\RoomDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>

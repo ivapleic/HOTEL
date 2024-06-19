@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HotelApp.classes_main
+{
+    internal class RoomAccessoryAssignment
+    {
+        public int RoomID { get; set; }
+        public int RoomAccessoryID { get; set; }
+    }
+}

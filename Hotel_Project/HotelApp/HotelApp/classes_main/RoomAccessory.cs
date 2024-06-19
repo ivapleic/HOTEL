@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace HotelApp.classes_main
 {
-    internal class RoomAccessory
+    public class RoomAccessory
     {
+        public int ID { get; set; }
+        public string Name { get; set; }
+
+        public RoomAccessory()
+        {
+            try
+            {
+                ID = -1;
+                Name = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                //catch exception
+            }
+        }
     }
 }
