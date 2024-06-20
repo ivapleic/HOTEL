@@ -13,6 +13,7 @@ namespace HotelApp.forms_main
         RoomsForm roomsForm;
         Form_Floors floorsForm;
         Form_Dashboard dashboardForm;
+        Form_RoomsAccessories roomsAccessoriesForm;
         Employee employee;
         public UserForm()
         {
@@ -37,7 +38,7 @@ namespace HotelApp.forms_main
             if (!managementExpand)
             {
                 pnl_management.Height += 10;
-                if (pnl_management.Height >= 188)
+                if (pnl_management.Height >= 260)
                 {
                     managementTransition.Stop();
                     managementExpand = true;
@@ -177,6 +178,26 @@ namespace HotelApp.forms_main
         private void Form_Dashboard_FormClosed(object? sender, FormClosedEventArgs e)
         {
             dashboardForm = null;
+        }
+
+        private void btn_room_acc_Click(object sender, EventArgs e)
+        {
+            if (roomsAccessoriesForm == null)
+            {
+                roomsAccessoriesForm = new Form_RoomsAccessories();
+                roomsAccessoriesForm.FormClosed += Form_Floors_FormClosed;
+                roomsAccessoriesForm.MdiParent = this;
+                roomsAccessoriesForm.Dock = DockStyle.Fill;
+                roomsAccessoriesForm.Show();
+            }
+            else
+            {
+                roomsAccessoriesForm.Activate();
+            }
+        }
+        private void Form_RoomAccessories_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            roomsAccessoriesForm = null;
         }
     }
 }

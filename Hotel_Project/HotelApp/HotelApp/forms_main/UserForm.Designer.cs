@@ -47,6 +47,7 @@
             sidebarTransition = new System.Windows.Forms.Timer(components);
             pnl_sidebar = new FlowLayoutPanel();
             pnl_management = new FlowLayoutPanel();
+            btn_room_acc = new Button();
             pnl_exit = new Panel();
             btn_exit = new Button();
             pnl_navbar.SuspendLayout();
@@ -137,7 +138,7 @@
             // 
             pnl_settings.BackColor = Color.FromArgb(28, 78, 128);
             pnl_settings.Controls.Add(btn_settings);
-            pnl_settings.Location = new Point(3, 127);
+            pnl_settings.Location = new Point(3, 129);
             pnl_settings.Name = "pnl_settings";
             pnl_settings.Size = new Size(265, 56);
             pnl_settings.TabIndex = 3;
@@ -163,7 +164,7 @@
             // 
             pnl_about.BackColor = Color.FromArgb(28, 78, 128);
             pnl_about.Controls.Add(btn_about);
-            pnl_about.Location = new Point(3, 189);
+            pnl_about.Location = new Point(3, 191);
             pnl_about.Name = "pnl_about";
             pnl_about.Size = new Size(265, 56);
             pnl_about.TabIndex = 2;
@@ -189,7 +190,7 @@
             pnl_logout.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             pnl_logout.BackColor = Color.FromArgb(28, 78, 128);
             pnl_logout.Controls.Add(btn_logout);
-            pnl_logout.Location = new Point(3, 251);
+            pnl_logout.Location = new Point(3, 253);
             pnl_logout.Name = "pnl_logout";
             pnl_logout.Size = new Size(265, 56);
             pnl_logout.TabIndex = 1;
@@ -228,7 +229,7 @@
             btn_dashboard.ForeColor = Color.White;
             btn_dashboard.Image = (Image)resources.GetObject("btn_dashboard.Image");
             btn_dashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_dashboard.Location = new Point(0, 12);
+            btn_dashboard.Location = new Point(0, 3);
             btn_dashboard.Name = "btn_dashboard";
             btn_dashboard.Padding = new Padding(10, 0, 0, 0);
             btn_dashboard.Size = new Size(265, 41);
@@ -268,17 +269,35 @@
             pnl_management.Controls.Add(btn_management);
             pnl_management.Controls.Add(btn_floors);
             pnl_management.Controls.Add(btn_rooms);
+            pnl_management.Controls.Add(btn_room_acc);
             pnl_management.Location = new Point(3, 65);
             pnl_management.Name = "pnl_management";
-            pnl_management.Size = new Size(265, 56);
+            pnl_management.Size = new Size(265, 58);
             pnl_management.TabIndex = 4;
+            // 
+            // btn_room_acc
+            // 
+            btn_room_acc.FlatAppearance.BorderSize = 0;
+            btn_room_acc.FlatStyle = FlatStyle.Flat;
+            btn_room_acc.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_room_acc.ForeColor = Color.White;
+            btn_room_acc.Image = (Image)resources.GetObject("btn_room_acc.Image");
+            btn_room_acc.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_room_acc.Location = new Point(3, 189);
+            btn_room_acc.Name = "btn_room_acc";
+            btn_room_acc.Padding = new Padding(10, 0, 0, 0);
+            btn_room_acc.Size = new Size(265, 56);
+            btn_room_acc.TabIndex = 3;
+            btn_room_acc.Text = "Room Accessories";
+            btn_room_acc.UseVisualStyleBackColor = true;
+            btn_room_acc.Click += btn_room_acc_Click;
             // 
             // pnl_exit
             // 
             pnl_exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             pnl_exit.BackColor = Color.FromArgb(28, 78, 128);
             pnl_exit.Controls.Add(btn_exit);
-            pnl_exit.Location = new Point(3, 313);
+            pnl_exit.Location = new Point(3, 315);
             pnl_exit.Name = "pnl_exit";
             pnl_exit.Size = new Size(265, 56);
             pnl_exit.TabIndex = 5;
@@ -346,5 +365,6 @@
         private FlowLayoutPanel pnl_management;
         private Panel pnl_exit;
         private Button btn_exit;
+        private Button btn_room_acc;
     }
 }
