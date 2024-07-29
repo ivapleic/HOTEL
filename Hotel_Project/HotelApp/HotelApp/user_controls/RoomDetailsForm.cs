@@ -15,31 +15,10 @@ namespace HotelApp.user_controls
             InitializeComponent();
         }
 
-        public RoomDetailsForm(Room room, List<RoomAccessory> accessories) : this()
+        public RoomDetailsForm(Room room) : this()
         {
             this.room = room;
-            this.accessories = accessories;
-            DisplayRoomDetails();
-            DisplayAccessories();
         }
 
-        private void DisplayRoomDetails()
-        {
-            room_number_label.Text = room.Number.ToString();
-            room_type_label.Text = room.RoomTypeName;
-            floor_number_label.Text = room.Floor != null ? room.Floor.Number.ToString() : "N/A";
-            room_available_label.Text = room.Is_Active ? "Yes" : "No";
-            room_description_label.Text = room.Description;
-        }
-
-        private void DisplayAccessories()
-        {
-            accessories_listBox.Items.Clear();
-
-            foreach (var accessory in accessories)
-            {
-                accessories_listBox.Items.Add(accessory.Name);
-            }
-        }
     }
 }

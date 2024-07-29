@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label1 = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
@@ -58,8 +58,8 @@
             label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(28, 78, 128);
-            label1.Location = new Point(486, 22);
+            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.Location = new Point(600, 30);
             label1.Name = "label1";
             label1.Size = new Size(305, 56);
             label1.TabIndex = 0;
@@ -79,21 +79,22 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            panel2.BackColor = Color.FromArgb(28, 78, 128);
+            panel2.BackColor = Color.FromArgb(40, 86, 182);
             panel2.Controls.Add(label_num_of_rooms);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(31, 134);
+            panel2.Location = new Point(34, 122);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1278, 43);
+            panel2.Size = new Size(1077, 60);
             panel2.TabIndex = 2;
             // 
             // label_num_of_rooms
             // 
             label_num_of_rooms.AutoSize = true;
+            label_num_of_rooms.Font = new Font("Century Gothic", 11F);
             label_num_of_rooms.ForeColor = Color.White;
-            label_num_of_rooms.Location = new Point(574, 9);
+            label_num_of_rooms.Location = new Point(227, 17);
             label_num_of_rooms.Name = "label_num_of_rooms";
-            label_num_of_rooms.Size = new Size(123, 25);
+            label_num_of_rooms.Size = new Size(161, 25);
             label_num_of_rooms.TabIndex = 1;
             label_num_of_rooms.Text = "some number";
             label_num_of_rooms.TextAlign = ContentAlignment.MiddleCenter;
@@ -101,10 +102,11 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 11F);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(399, 9);
+            label2.Location = new Point(17, 17);
             label2.Name = "label2";
-            label2.Size = new Size(160, 25);
+            label2.Size = new Size(204, 25);
             label2.TabIndex = 0;
             label2.Text = "Number of rooms:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -112,9 +114,9 @@
             // btn_add_room
             // 
             btn_add_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_add_room.Location = new Point(697, 649);
+            btn_add_room.Location = new Point(1148, 245);
             btn_add_room.Name = "btn_add_room";
-            btn_add_room.Size = new Size(148, 44);
+            btn_add_room.Size = new Size(164, 58);
             btn_add_room.TabIndex = 4;
             btn_add_room.Text = "Add New";
             btn_add_room.UseVisualStyleBackColor = true;
@@ -122,9 +124,9 @@
             // btn_delete_room
             // 
             btn_delete_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_delete_room.Location = new Point(851, 649);
+            btn_delete_room.Location = new Point(1149, 340);
             btn_delete_room.Name = "btn_delete_room";
-            btn_delete_room.Size = new Size(147, 44);
+            btn_delete_room.Size = new Size(163, 62);
             btn_delete_room.TabIndex = 5;
             btn_delete_room.Text = "Delete";
             btn_delete_room.UseVisualStyleBackColor = true;
@@ -132,9 +134,9 @@
             // btn_update_room
             // 
             btn_update_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_update_room.Location = new Point(1004, 649);
+            btn_update_room.Location = new Point(1149, 442);
             btn_update_room.Name = "btn_update_room";
-            btn_update_room.Size = new Size(146, 44);
+            btn_update_room.Size = new Size(163, 60);
             btn_update_room.TabIndex = 6;
             btn_update_room.Text = "Update";
             btn_update_room.UseVisualStyleBackColor = true;
@@ -142,9 +144,9 @@
             // btn_room_details
             // 
             btn_room_details.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_room_details.Location = new Point(1156, 649);
+            btn_room_details.Location = new Point(1149, 539);
             btn_room_details.Name = "btn_room_details";
-            btn_room_details.Size = new Size(150, 44);
+            btn_room_details.Size = new Size(163, 61);
             btn_room_details.TabIndex = 7;
             btn_room_details.Text = "Details";
             btn_room_details.UseVisualStyleBackColor = true;
@@ -160,42 +162,44 @@
             dataGridViewRooms.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewRooms.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             dataGridViewRooms.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewRooms.ColumnHeadersHeight = 38;
             dataGridViewRooms.Columns.AddRange(new DataGridViewColumn[] { RoomNumber, RoomType, RoomFloor, RoomAvailable, RoomDescription });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridViewRooms.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridViewRooms.DefaultCellStyle = dataGridViewCellStyle5;
             dataGridViewRooms.EnableHeadersVisualStyles = false;
             dataGridViewRooms.GridColor = Color.White;
-            dataGridViewRooms.Location = new Point(3, 3);
+            dataGridViewRooms.Location = new Point(0, -4);
             dataGridViewRooms.MultiSelect = false;
             dataGridViewRooms.Name = "dataGridViewRooms";
             dataGridViewRooms.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridViewRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewRooms.RowHeadersVisible = false;
             dataGridViewRooms.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewRooms.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewRooms.RowTemplate.Height = 30;
-            dataGridViewRooms.Size = new Size(1269, 426);
+            dataGridViewRooms.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewRooms.Size = new Size(1077, 532);
             dataGridViewRooms.TabIndex = 0;
             dataGridViewRooms.CellMouseDoubleClick += dataGridViewRooms_CellMouseDoubleClick;
             // 
@@ -251,7 +255,7 @@
             panel3.Controls.Add(dataGridViewRooms);
             panel3.Location = new Point(34, 192);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1275, 432);
+            panel3.Size = new Size(1077, 521);
             panel3.TabIndex = 3;
             // 
             // RoomsForm

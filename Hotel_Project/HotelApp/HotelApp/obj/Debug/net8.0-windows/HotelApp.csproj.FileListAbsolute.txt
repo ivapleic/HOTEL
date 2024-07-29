@@ -76,3 +76,5 @@ C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.Floor_AddNewForm.resources
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.Floor_UpdateForm.resources
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.Form_RoomsAccessories.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.Accessories_AddNewForm.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.Form_RoomTypes.resources

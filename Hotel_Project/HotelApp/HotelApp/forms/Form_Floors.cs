@@ -22,6 +22,10 @@ namespace HotelApp.forms
         {
             InitializeComponent();
             dbConnection = new DBConnection();
+
+            // Dodajte DataBindingComplete događaj
+            dataGridViewFloors.DataBindingComplete += dataGridViewFloors_DataBindingComplete;
+            dataGridViewFloors.CellClick += dataGridViewFloors_CellClick;
         }
 
         public void RefreshFloorList()
@@ -39,8 +43,8 @@ namespace HotelApp.forms
         private void Form_Floors_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
-            dataGridViewFloors.ClearSelection();
             DisplayFloors();
+            dataGridViewFloors.ClearSelection();
         }
 
         private void DisplayFloors()
@@ -57,12 +61,11 @@ namespace HotelApp.forms
                     int number = Convert.ToInt32(row["fl_number"]);
                     string description = Convert.ToString(row["fl_description"]);
 
-                    // Dodajte red u DataGridView s ID-om kao skrivenim stupcem
                     int rowIndex = dataGridViewFloors.Rows.Add(id, number, description);
-
                 }
 
                 label_num_of_floors.Text = $"{floorsTable.Rows.Count}";
+                dataGridViewFloors.ClearSelection();
             }
             catch (Exception ex)
             {
@@ -98,7 +101,7 @@ namespace HotelApp.forms
                     // Poziv spremljene procedure za brisanje kroz DBConnection
                     SqlParameter[] parameters = new SqlParameter[]
                     {
-                new SqlParameter("@fl_id_pk", floorId)
+                        new SqlParameter("@fl_id_pk", floorId)
                     };
 
                     object deleteResult = dbConnection.ExecuteStoredProcedure("Delete_FLOOR", parameters);
@@ -155,9 +158,9 @@ namespace HotelApp.forms
                     // Poziv spremljene procedure za ažuriranje kroz DBConnection
                     SqlParameter[] parameters = new SqlParameter[]
                     {
-                    new SqlParameter("@fl_id_pk", selectedFloor.ID),
-                    new SqlParameter("@fl_number", selectedFloor.Number),
-                    new SqlParameter("@fl_description", selectedFloor.Description)
+                        new SqlParameter("@fl_id_pk", selectedFloor.ID),
+                        new SqlParameter("@fl_number", selectedFloor.Number),
+                        new SqlParameter("@fl_description", selectedFloor.Description)
                     };
 
                     object updateResult = dbConnection.ExecuteStoredProcedure("Update_FLOOR", parameters);
@@ -175,9 +178,17 @@ namespace HotelApp.forms
             }
         }
 
+        private void dataGridViewFloors_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridViewFloors.ClearSelection();
+        }
 
-
-
-
+        private void dataGridViewFloors_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Provjerite je li kliknuta ćelija unutar reda, a ne header
+            {
+                dataGridViewFloors.Rows[e.RowIndex].Selected = true;
+            }
+        }
     }
 }

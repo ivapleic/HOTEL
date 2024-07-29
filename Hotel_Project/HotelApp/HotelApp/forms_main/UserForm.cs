@@ -38,7 +38,7 @@ namespace HotelApp.forms_main
             if (!managementExpand)
             {
                 pnl_management.Height += 10;
-                if (pnl_management.Height >= 260)
+                if (pnl_management.Height >= 323)
                 {
                     managementTransition.Stop();
                     managementExpand = true;
@@ -54,6 +54,25 @@ namespace HotelApp.forms_main
                 }
             }
         }
+
+        private void ShowFormInPanel(Form form)
+        {
+            // Remove all controls from the panel
+            main_panel.Controls.Clear();
+
+            // Set form properties
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            // Add form to the panel
+            main_panel.Controls.Add(form);
+            main_panel.Tag = form;
+
+            // Show form
+            form.Show();
+        }
+
 
         private void btn_management_Click(object sender, EventArgs e)
         {
@@ -113,14 +132,8 @@ namespace HotelApp.forms_main
             {
                 roomsForm = new RoomsForm();
                 roomsForm.FormClosed += RoomsForm_FormClosed;
-                roomsForm.MdiParent = this;
-                roomsForm.Dock = DockStyle.Fill;
-                roomsForm.Show();
             }
-            else
-            {
-                roomsForm.Activate();
-            }
+            ShowFormInPanel(roomsForm);
         }
 
         private void RoomsForm_FormClosed(object? sender, FormClosedEventArgs e)
@@ -130,19 +143,14 @@ namespace HotelApp.forms_main
 
         private void btn_floors_Click(object sender, EventArgs e)
         {
-            if (roomsForm == null)
+            if (floorsForm == null)
             {
                 floorsForm = new Form_Floors();
                 floorsForm.FormClosed += Form_Floors_FormClosed;
-                floorsForm.MdiParent = this;
-                floorsForm.Dock = DockStyle.Fill;
-                floorsForm.Show();
             }
-            else
-            {
-                floorsForm.Activate();
-            }
+            ShowFormInPanel(floorsForm);
         }
+
         private void Form_Floors_FormClosed(object? sender, FormClosedEventArgs e)
         {
             floorsForm = null;
@@ -198,6 +206,11 @@ namespace HotelApp.forms_main
         private void Form_RoomAccessories_FormClosed(object? sender, FormClosedEventArgs e)
         {
             roomsAccessoriesForm = null;
+        }
+
+        private void btn_room_types_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
