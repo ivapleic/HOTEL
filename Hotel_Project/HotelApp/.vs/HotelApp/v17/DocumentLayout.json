@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|c:\\users\\korisnik\\desktop\\hotel\\hotel_project\\hotelapp\\hotelapp\\forms\\roomsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|solutionrelative:hotelapp\\forms\\roomsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|c:\\users\\korisnik\\desktop\\hotel\\hotel_project\\hotelapp\\hotelapp\\forms\\form_roomtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|solutionrelative:hotelapp\\forms\\form_roomtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|c:\\users\\korisnik\\desktop\\hotel\\hotel_project\\hotelapp\\hotelapp\\forms\\roomsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|solutionrelative:hotelapp\\forms\\roomsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|c:\\users\\korisnik\\desktop\\hotel\\hotel_project\\hotelapp\\hotelapp\\forms\\form_floors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|solutionrelative:hotelapp\\forms\\form_floors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|c:\\users\\korisnik\\desktop\\hotel\\hotel_project\\hotelapp\\hotelapp\\forms\\form_floors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|solutionrelative:hotelapp\\forms\\form_floors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|c:\\users\\korisnik\\desktop\\hotel\\hotel_project\\hotelapp\\hotelapp\\forms\\form_roomtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|solutionrelative:hotelapp\\forms\\form_roomtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|c:\\users\\korisnik\\desktop\\hotel\\hotel_project\\hotelapp\\hotelapp\\forms_main\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|solutionrelative:hotelapp\\forms_main\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,45 +45,58 @@
               "ToolTip": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\RoomsForm.cs [Design]",
               "RelativeToolTip": "HotelApp\\forms\\RoomsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T22:06:54.231Z",
+              "WhenOpened": "2024-07-29T21:58:32.692Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form_RoomTypes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_RoomTypes.cs",
+              "RelativeDocumentMoniker": "HotelApp\\forms\\Form_RoomTypes.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_RoomTypes.cs [Design]",
+              "RelativeToolTip": "HotelApp\\forms\\Form_RoomTypes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T21:57:26.133Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form_Floors.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_Floors.cs",
-              "RelativeDocumentMoniker": "HotelApp\\forms\\Form_Floors.cs",
-              "ToolTip": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_Floors.cs [Design]",
-              "RelativeToolTip": "HotelApp\\forms\\Form_Floors.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T21:13:54.481Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Form_Floors.cs",
               "DocumentMoniker": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_Floors.cs",
               "RelativeDocumentMoniker": "HotelApp\\forms\\Form_Floors.cs",
               "ToolTip": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_Floors.cs",
               "RelativeToolTip": "HotelApp\\forms\\Form_Floors.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAkwE0AAABDAAAA",
+              "ViewState": "AQIAAKcAAAAAAAAAAAAowL4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T21:55:56.351Z",
+              "WhenOpened": "2024-07-29T21:38:54.213Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RoomsForm.cs",
-              "DocumentMoniker": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\RoomsForm.cs",
-              "RelativeDocumentMoniker": "HotelApp\\forms\\RoomsForm.cs",
-              "ToolTip": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\RoomsForm.cs",
-              "RelativeToolTip": "HotelApp\\forms\\RoomsForm.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAkwEkAAAANAAAA",
+              "DocumentIndex": 3,
+              "Title": "Form_RoomTypes.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_RoomTypes.cs",
+              "RelativeDocumentMoniker": "HotelApp\\forms\\Form_RoomTypes.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_RoomTypes.cs",
+              "RelativeToolTip": "HotelApp\\forms\\Form_RoomTypes.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwCkAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T22:06:53.333Z",
+              "WhenOpened": "2024-07-29T21:38:29.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserForm.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms_main\\UserForm.cs",
+              "RelativeDocumentMoniker": "HotelApp\\forms_main\\UserForm.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms_main\\UserForm.cs",
+              "RelativeToolTip": "HotelApp\\forms_main\\UserForm.cs",
+              "ViewState": "AQIAALoAAAAAAAAAAAAQwMkAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T21:52:28.64Z",
               "EditorCaption": ""
             }
           ]

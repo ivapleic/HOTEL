@@ -20,6 +20,10 @@ namespace HotelApp.forms
         {
             InitializeComponent();
             dbConnection = new DBConnection();
+
+            // Dodajte DataBindingComplete događaj
+            dataGridViewAccessories.DataBindingComplete += dataGridViewAccessories_DataBindingComplete;
+            dataGridViewAccessories.CellClick += dataGridViewAccessories_CellClick;
         }
 
         public void RefreshAccessoryList()
@@ -70,6 +74,26 @@ namespace HotelApp.forms
         {
             Accessories_AddNewForm addNewAccessoryForm = new Accessories_AddNewForm();
             addNewAccessoryForm.Show();
+        }
+
+
+        private void dataGridViewAccessories_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridViewAccessories.ClearSelection();
+        }
+
+
+        private void dataGridViewAccessories_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Provjerite je li kliknuta ćelija unutar reda, a ne header
+            {
+                dataGridViewAccessories.Rows[e.RowIndex].Selected = true;
+            }
+        }
+
+        private void dataGridViewAccessories_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

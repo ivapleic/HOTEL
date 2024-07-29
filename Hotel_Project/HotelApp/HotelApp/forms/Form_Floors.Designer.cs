@@ -148,6 +148,8 @@
             dataGridViewFloors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewFloors.BackgroundColor = Color.White;
             dataGridViewFloors.BorderStyle = BorderStyle.None;
+            dataGridViewFloors.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridViewFloors.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -162,13 +164,14 @@
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = Color.LightGray;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridViewFloors.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewFloors.EnableHeadersVisualStyles = false;
             dataGridViewFloors.Location = new Point(0, 0);
             dataGridViewFloors.Name = "dataGridViewFloors";
+            dataGridViewFloors.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewFloors.RowHeadersVisible = false;
             dataGridViewFloors.RowHeadersWidth = 62;
             dataGridViewFloors.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

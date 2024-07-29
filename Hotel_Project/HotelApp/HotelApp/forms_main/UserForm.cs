@@ -14,6 +14,7 @@ namespace HotelApp.forms_main
         Form_Floors floorsForm;
         Form_Dashboard dashboardForm;
         Form_RoomsAccessories roomsAccessoriesForm;
+        RoomTypesForm roomTypesForm;
         Employee employee;
         public UserForm()
         {
@@ -174,14 +175,8 @@ namespace HotelApp.forms_main
             {
                 dashboardForm = new Form_Dashboard();
                 dashboardForm.FormClosed += Form_Dashboard_FormClosed;
-                dashboardForm.MdiParent = this;
-                dashboardForm.Dock = DockStyle.Fill;
-                dashboardForm.Show();
             }
-            else
-            {
-                dashboardForm.Activate();
-            }
+            ShowFormInPanel(dashboardForm);
         }
         private void Form_Dashboard_FormClosed(object? sender, FormClosedEventArgs e)
         {
@@ -193,15 +188,9 @@ namespace HotelApp.forms_main
             if (roomsAccessoriesForm == null)
             {
                 roomsAccessoriesForm = new Form_RoomsAccessories();
-                roomsAccessoriesForm.FormClosed += Form_Floors_FormClosed;
-                roomsAccessoriesForm.MdiParent = this;
-                roomsAccessoriesForm.Dock = DockStyle.Fill;
-                roomsAccessoriesForm.Show();
+                roomsAccessoriesForm.FormClosed += Form_RoomAccessories_FormClosed;
             }
-            else
-            {
-                roomsAccessoriesForm.Activate();
-            }
+            ShowFormInPanel(roomsAccessoriesForm);
         }
         private void Form_RoomAccessories_FormClosed(object? sender, FormClosedEventArgs e)
         {
@@ -210,7 +199,17 @@ namespace HotelApp.forms_main
 
         private void btn_room_types_Click(object sender, EventArgs e)
         {
+            if (roomTypesForm == null)
+            {
+                roomTypesForm = new RoomTypesForm();
+                roomTypesForm.FormClosed += RoomTypesForm_FormClosed;
+            }
+            ShowFormInPanel(roomTypesForm);
+        }
 
+        private void RoomTypesForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            roomTypesForm = null;
         }
     }
 }
