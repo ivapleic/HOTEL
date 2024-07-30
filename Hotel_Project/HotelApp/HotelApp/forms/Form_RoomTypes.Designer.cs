@@ -212,6 +212,7 @@
             btn_add_room.TabIndex = 8;
             btn_add_room.Text = "Add New";
             btn_add_room.UseVisualStyleBackColor = true;
+            btn_add_room.Click += btn_add_room_Click;
             // 
             // RoomTypesForm
             // 

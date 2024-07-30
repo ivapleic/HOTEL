@@ -1,4 +1,5 @@
 ﻿using HotelApp.classes;
+using HotelApp.user_controls;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
@@ -65,6 +66,12 @@ namespace HotelApp.forms
             {
                 dataGridView_RoomTypes.Rows[e.RowIndex].Selected = true;
             }
+        }
+
+        private void btn_add_room_Click(object sender, EventArgs e)
+        {
+            RoomType_AddNewForm addNewRoomTypeForm = new RoomType_AddNewForm();
+            addNewRoomTypeForm.Show();
         }
     }
 }

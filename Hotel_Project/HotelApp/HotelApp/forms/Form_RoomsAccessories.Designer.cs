@@ -37,7 +37,7 @@
             label2 = new Label();
             btn_delete_floor = new Button();
             btn_update_floor = new Button();
-            btn_add_new_floor = new Button();
+            btn_add_new_acc = new Button();
             dataGridViewAccessories = new DataGridView();
             RoomAccID = new DataGridViewTextBoxColumn();
             RoomAccName = new DataGridViewTextBoxColumn();
@@ -119,6 +119,7 @@
             btn_delete_floor.TabIndex = 9;
             btn_delete_floor.Text = "Delete";
             btn_delete_floor.UseVisualStyleBackColor = true;
+            btn_delete_floor.Click += btn_delete_floor_Click;
             // 
             // btn_update_floor
             // 
@@ -129,17 +130,18 @@
             btn_update_floor.TabIndex = 8;
             btn_update_floor.Text = "Update";
             btn_update_floor.UseVisualStyleBackColor = true;
+            btn_update_floor.Click += btn_update_floor_Click;
             // 
-            // btn_add_new_floor
+            // btn_add_new_acc
             // 
-            btn_add_new_floor.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_add_new_floor.Location = new Point(730, 246);
-            btn_add_new_floor.Name = "btn_add_new_floor";
-            btn_add_new_floor.Size = new Size(143, 59);
-            btn_add_new_floor.TabIndex = 7;
-            btn_add_new_floor.Text = "Add New";
-            btn_add_new_floor.UseVisualStyleBackColor = true;
-            btn_add_new_floor.Click += btn_add_new_floor_Click;
+            btn_add_new_acc.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_add_new_acc.Location = new Point(730, 246);
+            btn_add_new_acc.Name = "btn_add_new_acc";
+            btn_add_new_acc.Size = new Size(143, 59);
+            btn_add_new_acc.TabIndex = 7;
+            btn_add_new_acc.Text = "Add New";
+            btn_add_new_acc.UseVisualStyleBackColor = true;
+            btn_add_new_acc.Click += btn_add_new_acc_Click;
             // 
             // dataGridViewAccessories
             // 
@@ -155,7 +157,7 @@
             dataGridViewCellStyle1.BackColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewAccessories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -178,7 +180,6 @@
             dataGridViewAccessories.Size = new Size(575, 503);
             dataGridViewAccessories.TabIndex = 0;
             dataGridViewAccessories.CellClick += dataGridViewAccessories_CellClick;
-            dataGridViewAccessories.CellContentClick += dataGridViewAccessories_CellContentClick;
             dataGridViewAccessories.DataBindingComplete += dataGridViewAccessories_DataBindingComplete;
             // 
             // RoomAccID
@@ -213,7 +214,7 @@
             Controls.Add(panel3);
             Controls.Add(btn_delete_floor);
             Controls.Add(btn_update_floor);
-            Controls.Add(btn_add_new_floor);
+            Controls.Add(btn_add_new_acc);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -239,7 +240,7 @@
         private Label label2;
         private Button btn_delete_floor;
         private Button btn_update_floor;
-        private Button btn_add_new_floor;
+        private Button btn_add_new_acc;
         private DataGridView dataGridViewAccessories;
         private DataGridViewTextBoxColumn RoomAccID;
         private DataGridViewTextBoxColumn RoomAccName;
