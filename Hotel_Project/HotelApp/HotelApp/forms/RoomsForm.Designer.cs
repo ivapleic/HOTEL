@@ -120,6 +120,7 @@
             btn_add_room.TabIndex = 4;
             btn_add_room.Text = "Add New";
             btn_add_room.UseVisualStyleBackColor = true;
+            btn_add_room.Click += btn_add_room_Click;
             // 
             // btn_delete_room
             // 
@@ -150,6 +151,7 @@
             btn_room_details.TabIndex = 7;
             btn_room_details.Text = "Details";
             btn_room_details.UseVisualStyleBackColor = true;
+            btn_room_details.Click += btn_room_details_Click;
             // 
             // dataGridViewRooms
             // 

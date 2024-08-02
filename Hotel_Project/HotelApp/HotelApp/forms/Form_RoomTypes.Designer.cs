@@ -186,22 +186,24 @@
             // btn_update_room
             // 
             btn_update_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_update_room.Location = new Point(1127, 474);
+            btn_update_room.Location = new Point(1127, 393);
             btn_update_room.Name = "btn_update_room";
             btn_update_room.Size = new Size(163, 60);
             btn_update_room.TabIndex = 10;
             btn_update_room.Text = "Update";
             btn_update_room.UseVisualStyleBackColor = true;
+            btn_update_room.Click += btn_update_room_Click;
             // 
             // btn_delete_room
             // 
             btn_delete_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_delete_room.Location = new Point(1127, 372);
+            btn_delete_room.Location = new Point(1127, 512);
             btn_delete_room.Name = "btn_delete_room";
             btn_delete_room.Size = new Size(163, 62);
             btn_delete_room.TabIndex = 9;
             btn_delete_room.Text = "Delete";
             btn_delete_room.UseVisualStyleBackColor = true;
+            btn_delete_room.Click += btn_delete_room_Click;
             // 
             // btn_add_room
             // 

@@ -78,7 +78,7 @@
             txtNumberOfPersons.Location = new Point(427, 274);
             txtNumberOfPersons.Multiline = true;
             txtNumberOfPersons.Name = "txtNumberOfPersons";
-            txtNumberOfPersons.Size = new Size(218, 39);
+            txtNumberOfPersons.Size = new Size(277, 39);
             txtNumberOfPersons.TabIndex = 11;
             // 
             // label3
@@ -97,7 +97,7 @@
             txtRoomtypeName.Location = new Point(427, 200);
             txtRoomtypeName.Multiline = true;
             txtRoomtypeName.Name = "txtRoomtypeName";
-            txtRoomtypeName.Size = new Size(218, 38);
+            txtRoomtypeName.Size = new Size(277, 38);
             txtRoomtypeName.TabIndex = 9;
             // 
             // label2
@@ -116,7 +116,7 @@
             txtNumberOfChildren.Location = new Point(427, 335);
             txtNumberOfChildren.Multiline = true;
             txtNumberOfChildren.Name = "txtNumberOfChildren";
-            txtNumberOfChildren.Size = new Size(218, 39);
+            txtNumberOfChildren.Size = new Size(277, 39);
             txtNumberOfChildren.TabIndex = 14;
             // 
             // label5
@@ -137,6 +137,7 @@
             btn_cancel.TabIndex = 16;
             btn_cancel.Text = "Cancel";
             btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_add
             // 
@@ -146,6 +147,7 @@
             btn_add.TabIndex = 15;
             btn_add.Text = "Add ";
             btn_add.UseVisualStyleBackColor = true;
+            btn_add.Click += btn_add_Click;
             // 
             // RoomType_AddNewForm
             // 

@@ -43,5 +43,11 @@
     <Compile Update="user_controls\RoomType_AddNewForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="user_controls\RoomType_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\Room_AddNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
