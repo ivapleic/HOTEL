@@ -41,6 +41,7 @@
             btn_update_room = new Button();
             btn_room_details = new Button();
             dataGridViewRooms = new DataGridView();
+            RoomID = new DataGridViewTextBoxColumn();
             RoomNumber = new DataGridViewTextBoxColumn();
             RoomType = new DataGridViewTextBoxColumn();
             RoomFloor = new DataGridViewTextBoxColumn();
@@ -82,9 +83,9 @@
             panel2.BackColor = Color.FromArgb(40, 86, 182);
             panel2.Controls.Add(label_num_of_rooms);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(34, 122);
+            panel2.Location = new Point(34, 111);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1018, 60);
+            panel2.Size = new Size(1075, 60);
             panel2.TabIndex = 2;
             // 
             // label_num_of_rooms
@@ -114,7 +115,7 @@
             // btn_add_room
             // 
             btn_add_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_add_room.Location = new Point(1093, 257);
+            btn_add_room.Location = new Point(1140, 263);
             btn_add_room.Name = "btn_add_room";
             btn_add_room.Size = new Size(164, 58);
             btn_add_room.TabIndex = 4;
@@ -125,27 +126,29 @@
             // btn_delete_room
             // 
             btn_delete_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_delete_room.Location = new Point(1094, 352);
+            btn_delete_room.Location = new Point(1141, 358);
             btn_delete_room.Name = "btn_delete_room";
             btn_delete_room.Size = new Size(163, 62);
             btn_delete_room.TabIndex = 5;
             btn_delete_room.Text = "Delete";
             btn_delete_room.UseVisualStyleBackColor = true;
+            btn_delete_room.Click += btn_delete_room_Click;
             // 
             // btn_update_room
             // 
             btn_update_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_update_room.Location = new Point(1094, 454);
+            btn_update_room.Location = new Point(1141, 460);
             btn_update_room.Name = "btn_update_room";
             btn_update_room.Size = new Size(163, 60);
             btn_update_room.TabIndex = 6;
             btn_update_room.Text = "Update";
             btn_update_room.UseVisualStyleBackColor = true;
+            btn_update_room.Click += btn_update_room_Click;
             // 
             // btn_room_details
             // 
             btn_room_details.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_room_details.Location = new Point(1094, 551);
+            btn_room_details.Location = new Point(1141, 557);
             btn_room_details.Name = "btn_room_details";
             btn_room_details.Size = new Size(163, 61);
             btn_room_details.TabIndex = 7;
@@ -173,7 +176,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewRooms.ColumnHeadersHeight = 38;
-            dataGridViewRooms.Columns.AddRange(new DataGridViewColumn[] { RoomNumber, RoomType, RoomFloor, RoomAvailable, RoomDescription });
+            dataGridViewRooms.Columns.AddRange(new DataGridViewColumn[] { RoomID, RoomNumber, RoomType, RoomFloor, RoomAvailable, RoomDescription });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -184,7 +187,7 @@
             dataGridViewRooms.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewRooms.EnableHeadersVisualStyles = false;
             dataGridViewRooms.GridColor = Color.White;
-            dataGridViewRooms.Location = new Point(0, -4);
+            dataGridViewRooms.Location = new Point(0, 0);
             dataGridViewRooms.MultiSelect = false;
             dataGridViewRooms.Name = "dataGridViewRooms";
             dataGridViewRooms.ReadOnly = true;
@@ -202,9 +205,17 @@
             dataGridViewRooms.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewRooms.RowTemplate.Height = 30;
             dataGridViewRooms.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewRooms.Size = new Size(1018, 532);
+            dataGridViewRooms.Size = new Size(1075, 526);
             dataGridViewRooms.TabIndex = 0;
             dataGridViewRooms.CellMouseDoubleClick += dataGridViewRooms_CellMouseDoubleClick;
+            // 
+            // RoomID
+            // 
+            RoomID.HeaderText = "RoomID";
+            RoomID.MinimumWidth = 8;
+            RoomID.Name = "RoomID";
+            RoomID.ReadOnly = true;
+            RoomID.Visible = false;
             // 
             // RoomNumber
             // 
@@ -256,9 +267,9 @@
             panel3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             panel3.BackColor = Color.FromArgb(28, 78, 128);
             panel3.Controls.Add(dataGridViewRooms);
-            panel3.Location = new Point(34, 192);
+            panel3.Location = new Point(34, 177);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1018, 521);
+            panel3.Size = new Size(1075, 526);
             panel3.TabIndex = 3;
             // 
             // RoomsForm
@@ -301,11 +312,12 @@
         private Button btn_update_room;
         private Button btn_room_details;
         private DataGridView dataGridViewRooms;
+        private Panel panel3;
+        private DataGridViewTextBoxColumn RoomID;
         private DataGridViewTextBoxColumn RoomNumber;
         private DataGridViewTextBoxColumn RoomType;
         private DataGridViewTextBoxColumn RoomFloor;
         private DataGridViewTextBoxColumn RoomAvailable;
         private DataGridViewTextBoxColumn RoomDescription;
-        private Panel panel3;
     }
 }

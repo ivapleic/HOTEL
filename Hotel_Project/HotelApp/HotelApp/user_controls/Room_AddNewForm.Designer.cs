@@ -32,11 +32,11 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            checkBox1 = new CheckBox();
-            textBox5 = new TextBox();
-            textBox2 = new TextBox();
+            room_type_choose = new ComboBox();
+            floor_choose = new ComboBox();
+            checkBox_available = new CheckBox();
+            room_description_input = new TextBox();
+            room_number_input = new TextBox();
             label2 = new Label();
             label8 = new Label();
             label7 = new Label();
@@ -44,27 +44,29 @@
             room_type_label = new Label();
             label3 = new Label();
             panel3 = new Panel();
-            button1 = new Button();
-            comboBox3 = new ComboBox();
+            remove_acc_btn = new Button();
+            acessories_choose = new ComboBox();
             accessories_listBox = new ListBox();
             label12 = new Label();
             panel4 = new Panel();
-            button8 = new Button();
-            button9 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            btn_remove_img = new Button();
-            btn_add_img = new Button();
+            btn_remove_img5 = new Button();
+            btn_add_img5 = new Button();
+            btn_remove_img4 = new Button();
+            btn_add_img4 = new Button();
+            btn_remove_img3 = new Button();
+            btn_add_img3 = new Button();
+            btn_remove_img2 = new Button();
+            btn_add_img2 = new Button();
+            btn_remove_img1 = new Button();
+            btn_add_img1 = new Button();
             room_image5 = new PictureBox();
             room_image4 = new PictureBox();
             room_image3 = new PictureBox();
             room_image2 = new PictureBox();
             room_image1 = new PictureBox();
             label11 = new Label();
+            btn_add_room = new Button();
+            btn_cancel = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -99,62 +101,62 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            panel2.Controls.Add(comboBox2);
-            panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(checkBox1);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox2);
+            panel2.Controls.Add(room_type_choose);
+            panel2.Controls.Add(floor_choose);
+            panel2.Controls.Add(checkBox_available);
+            panel2.Controls.Add(room_description_input);
+            panel2.Controls.Add(room_number_input);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(room_type_label);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(24, 146);
+            panel2.Location = new Point(24, 110);
             panel2.Name = "panel2";
-            panel2.Size = new Size(779, 423);
+            panel2.Size = new Size(779, 400);
             panel2.TabIndex = 2;
             // 
-            // comboBox2
+            // room_type_choose
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(171, 80);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(208, 33);
-            comboBox2.TabIndex = 16;
+            room_type_choose.FormattingEnabled = true;
+            room_type_choose.Location = new Point(171, 80);
+            room_type_choose.Name = "room_type_choose";
+            room_type_choose.Size = new Size(301, 33);
+            room_type_choose.TabIndex = 16;
             // 
-            // comboBox1
+            // floor_choose
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(107, 135);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(78, 33);
-            comboBox1.TabIndex = 15;
+            floor_choose.FormattingEnabled = true;
+            floor_choose.Location = new Point(107, 135);
+            floor_choose.Name = "floor_choose";
+            floor_choose.Size = new Size(227, 33);
+            floor_choose.TabIndex = 15;
             // 
-            // checkBox1
+            // checkBox_available
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(148, 201);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(121, 29);
-            checkBox1.TabIndex = 14;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBox_available.AutoSize = true;
+            checkBox_available.Location = new Point(148, 201);
+            checkBox_available.Name = "checkBox_available";
+            checkBox_available.Size = new Size(121, 29);
+            checkBox_available.TabIndex = 14;
+            checkBox_available.Text = "checkBox1";
+            checkBox_available.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // room_description_input
             // 
-            textBox5.Location = new Point(230, 266);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(506, 89);
-            textBox5.TabIndex = 13;
+            room_description_input.Location = new Point(230, 266);
+            room_description_input.Multiline = true;
+            room_description_input.Name = "room_description_input";
+            room_description_input.Size = new Size(521, 118);
+            room_description_input.TabIndex = 13;
             // 
-            // textBox2
+            // room_number_input
             // 
-            textBox2.Location = new Point(205, 20);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(150, 31);
-            textBox2.TabIndex = 10;
+            room_number_input.Location = new Point(205, 20);
+            room_number_input.Name = "room_number_input";
+            room_number_input.Size = new Size(267, 31);
+            room_number_input.TabIndex = 10;
             // 
             // label2
             // 
@@ -218,31 +220,33 @@
             // panel3
             // 
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            panel3.Controls.Add(button1);
-            panel3.Controls.Add(comboBox3);
+            panel3.Controls.Add(remove_acc_btn);
+            panel3.Controls.Add(acessories_choose);
             panel3.Controls.Add(accessories_listBox);
             panel3.Controls.Add(label12);
-            panel3.Location = new Point(827, 146);
+            panel3.Location = new Point(818, 110);
             panel3.Name = "panel3";
-            panel3.Size = new Size(617, 423);
+            panel3.Size = new Size(617, 400);
             panel3.TabIndex = 3;
             // 
-            // button1
+            // remove_acc_btn
             // 
-            button1.Location = new Point(298, 74);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 4;
-            button1.Text = "Remove item";
-            button1.UseVisualStyleBackColor = true;
+            remove_acc_btn.Location = new Point(398, 74);
+            remove_acc_btn.Name = "remove_acc_btn";
+            remove_acc_btn.Size = new Size(112, 34);
+            remove_acc_btn.TabIndex = 4;
+            remove_acc_btn.Text = "Remove item";
+            remove_acc_btn.UseVisualStyleBackColor = true;
+            remove_acc_btn.Click += remove_acc_btn_Click;
             // 
-            // comboBox3
+            // acessories_choose
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(21, 74);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(260, 33);
-            comboBox3.TabIndex = 3;
+            acessories_choose.FormattingEnabled = true;
+            acessories_choose.Location = new Point(21, 74);
+            acessories_choose.Name = "acessories_choose";
+            acessories_choose.Size = new Size(371, 33);
+            acessories_choose.TabIndex = 3;
+            acessories_choose.SelectedIndexChanged += acessories_choose_SelectedIndexChanged;
             // 
             // accessories_listBox
             // 
@@ -269,155 +273,155 @@
             // 
             panel4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel4.AutoScroll = true;
-            panel4.Controls.Add(button8);
-            panel4.Controls.Add(button9);
-            panel4.Controls.Add(button6);
-            panel4.Controls.Add(button7);
-            panel4.Controls.Add(button4);
-            panel4.Controls.Add(button5);
-            panel4.Controls.Add(button2);
-            panel4.Controls.Add(button3);
-            panel4.Controls.Add(btn_remove_img);
-            panel4.Controls.Add(btn_add_img);
+            panel4.Controls.Add(btn_remove_img5);
+            panel4.Controls.Add(btn_add_img5);
+            panel4.Controls.Add(btn_remove_img4);
+            panel4.Controls.Add(btn_add_img4);
+            panel4.Controls.Add(btn_remove_img3);
+            panel4.Controls.Add(btn_add_img3);
+            panel4.Controls.Add(btn_remove_img2);
+            panel4.Controls.Add(btn_add_img2);
+            panel4.Controls.Add(btn_remove_img1);
+            panel4.Controls.Add(btn_add_img1);
             panel4.Controls.Add(room_image5);
             panel4.Controls.Add(room_image4);
             panel4.Controls.Add(room_image3);
             panel4.Controls.Add(room_image2);
             panel4.Controls.Add(room_image1);
             panel4.Controls.Add(label11);
-            panel4.Location = new Point(24, 581);
+            panel4.Location = new Point(24, 516);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1420, 394);
+            panel4.Size = new Size(1411, 337);
             panel4.TabIndex = 4;
             // 
-            // button8
+            // btn_remove_img5
             // 
-            button8.BackgroundImage = (Image)resources.GetObject("button8.BackgroundImage");
-            button8.BackgroundImageLayout = ImageLayout.Stretch;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Location = new Point(1344, 99);
-            button8.Name = "button8";
-            button8.Size = new Size(40, 40);
-            button8.TabIndex = 15;
-            button8.UseVisualStyleBackColor = true;
+            btn_remove_img5.BackgroundImage = (Image)resources.GetObject("btn_remove_img5.BackgroundImage");
+            btn_remove_img5.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_remove_img5.FlatAppearance.BorderSize = 0;
+            btn_remove_img5.FlatStyle = FlatStyle.Flat;
+            btn_remove_img5.Location = new Point(1341, 41);
+            btn_remove_img5.Name = "btn_remove_img5";
+            btn_remove_img5.Size = new Size(40, 40);
+            btn_remove_img5.TabIndex = 15;
+            btn_remove_img5.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btn_add_img5
             // 
-            button9.BackColor = Color.White;
-            button9.BackgroundImage = (Image)resources.GetObject("button9.BackgroundImage");
-            button9.BackgroundImageLayout = ImageLayout.Stretch;
-            button9.FlatAppearance.BorderSize = 0;
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Location = new Point(1298, 99);
-            button9.Name = "button9";
-            button9.Size = new Size(40, 40);
-            button9.TabIndex = 14;
-            button9.UseVisualStyleBackColor = false;
+            btn_add_img5.BackColor = Color.White;
+            btn_add_img5.BackgroundImage = (Image)resources.GetObject("btn_add_img5.BackgroundImage");
+            btn_add_img5.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_add_img5.FlatAppearance.BorderSize = 0;
+            btn_add_img5.FlatStyle = FlatStyle.Flat;
+            btn_add_img5.Location = new Point(1295, 41);
+            btn_add_img5.Name = "btn_add_img5";
+            btn_add_img5.Size = new Size(40, 40);
+            btn_add_img5.TabIndex = 14;
+            btn_add_img5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btn_remove_img4
             // 
-            button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
-            button6.BackgroundImageLayout = ImageLayout.Stretch;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(1072, 98);
-            button6.Name = "button6";
-            button6.Size = new Size(40, 40);
-            button6.TabIndex = 13;
-            button6.UseVisualStyleBackColor = true;
+            btn_remove_img4.BackgroundImage = (Image)resources.GetObject("btn_remove_img4.BackgroundImage");
+            btn_remove_img4.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_remove_img4.FlatAppearance.BorderSize = 0;
+            btn_remove_img4.FlatStyle = FlatStyle.Flat;
+            btn_remove_img4.Location = new Point(1069, 40);
+            btn_remove_img4.Name = "btn_remove_img4";
+            btn_remove_img4.Size = new Size(40, 40);
+            btn_remove_img4.TabIndex = 13;
+            btn_remove_img4.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn_add_img4
             // 
-            button7.BackColor = Color.White;
-            button7.BackgroundImage = (Image)resources.GetObject("button7.BackgroundImage");
-            button7.BackgroundImageLayout = ImageLayout.Stretch;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Location = new Point(1026, 98);
-            button7.Name = "button7";
-            button7.Size = new Size(40, 40);
-            button7.TabIndex = 12;
-            button7.UseVisualStyleBackColor = false;
+            btn_add_img4.BackColor = Color.White;
+            btn_add_img4.BackgroundImage = (Image)resources.GetObject("btn_add_img4.BackgroundImage");
+            btn_add_img4.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_add_img4.FlatAppearance.BorderSize = 0;
+            btn_add_img4.FlatStyle = FlatStyle.Flat;
+            btn_add_img4.Location = new Point(1023, 40);
+            btn_add_img4.Name = "btn_add_img4";
+            btn_add_img4.Size = new Size(40, 40);
+            btn_add_img4.TabIndex = 12;
+            btn_add_img4.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btn_remove_img3
             // 
-            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
-            button4.BackgroundImageLayout = ImageLayout.Stretch;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(797, 98);
-            button4.Name = "button4";
-            button4.Size = new Size(40, 40);
-            button4.TabIndex = 11;
-            button4.UseVisualStyleBackColor = true;
+            btn_remove_img3.BackgroundImage = (Image)resources.GetObject("btn_remove_img3.BackgroundImage");
+            btn_remove_img3.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_remove_img3.FlatAppearance.BorderSize = 0;
+            btn_remove_img3.FlatStyle = FlatStyle.Flat;
+            btn_remove_img3.Location = new Point(794, 40);
+            btn_remove_img3.Name = "btn_remove_img3";
+            btn_remove_img3.Size = new Size(40, 40);
+            btn_remove_img3.TabIndex = 11;
+            btn_remove_img3.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_add_img3
             // 
-            button5.BackColor = Color.White;
-            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
-            button5.BackgroundImageLayout = ImageLayout.Stretch;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(751, 98);
-            button5.Name = "button5";
-            button5.Size = new Size(40, 40);
-            button5.TabIndex = 10;
-            button5.UseVisualStyleBackColor = false;
+            btn_add_img3.BackColor = Color.White;
+            btn_add_img3.BackgroundImage = (Image)resources.GetObject("btn_add_img3.BackgroundImage");
+            btn_add_img3.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_add_img3.FlatAppearance.BorderSize = 0;
+            btn_add_img3.FlatStyle = FlatStyle.Flat;
+            btn_add_img3.Location = new Point(748, 40);
+            btn_add_img3.Name = "btn_add_img3";
+            btn_add_img3.Size = new Size(40, 40);
+            btn_add_img3.TabIndex = 10;
+            btn_add_img3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_remove_img2
             // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(512, 98);
-            button2.Name = "button2";
-            button2.Size = new Size(40, 40);
-            button2.TabIndex = 9;
-            button2.UseVisualStyleBackColor = true;
+            btn_remove_img2.BackgroundImage = (Image)resources.GetObject("btn_remove_img2.BackgroundImage");
+            btn_remove_img2.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_remove_img2.FlatAppearance.BorderSize = 0;
+            btn_remove_img2.FlatStyle = FlatStyle.Flat;
+            btn_remove_img2.Location = new Point(509, 40);
+            btn_remove_img2.Name = "btn_remove_img2";
+            btn_remove_img2.Size = new Size(40, 40);
+            btn_remove_img2.TabIndex = 9;
+            btn_remove_img2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_add_img2
             // 
-            button3.BackColor = Color.White;
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(466, 98);
-            button3.Name = "button3";
-            button3.Size = new Size(40, 40);
-            button3.TabIndex = 8;
-            button3.UseVisualStyleBackColor = false;
+            btn_add_img2.BackColor = Color.White;
+            btn_add_img2.BackgroundImage = (Image)resources.GetObject("btn_add_img2.BackgroundImage");
+            btn_add_img2.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_add_img2.FlatAppearance.BorderSize = 0;
+            btn_add_img2.FlatStyle = FlatStyle.Flat;
+            btn_add_img2.Location = new Point(463, 40);
+            btn_add_img2.Name = "btn_add_img2";
+            btn_add_img2.Size = new Size(40, 40);
+            btn_add_img2.TabIndex = 8;
+            btn_add_img2.UseVisualStyleBackColor = false;
             // 
-            // btn_remove_img
+            // btn_remove_img1
             // 
-            btn_remove_img.BackgroundImage = (Image)resources.GetObject("btn_remove_img.BackgroundImage");
-            btn_remove_img.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_remove_img.FlatAppearance.BorderSize = 0;
-            btn_remove_img.FlatStyle = FlatStyle.Flat;
-            btn_remove_img.Location = new Point(230, 98);
-            btn_remove_img.Name = "btn_remove_img";
-            btn_remove_img.Size = new Size(40, 40);
-            btn_remove_img.TabIndex = 7;
-            btn_remove_img.UseVisualStyleBackColor = true;
+            btn_remove_img1.BackgroundImage = (Image)resources.GetObject("btn_remove_img1.BackgroundImage");
+            btn_remove_img1.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_remove_img1.FlatAppearance.BorderSize = 0;
+            btn_remove_img1.FlatStyle = FlatStyle.Flat;
+            btn_remove_img1.Location = new Point(227, 40);
+            btn_remove_img1.Name = "btn_remove_img1";
+            btn_remove_img1.Size = new Size(40, 40);
+            btn_remove_img1.TabIndex = 7;
+            btn_remove_img1.UseVisualStyleBackColor = true;
             // 
-            // btn_add_img
+            // btn_add_img1
             // 
-            btn_add_img.BackColor = Color.White;
-            btn_add_img.BackgroundImage = (Image)resources.GetObject("btn_add_img.BackgroundImage");
-            btn_add_img.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_add_img.FlatAppearance.BorderSize = 0;
-            btn_add_img.FlatStyle = FlatStyle.Flat;
-            btn_add_img.Location = new Point(184, 98);
-            btn_add_img.Name = "btn_add_img";
-            btn_add_img.Size = new Size(40, 40);
-            btn_add_img.TabIndex = 6;
-            btn_add_img.UseVisualStyleBackColor = false;
+            btn_add_img1.BackColor = Color.White;
+            btn_add_img1.BackgroundImage = (Image)resources.GetObject("btn_add_img1.BackgroundImage");
+            btn_add_img1.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_add_img1.FlatAppearance.BorderSize = 0;
+            btn_add_img1.FlatStyle = FlatStyle.Flat;
+            btn_add_img1.Location = new Point(181, 40);
+            btn_add_img1.Name = "btn_add_img1";
+            btn_add_img1.Size = new Size(40, 40);
+            btn_add_img1.TabIndex = 6;
+            btn_add_img1.UseVisualStyleBackColor = false;
             // 
             // room_image5
             // 
-            room_image5.Location = new Point(1119, 145);
+            room_image5.Location = new Point(1116, 87);
             room_image5.Name = "room_image5";
             room_image5.Size = new Size(270, 235);
             room_image5.TabIndex = 5;
@@ -425,7 +429,7 @@
             // 
             // room_image4
             // 
-            room_image4.Location = new Point(843, 145);
+            room_image4.Location = new Point(840, 87);
             room_image4.Name = "room_image4";
             room_image4.Size = new Size(270, 235);
             room_image4.TabIndex = 4;
@@ -433,7 +437,7 @@
             // 
             // room_image3
             // 
-            room_image3.Location = new Point(567, 144);
+            room_image3.Location = new Point(564, 86);
             room_image3.Name = "room_image3";
             room_image3.Size = new Size(270, 235);
             room_image3.TabIndex = 3;
@@ -441,7 +445,7 @@
             // 
             // room_image2
             // 
-            room_image2.Location = new Point(291, 144);
+            room_image2.Location = new Point(288, 86);
             room_image2.Name = "room_image2";
             room_image2.Size = new Size(270, 235);
             room_image2.TabIndex = 2;
@@ -450,7 +454,7 @@
             // room_image1
             // 
             room_image1.BackColor = Color.Transparent;
-            room_image1.Location = new Point(15, 144);
+            room_image1.Location = new Point(12, 86);
             room_image1.Name = "room_image1";
             room_image1.Size = new Size(270, 235);
             room_image1.TabIndex = 1;
@@ -460,18 +464,40 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(15, 37);
+            label11.Location = new Point(13, 11);
             label11.Name = "label11";
             label11.Size = new Size(162, 25);
             label11.TabIndex = 0;
             label11.Text = "Room Images";
+            // 
+            // btn_add_room
+            // 
+            btn_add_room.Location = new Point(1125, 878);
+            btn_add_room.Name = "btn_add_room";
+            btn_add_room.Size = new Size(147, 50);
+            btn_add_room.TabIndex = 5;
+            btn_add_room.Text = "Add";
+            btn_add_room.UseVisualStyleBackColor = true;
+            btn_add_room.Click += btn_add_room_Click;
+            // 
+            // btn_cancel
+            // 
+            btn_cancel.Location = new Point(1288, 878);
+            btn_cancel.Name = "btn_cancel";
+            btn_cancel.Size = new Size(147, 50);
+            btn_cancel.TabIndex = 6;
+            btn_cancel.Text = "Cancel";
+            btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // Room_AddNewForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1456, 977);
+            ClientSize = new Size(1456, 951);
+            Controls.Add(btn_cancel);
+            Controls.Add(btn_add_room);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -505,32 +531,34 @@
         private Label label6;
         private Label room_type_label;
         private Label label3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
-        private CheckBox checkBox1;
-        private TextBox textBox5;
-        private TextBox textBox2;
+        private ComboBox room_type_choose;
+        private ComboBox floor_choose;
+        private CheckBox checkBox_available;
+        private TextBox room_description_input;
+        private TextBox room_number_input;
         private Panel panel3;
-        private Button button1;
-        private ComboBox comboBox3;
+        private Button remove_acc_btn;
+        private ComboBox acessories_choose;
         private ListBox accessories_listBox;
         private Label label12;
         private Panel panel4;
-        private Button btn_remove_img;
-        private Button btn_add_img;
+        private Button btn_remove_img1;
+        private Button btn_add_img1;
         private PictureBox room_image5;
         private PictureBox room_image4;
         private PictureBox room_image3;
         private PictureBox room_image2;
         private PictureBox room_image1;
         private Label label11;
-        private Button button8;
-        private Button button9;
-        private Button button6;
-        private Button button7;
-        private Button button4;
-        private Button button5;
-        private Button button2;
-        private Button button3;
+        private Button btn_remove_img5;
+        private Button btn_add_img5;
+        private Button btn_remove_img4;
+        private Button btn_add_img4;
+        private Button btn_remove_img3;
+        private Button btn_add_img3;
+        private Button btn_remove_img2;
+        private Button btn_add_img2;
+        private Button btn_add_room;
+        private Button btn_cancel;
     }
 }
