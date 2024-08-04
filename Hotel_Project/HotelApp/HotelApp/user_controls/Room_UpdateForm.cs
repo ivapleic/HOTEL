@@ -1,5 +1,6 @@
 ﻿using HotelApp.classes;
 using HotelApp.classes_main;
+using HotelApp.forms;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,7 @@ namespace HotelApp.user_controls
             PopulateFloors();
             PopulateRoomTypes();
             PopulateAccessories();
+
             LoadRoomData();
 
             // Add event handlers for adding and removing images
@@ -75,15 +77,34 @@ namespace HotelApp.user_controls
             room_image5.Tag = room.ImagePath5;
             room_image5.Image = LoadImageFromPath(room.ImagePath5);
 
-            // Populate accessories list box with existing accessories
-            foreach (var accessory in room.RoomAccessories)
+            LoadRoomAccessories();
+        }
+
+        private void LoadRoomAccessories()
+        {
+            try
             {
-                ListBoxItem item = new ListBoxItem
+                SqlParameter[] parameters = new SqlParameter[]
                 {
-                    Text = accessory.Name,
-                    Tag = accessory.ID
+            new SqlParameter("@ar_rm_id_fk", room.ID)
                 };
-                accessories_listBox.Items.Add(item);
+
+                DataTable accessoriesTable = dbConnection.ExecuteStoredProcedure("Get_ROOMS_ROOM_ACCESSORIES_BY_ROOM_ID", parameters);
+                accessories_listBox.Items.Clear(); // Očistite prethodne stavke
+
+                foreach (DataRow accessoryRow in accessoriesTable.Rows)
+                {
+                    ListBoxItem item = new ListBoxItem
+                    {
+                        Text = accessoryRow["ac_name"].ToString(),
+                        Tag = (int)accessoryRow["ar_ac_id_fk"]
+                    };
+                    accessories_listBox.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška prilikom učitavanja dodatne opreme: " + ex.Message);
             }
         }
 
@@ -154,49 +175,6 @@ namespace HotelApp.user_controls
             }
         }
 
-        private void acessories_choose_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (acessories_choose.SelectedItem != null)
-            {
-                DataRowView selectedRow = (DataRowView)acessories_choose.SelectedItem;
-                string accessoryName = selectedRow["ac_name"].ToString();
-                int accessoryID = Convert.ToInt32(selectedRow["ac_id_pk"]);
-
-                if (!IsAccessoryAlreadyInList(accessoryID))
-                {
-                    ListBoxItem item = new ListBoxItem
-                    {
-                        Text = accessoryName,
-                        Tag = accessoryID
-                    };
-                    accessories_listBox.Items.Add(item);
-                }
-            }
-        }
-
-        private bool IsAccessoryAlreadyInList(int accessoryID)
-        {
-            foreach (object item in accessories_listBox.Items)
-            {
-                if (item is ListBoxItem listBoxItem)
-                {
-                    if ((int)listBoxItem.Tag == accessoryID)
-                    {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-
-        private void remove_acc_btn_Click(object sender, EventArgs e)
-        {
-            if (accessories_listBox.SelectedItem != null)
-            {
-                accessories_listBox.Items.Remove(accessories_listBox.SelectedItem);
-            }
-        }
-
         private void UpdateRoom()
         {
             try
@@ -230,7 +208,7 @@ namespace HotelApp.user_controls
                 dbConnection.ExecuteStoredProcedure("UPDATE_ROOM", parameters);
 
                 // Update room accessories
-                dbConnection.ExecuteStoredProcedure("DELETE_ROOM_ACCESSORIES_BY_ROOM_ID", new SqlParameter[] {
+                dbConnection.ExecuteStoredProcedure("Delete_ROOMS_ROOM_ACCESSORY_BY_ROOM_ID", new SqlParameter[] {
                     new SqlParameter("@ar_rm_id_fk", room.ID)
                 });
 
@@ -240,8 +218,9 @@ namespace HotelApp.user_controls
                         new SqlParameter("@ar_rm_id_fk", room.ID),
                         new SqlParameter("@ar_ac_id_fk", item.Tag)
                     };
-                    dbConnection.ExecuteStoredProcedure("INSERT_ROOM_ACCESSORY", accessoryParameters);
+                    dbConnection.ExecuteStoredProcedure("Insert_ROOMS_ROOM_ACCESSORY", accessoryParameters);
                 }
+
 
                 MessageBox.Show("Room updated successfully.");
             }
@@ -251,10 +230,72 @@ namespace HotelApp.user_controls
             }
         }
 
+        private void acessories_choose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (acessories_choose.SelectedItem != null)
+            {
+                // Dohvati odabrani redak iz DataTable
+                DataRowView selectedRow = (DataRowView)acessories_choose.SelectedItem;
+                string accessoryName = selectedRow["ac_name"].ToString();
+                int accessoryID = Convert.ToInt32(selectedRow["ac_id_pk"]);
+
+                // Formatiraj stavku kao samo naziv dodatka
+                string itemText = accessoryName;
+
+                // Provjeri je li dodatak već u ListBoxu
+                if (!IsAccessoryAlreadyInList(accessoryID))
+                {
+                    // Dodaj dodatak u ListBox
+                    ListBoxItem item = new ListBoxItem
+                    {
+                        Text = itemText,
+                        Tag = accessoryID
+                    };
+                    accessories_listBox.Items.Add(item);
+                }
+
+            }
+        }
+
+        private bool IsAccessoryAlreadyInList(int accessoryID)
+        {
+            foreach (object item in accessories_listBox.Items)
+            {
+                if (item is ListBoxItem listBoxItem)
+                {
+                    if ((int)listBoxItem.Tag == accessoryID)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void remove_acc_btn_Click(object sender, EventArgs e)
+        {
+            if (accessories_listBox.SelectedItem != null)
+            {
+                // Ukloni stavku iz ListBoxa
+                accessories_listBox.Items.Remove(accessories_listBox.SelectedItem);
+            }
+        }
+
         private void btn_update_room_Click(object sender, EventArgs e)
         {
             UpdateRoom();
 
+            if (Application.OpenForms["RoomsForm"] is RoomsForm roomsForm)
+            {
+                roomsForm.LoadRoomsData();
+            }
+
+            this.Close();
         }
     }
 }

@@ -237,6 +237,7 @@
             remove_acc_btn.TabIndex = 4;
             remove_acc_btn.Text = "Remove item";
             remove_acc_btn.UseVisualStyleBackColor = true;
+            remove_acc_btn.Click += remove_acc_btn_Click;
             // 
             // acessories_choose
             // 
@@ -245,6 +246,7 @@
             acessories_choose.Name = "acessories_choose";
             acessories_choose.Size = new Size(371, 33);
             acessories_choose.TabIndex = 3;
+            acessories_choose.SelectedIndexChanged += acessories_choose_SelectedIndexChanged;
             // 
             // accessories_listBox
             // 
@@ -476,6 +478,7 @@
             btn_cancel.TabIndex = 8;
             btn_cancel.Text = "Cancel";
             btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_update_room
             // 
@@ -485,6 +488,7 @@
             btn_update_room.TabIndex = 7;
             btn_update_room.Text = "Update";
             btn_update_room.UseVisualStyleBackColor = true;
+            btn_update_room.Click += btn_update_room_Click;
             // 
             // Room_UpdateForm
             // 
