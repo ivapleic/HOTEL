@@ -15,6 +15,7 @@ namespace HotelApp.forms_main
         Form_Dashboard dashboardForm;
         Form_RoomsAccessories roomsAccessoriesForm;
         RoomTypesForm roomTypesForm;
+        Form_AddServices addServicesForm;
         Employee employee;
         public UserForm()
         {
@@ -27,6 +28,7 @@ namespace HotelApp.forms_main
         }
 
         bool managementExpand = false;
+        bool reservationExpand = false;
 
         private void mdiProp()
         {
@@ -39,7 +41,7 @@ namespace HotelApp.forms_main
             if (!managementExpand)
             {
                 pnl_management.Height += 10;
-                if (pnl_management.Height >= 323)
+                if (pnl_management.Height >= 386)
                 {
                     managementTransition.Stop();
                     managementExpand = true;
@@ -178,6 +180,7 @@ namespace HotelApp.forms_main
             }
             ShowFormInPanel(dashboardForm);
         }
+
         private void Form_Dashboard_FormClosed(object? sender, FormClosedEventArgs e)
         {
             dashboardForm = null;
@@ -192,6 +195,7 @@ namespace HotelApp.forms_main
             }
             ShowFormInPanel(roomsAccessoriesForm);
         }
+
         private void Form_RoomAccessories_FormClosed(object? sender, FormClosedEventArgs e)
         {
             roomsAccessoriesForm = null;
@@ -210,6 +214,52 @@ namespace HotelApp.forms_main
         private void RoomTypesForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             roomTypesForm = null;
+        }
+
+        private void btn_reservations_Click(object sender, EventArgs e)
+        {
+            reservationTransition.Start();
+        }
+
+        private void UserForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reservationTransition_Tick(object sender, EventArgs e)
+        {
+            if (!reservationExpand)
+            {
+                pnl_reservations.Height += 10;
+                if (pnl_reservations.Height >= 359)
+                {
+                    reservationTransition.Stop();
+                    reservationExpand = true;
+                }
+            }
+            else
+            {
+                pnl_reservations.Height -= 10;
+                if (pnl_reservations.Height <= 56)
+                {
+                    reservationTransition.Stop();
+                    reservationExpand = false;
+                }
+            }
+        }
+
+        private void btn_add_services_Click(object sender, EventArgs e)
+        {
+            if (addServicesForm == null)
+            {
+                addServicesForm = new Form_AddServices();
+                addServicesForm.FormClosed += Form_AddServices_FormClosed;
+            }
+            ShowFormInPanel(addServicesForm);
+        }
+        private void Form_AddServices_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            addServicesForm = null;
         }
     }
 }

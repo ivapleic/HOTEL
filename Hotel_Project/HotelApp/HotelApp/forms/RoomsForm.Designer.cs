@@ -115,7 +115,7 @@
             // btn_add_room
             // 
             btn_add_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_add_room.Location = new Point(1140, 263);
+            btn_add_room.Location = new Point(1153, 259);
             btn_add_room.Name = "btn_add_room";
             btn_add_room.Size = new Size(164, 58);
             btn_add_room.TabIndex = 4;
@@ -126,7 +126,7 @@
             // btn_delete_room
             // 
             btn_delete_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_delete_room.Location = new Point(1141, 358);
+            btn_delete_room.Location = new Point(1154, 354);
             btn_delete_room.Name = "btn_delete_room";
             btn_delete_room.Size = new Size(163, 62);
             btn_delete_room.TabIndex = 5;
@@ -137,7 +137,7 @@
             // btn_update_room
             // 
             btn_update_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_update_room.Location = new Point(1141, 460);
+            btn_update_room.Location = new Point(1154, 456);
             btn_update_room.Name = "btn_update_room";
             btn_update_room.Size = new Size(163, 60);
             btn_update_room.TabIndex = 6;
@@ -148,7 +148,7 @@
             // btn_room_details
             // 
             btn_room_details.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_room_details.Location = new Point(1141, 557);
+            btn_room_details.Location = new Point(1154, 553);
             btn_room_details.Name = "btn_room_details";
             btn_room_details.Size = new Size(163, 61);
             btn_room_details.TabIndex = 7;
@@ -160,7 +160,7 @@
             // 
             dataGridViewRooms.AllowUserToAddRows = false;
             dataGridViewRooms.AllowUserToDeleteRows = false;
-            dataGridViewRooms.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridViewRooms.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             dataGridViewRooms.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewRooms.BackgroundColor = Color.White;
             dataGridViewRooms.BorderStyle = BorderStyle.None;
