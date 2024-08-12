@@ -16,6 +16,12 @@
     <Compile Update="forms\Form_RoomTypes.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="forms\Form_RoomTypeSeasonPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Form_SeasonalPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="forms\RoomsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -49,6 +55,12 @@
     <Compile Update="user_controls\RoomDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="user_controls\RoomTypeSeasonalPrices_AddNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\RoomTypeSeasonalPrices_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="user_controls\RoomType_AddNewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +71,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="user_controls\Room_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\SeasonalPeriod_AddNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\SeasonalPeriod_UpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

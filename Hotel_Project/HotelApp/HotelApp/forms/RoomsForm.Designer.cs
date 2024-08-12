@@ -160,7 +160,7 @@
             // 
             dataGridViewRooms.AllowUserToAddRows = false;
             dataGridViewRooms.AllowUserToDeleteRows = false;
-            dataGridViewRooms.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            dataGridViewRooms.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewRooms.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewRooms.BackgroundColor = Color.White;
             dataGridViewRooms.BorderStyle = BorderStyle.None;

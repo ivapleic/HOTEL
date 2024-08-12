@@ -16,6 +16,9 @@ namespace HotelApp.forms_main
         Form_RoomsAccessories roomsAccessoriesForm;
         RoomTypesForm roomTypesForm;
         Form_AddServices addServicesForm;
+        Form_SeasonalPeriods form_SeasonalPrices;
+        Form_RoomTypeSeasonPrice form_RoomTypeSeasonalPrice;
+
         Employee employee;
         public UserForm()
         {
@@ -260,6 +263,35 @@ namespace HotelApp.forms_main
         private void Form_AddServices_FormClosed(object sender, FormClosedEventArgs e)
         {
             addServicesForm = null;
+        }
+
+        private void btn_seasonal_prices_Click(object sender, EventArgs e)
+        {
+            if (form_SeasonalPrices == null)
+            {
+                form_SeasonalPrices = new Form_SeasonalPeriods();
+                form_SeasonalPrices.FormClosed += Form_SeasonalPrices_FormClosed;
+            }
+            ShowFormInPanel(form_SeasonalPrices);
+        }
+        private void Form_SeasonalPrices_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form_SeasonalPrices = null;
+        }
+
+        private void btn_RoomTypes_Prices_Click(object sender, EventArgs e)
+        {
+            if (form_RoomTypeSeasonalPrice == null)
+            {
+                form_RoomTypeSeasonalPrice = new Form_RoomTypeSeasonPrice();
+                form_RoomTypeSeasonalPrice.FormClosed += Form_RoomTypeSeasonPrice_FormClosed;
+            }
+            ShowFormInPanel(form_RoomTypeSeasonalPrice);
+
+        }
+        private void Form_RoomTypeSeasonPrice_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form_RoomTypeSeasonalPrice = null;
         }
     }
 }

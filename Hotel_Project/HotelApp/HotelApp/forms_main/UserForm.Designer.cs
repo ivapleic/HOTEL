@@ -58,10 +58,12 @@
             btn_room_acc = new Button();
             btn_room_types = new Button();
             btn_add_services = new Button();
+            btn_seasonal_prices = new Button();
             pnl_exit = new Panel();
             btn_exit = new Button();
             main_panel = new Panel();
             reservationTransition = new System.Windows.Forms.Timer(components);
+            btn_RoomTypes_Prices = new Button();
             pnl_navbar.SuspendLayout();
             pnl_settings.SuspendLayout();
             pnl_about.SuspendLayout();
@@ -81,7 +83,7 @@
             pnl_navbar.Dock = DockStyle.Top;
             pnl_navbar.Location = new Point(0, 0);
             pnl_navbar.Name = "pnl_navbar";
-            pnl_navbar.Size = new Size(1121, 61);
+            pnl_navbar.Size = new Size(1353, 61);
             pnl_navbar.TabIndex = 0;
             // 
             // label1
@@ -163,7 +165,7 @@
             pnl_settings.BackColor = Color.FromArgb(235, 239, 241);
             pnl_settings.Controls.Add(btn_settings);
             pnl_settings.ForeColor = Color.Gray;
-            pnl_settings.Location = new Point(3, 269);
+            pnl_settings.Location = new Point(3, 716);
             pnl_settings.Name = "pnl_settings";
             pnl_settings.Size = new Size(265, 56);
             pnl_settings.TabIndex = 3;
@@ -190,7 +192,7 @@
             pnl_about.BackColor = Color.FromArgb(235, 239, 241);
             pnl_about.Controls.Add(btn_about);
             pnl_about.ForeColor = Color.Gray;
-            pnl_about.Location = new Point(3, 207);
+            pnl_about.Location = new Point(3, 654);
             pnl_about.Name = "pnl_about";
             pnl_about.Size = new Size(265, 56);
             pnl_about.TabIndex = 2;
@@ -218,7 +220,7 @@
             pnl_logout.BackColor = Color.FromArgb(235, 239, 241);
             pnl_logout.Controls.Add(btn_logout);
             pnl_logout.ForeColor = Color.Gray;
-            pnl_logout.Location = new Point(3, 331);
+            pnl_logout.Location = new Point(3, 778);
             pnl_logout.Name = "pnl_logout";
             pnl_logout.Size = new Size(265, 56);
             pnl_logout.TabIndex = 1;
@@ -291,7 +293,7 @@
             pnl_sidebar.Dock = DockStyle.Left;
             pnl_sidebar.Location = new Point(0, 61);
             pnl_sidebar.Name = "pnl_sidebar";
-            pnl_sidebar.Size = new Size(271, 601);
+            pnl_sidebar.Size = new Size(271, 689);
             pnl_sidebar.TabIndex = 2;
             // 
             // pnl_reservations
@@ -415,10 +417,12 @@
             pnl_management.Controls.Add(btn_room_acc);
             pnl_management.Controls.Add(btn_room_types);
             pnl_management.Controls.Add(btn_add_services);
+            pnl_management.Controls.Add(btn_seasonal_prices);
+            pnl_management.Controls.Add(btn_RoomTypes_Prices);
             pnl_management.ForeColor = Color.Gray;
             pnl_management.Location = new Point(3, 134);
             pnl_management.Name = "pnl_management";
-            pnl_management.Size = new Size(265, 67);
+            pnl_management.Size = new Size(265, 514);
             pnl_management.TabIndex = 4;
             // 
             // btn_room_acc
@@ -469,13 +473,29 @@
             btn_add_services.UseVisualStyleBackColor = true;
             btn_add_services.Click += btn_add_services_Click;
             // 
+            // btn_seasonal_prices
+            // 
+            btn_seasonal_prices.FlatAppearance.BorderSize = 0;
+            btn_seasonal_prices.FlatStyle = FlatStyle.Flat;
+            btn_seasonal_prices.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_seasonal_prices.ForeColor = Color.Gray;
+            btn_seasonal_prices.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_seasonal_prices.Location = new Point(3, 379);
+            btn_seasonal_prices.Name = "btn_seasonal_prices";
+            btn_seasonal_prices.Padding = new Padding(10, 0, 0, 0);
+            btn_seasonal_prices.Size = new Size(262, 56);
+            btn_seasonal_prices.TabIndex = 6;
+            btn_seasonal_prices.Text = "Seasonal Prices";
+            btn_seasonal_prices.UseVisualStyleBackColor = true;
+            btn_seasonal_prices.Click += btn_seasonal_prices_Click;
+            // 
             // pnl_exit
             // 
             pnl_exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             pnl_exit.BackColor = Color.FromArgb(235, 239, 241);
             pnl_exit.Controls.Add(btn_exit);
             pnl_exit.ForeColor = Color.Gray;
-            pnl_exit.Location = new Point(3, 393);
+            pnl_exit.Location = new Point(3, 840);
             pnl_exit.Name = "pnl_exit";
             pnl_exit.Size = new Size(265, 56);
             pnl_exit.TabIndex = 5;
@@ -503,7 +523,7 @@
             main_panel.Dock = DockStyle.Fill;
             main_panel.Location = new Point(271, 61);
             main_panel.Name = "main_panel";
-            main_panel.Size = new Size(850, 601);
+            main_panel.Size = new Size(1082, 689);
             main_panel.TabIndex = 4;
             // 
             // reservationTransition
@@ -511,12 +531,28 @@
             reservationTransition.Interval = 10;
             reservationTransition.Tick += reservationTransition_Tick;
             // 
+            // btn_RoomTypes_Prices
+            // 
+            btn_RoomTypes_Prices.FlatAppearance.BorderSize = 0;
+            btn_RoomTypes_Prices.FlatStyle = FlatStyle.Flat;
+            btn_RoomTypes_Prices.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_RoomTypes_Prices.ForeColor = Color.Gray;
+            btn_RoomTypes_Prices.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_RoomTypes_Prices.Location = new Point(3, 441);
+            btn_RoomTypes_Prices.Name = "btn_RoomTypes_Prices";
+            btn_RoomTypes_Prices.Padding = new Padding(10, 0, 0, 0);
+            btn_RoomTypes_Prices.Size = new Size(262, 56);
+            btn_RoomTypes_Prices.TabIndex = 7;
+            btn_RoomTypes_Prices.Text = "Room Types Seasonal Prices";
+            btn_RoomTypes_Prices.UseVisualStyleBackColor = true;
+            btn_RoomTypes_Prices.Click += btn_RoomTypes_Prices_Click;
+            // 
             // UserForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1121, 662);
+            ClientSize = new Size(1353, 750);
             Controls.Add(main_panel);
             Controls.Add(pnl_sidebar);
             Controls.Add(pnl_navbar);
@@ -575,5 +611,7 @@
         private Button btn_check_inout;
         private System.Windows.Forms.Timer reservationTransition;
         private Button btn_add_services;
+        private Button btn_seasonal_prices;
+        private Button btn_RoomTypes_Prices;
     }
 }
