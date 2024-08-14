@@ -37,6 +37,7 @@
             panel_prices = new Panel();
             btn_add_prices = new Button();
             btn_update_price = new Button();
+            btn_delete_price = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPrices).BeginInit();
             panel_prices.SuspendLayout();
@@ -148,12 +149,24 @@
             btn_update_price.UseVisualStyleBackColor = true;
             btn_update_price.Click += btn_update_price_Click;
             // 
+            // btn_delete_price
+            // 
+            btn_delete_price.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_delete_price.Location = new Point(1127, 405);
+            btn_delete_price.Name = "btn_delete_price";
+            btn_delete_price.Size = new Size(164, 58);
+            btn_delete_price.TabIndex = 10;
+            btn_delete_price.Text = "Delete";
+            btn_delete_price.UseVisualStyleBackColor = true;
+            btn_delete_price.Click += btn_delete_price_Click;
+            // 
             // Form_RoomTypeSeasonPrice
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1320, 659);
+            Controls.Add(btn_delete_price);
             Controls.Add(btn_update_price);
             Controls.Add(btn_add_prices);
             Controls.Add(panel_prices);
@@ -180,5 +193,6 @@
         private Button btn_delete_room;
         private Button btn_add_prices;
         private Button btn_update_price;
+        private Button btn_delete_price;
     }
 }

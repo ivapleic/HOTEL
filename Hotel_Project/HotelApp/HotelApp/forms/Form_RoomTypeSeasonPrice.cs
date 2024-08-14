@@ -166,7 +166,7 @@ namespace HotelApp.forms
                 {
                     if (updateForm.ShowDialog() == DialogResult.OK)
                     {
-                        decimal updatedPrice = updateForm.selectedRoomTypeSeasonalPrice.Price;    
+                        decimal updatedPrice = updateForm.selectedRoomTypeSeasonalPrice.Price;
                         // Pozovi metodu za spremanje promjena u bazu podataka
                         UpdateRoomPriceInDatabase(rowID, updatedPrice);
 
@@ -223,6 +223,68 @@ namespace HotelApp.forms
 
                     connection.Open();
                     command.ExecuteNonQuery(); // Execute the stored procedure
+                }
+            }
+        }
+
+        private void btn_delete_price_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewPrices.SelectedCells.Count > 0)
+            {
+                DataGridViewCell selectedCell = dataGridViewPrices.SelectedCells[0];
+                int rowIndex = selectedCell.RowIndex;
+
+                RoomType_SeasonalPrices roomType_SeasonalPrices = new RoomType_SeasonalPrices();
+
+                // Dohvati podatke iz odabrane ćelije
+                int roomTypeID = Convert.ToInt32(dataGridViewPrices.Rows[rowIndex].Cells["RoomTypeID"].Value);
+                string seasonName = dataGridViewPrices.Columns[selectedCell.ColumnIndex].HeaderText;
+                decimal currentPrice = selectedCell.Value != null ? Convert.ToDecimal(selectedCell.Value) : 0;
+
+                // Nađi odgovarajući ID sezonskog perioda
+                int seasonalPeriodID = GetSeasonalPeriodIDFromColumnName(seasonName);
+
+                // Dobij ID retka koristeći funkciju GetIDByDetails
+                int rowID = roomType_SeasonalPrices.GetIDByDetails(roomTypeID, seasonalPeriodID, currentPrice);
+
+                // Ako ID nije pronađen, prikaži poruku o grešci
+                if (rowID == -1)
+                {
+                    MessageBox.Show("Ne mogu pronaći ID za odabrane detalje.");
+                    return;
+                }
+
+                // Potvrda brisanja
+                var confirmResult = MessageBox.Show("Jeste li sigurni da želite izbrisati ovu cijenu?", "Potvrda brisanja", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    // Pozovite metodu za brisanje
+                    DeleteRoomPriceFromDatabase(rowID);
+
+                    // Osvježite sve podatke u DataGridView
+                    RefreshPricesTable();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Molimo odaberite ćeliju iz stupaca za zimu, ljeto ili jesen za brisanje cijene.");
+            }
+        }
+        private void DeleteRoomPriceFromDatabase(int rowID)
+        {
+            using (var connection = dbConnection.GetConnection())
+            {
+                string procedureName = "Delete_ROOM_TYPE_SEASONAL_PRICE";
+
+                using (var command = new SqlCommand(procedureName, connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Definišite parametar za spremljenu proceduru
+                    command.Parameters.Add(new SqlParameter("@rtsp_id_pk", SqlDbType.Int) { Value = rowID });
+
+                    connection.Open();
+                    command.ExecuteNonQuery(); // Izvrši spremljenu proceduru
                 }
             }
         }

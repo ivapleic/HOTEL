@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|c:\\users\\korisnik\\desktop\\hotel\\hotel_project\\hotelapp\\hotelapp\\forms\\form_roomtypeseasonprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|solutionrelative:hotelapp\\forms\\form_roomtypeseasonprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|c:\\users\\korisnik\\desktop\\hotel\\hotel_project\\hotelapp\\hotelapp\\forms\\form_roomtypeseasonprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5609A14B-1BC4-47DD-88F1-80E580DC4E96}|HotelApp\\HotelApp.csproj|solutionrelative:hotelapp\\forms\\form_roomtypeseasonprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form_RoomTypeSeasonPrice.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_RoomTypeSeasonPrice.cs",
+              "RelativeDocumentMoniker": "HotelApp\\forms\\Form_RoomTypeSeasonPrice.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_RoomTypeSeasonPrice.cs",
+              "RelativeToolTip": "HotelApp\\forms\\Form_RoomTypeSeasonPrice.cs",
+              "ViewState": "AQIAAPoAAAAAAAAAAADwv/sAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T16:13:37.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form_RoomTypeSeasonPrice.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_RoomTypeSeasonPrice.cs",
+              "RelativeDocumentMoniker": "HotelApp\\forms\\Form_RoomTypeSeasonPrice.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Desktop\\HOTEL\\Hotel_Project\\HotelApp\\HotelApp\\forms\\Form_RoomTypeSeasonPrice.cs [Design]",
+              "RelativeToolTip": "HotelApp\\forms\\Form_RoomTypeSeasonPrice.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T16:12:37.852Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
