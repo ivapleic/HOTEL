@@ -132,7 +132,101 @@ namespace HotelApp.forms
 
         private void btn_update_price_Click(object sender, EventArgs e)
         {
+            if (dataGridViewPrices.SelectedCells.Count > 0)
+            {
+                RoomType_SeasonalPrices roomType_SeasonalPrices = new RoomType_SeasonalPrices();
 
+                DataGridViewCell selectedCell = dataGridViewPrices.SelectedCells[0];
+                int rowIndex = selectedCell.RowIndex;
+                int columnIndex = selectedCell.ColumnIndex;
+
+                // Dohvati podatke iz odabrane ćelije
+                int roomTypeID = Convert.ToInt32(dataGridViewPrices.Rows[rowIndex].Cells["RoomTypeID"].Value);
+                string seasonName = dataGridViewPrices.Columns[columnIndex].HeaderText;
+                decimal currentPrice = selectedCell.Value != null ? Convert.ToDecimal(selectedCell.Value) : 0;
+
+                // Nađi odgovarajući ID sezonskog perioda
+                int seasonalPeriodID = GetSeasonalPeriodIDFromColumnName(seasonName);
+
+                // Dobij ID retka koristeći funkciju GetIDByDetails
+                int rowID = roomType_SeasonalPrices.GetIDByDetails(roomTypeID, seasonalPeriodID, currentPrice);
+
+                // Ako ID nije pronađen, prikaži poruku o grešci
+                if (rowID == -1)
+                {
+                    MessageBox.Show("Ne mogu pronaći ID za odabrane detalje.");
+                    return;
+                }
+
+                // Kreiraj instancu RoomType_SeasonalPrices s dobivenim ID-em
+                var roomTypeSeasonalPrice = new RoomType_SeasonalPrices(rowID, roomTypeID, seasonalPeriodID, currentPrice);
+
+                // Otvori formu za ažuriranje
+                using (var updateForm = new RoomTypeSeasonalPrices_UpdateForm(roomTypeSeasonalPrice))
+                {
+                    if (updateForm.ShowDialog() == DialogResult.OK)
+                    {
+                        decimal updatedPrice = updateForm.selectedRoomTypeSeasonalPrice.Price;    
+                        // Pozovi metodu za spremanje promjena u bazu podataka
+                        UpdateRoomPriceInDatabase(rowID, updatedPrice);
+
+                        // Osvježi sve podatke u DataGridView
+                        RefreshPricesTable();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Molimo odaberite ćeliju iz stupaca za zimu, ljeto ili jesen za ažuriranje cijene.");
+            }
         }
+
+
+        public int GetSeasonalPeriodIDFromColumnName(string seasonName)
+        {
+            int id = -1;
+            dbConnection = new DBConnection();
+
+            using (var connection = dbConnection.GetConnection())
+            {
+                string query = "SELECT sp_id_pk FROM SEASONAL_PERIODS WHERE sp_name = @sp_name";
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add(new SqlParameter("@sp_name", SqlDbType.NVarChar) { Value = seasonName });
+
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null)
+                    {
+                        id = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return id;
+        }
+
+
+        private void UpdateRoomPriceInDatabase(int rowID, decimal newPrice)
+        {
+            using (var connection = dbConnection.GetConnection())
+            {
+                string procedureName = "Update_ROOM_TYPE_SEASONAL_PRICE";
+
+                using (var command = new SqlCommand(procedureName, connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Define the parameters for the stored procedure
+                    command.Parameters.Add(new SqlParameter("@rtsp_id_pk", SqlDbType.Int) { Value = rowID });
+                    command.Parameters.Add(new SqlParameter("@rtsp_price", SqlDbType.Decimal) { Value = newPrice });
+
+                    connection.Open();
+                    command.ExecuteNonQuery(); // Execute the stored procedure
+                }
+            }
+        }
+
+
     }
 }

@@ -104,8 +104,9 @@
             btn_update_price.Name = "btn_update_price";
             btn_update_price.Size = new Size(139, 57);
             btn_update_price.TabIndex = 43;
-            btn_update_price.Text = "Add ";
+            btn_update_price.Text = "Update";
             btn_update_price.UseVisualStyleBackColor = true;
+            btn_update_price.Click += btn_update_price_Click;
             // 
             // txtPrice
             // 

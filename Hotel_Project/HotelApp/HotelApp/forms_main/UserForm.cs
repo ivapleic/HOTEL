@@ -44,7 +44,7 @@ namespace HotelApp.forms_main
             if (!managementExpand)
             {
                 pnl_management.Height += 10;
-                if (pnl_management.Height >= 386)
+                if (pnl_management.Height >= 501)
                 {
                     managementTransition.Stop();
                     managementExpand = true;

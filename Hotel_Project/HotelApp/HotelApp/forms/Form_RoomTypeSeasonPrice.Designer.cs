@@ -112,7 +112,7 @@
             dataGridViewPrices.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewPrices.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewPrices.RowTemplate.Height = 30;
-            dataGridViewPrices.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewPrices.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dataGridViewPrices.Size = new Size(1038, 510);
             dataGridViewPrices.TabIndex = 3;
             // 
