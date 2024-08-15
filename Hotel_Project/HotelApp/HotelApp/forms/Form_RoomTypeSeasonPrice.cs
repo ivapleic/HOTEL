@@ -270,6 +270,7 @@ namespace HotelApp.forms
                 MessageBox.Show("Molimo odaberite ćeliju iz stupaca za zimu, ljeto ili jesen za brisanje cijene.");
             }
         }
+        
         private void DeleteRoomPriceFromDatabase(int rowID)
         {
             using (var connection = dbConnection.GetConnection())

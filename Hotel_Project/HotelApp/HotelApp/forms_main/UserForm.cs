@@ -10,6 +10,7 @@ namespace HotelApp.forms_main
 {
     public partial class UserForm : Form
     {
+        Employee employee;
         RoomsForm roomsForm;
         Form_Floors floorsForm;
         Form_Dashboard dashboardForm;
@@ -18,8 +19,8 @@ namespace HotelApp.forms_main
         Form_AddServices addServicesForm;
         Form_SeasonalPeriods form_SeasonalPrices;
         Form_RoomTypeSeasonPrice form_RoomTypeSeasonalPrice;
+        Form_Reservations form_Reservations;
 
-        Employee employee;
         public UserForm()
         {
             InitializeComponent();
@@ -292,6 +293,20 @@ namespace HotelApp.forms_main
         private void Form_RoomTypeSeasonPrice_FormClosed(object sender, FormClosedEventArgs e)
         {
             form_RoomTypeSeasonalPrice = null;
+        }
+
+        private void btn_reservation_list_Click(object sender, EventArgs e)
+        {
+            if (form_Reservations == null)
+            {
+                form_Reservations = new Form_Reservations(employee);
+                form_Reservations.FormClosed += Form_Reservations_FormClosed;
+            }
+            ShowFormInPanel(form_Reservations);
+        }
+        private void Form_Reservations_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form_Reservations = null;
         }
     }
 }

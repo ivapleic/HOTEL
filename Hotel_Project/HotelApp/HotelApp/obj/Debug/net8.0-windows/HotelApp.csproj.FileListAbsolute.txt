@@ -92,3 +92,5 @@ C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.Form_RoomTypeSeasonPrice.resources
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.RoomTypeSeasonalPrices_AddNewForm.resources
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.RoomTypeSeasonalPrices_UpdateForm.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.Form_Reservations.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.Reservations_DetailsForm.resources

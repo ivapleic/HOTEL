@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace HotelApp.classes_main
 {
-    internal class Identification
+    public class Identification
     {
+        public int ID { get; set; }  
+        public string Name { get; set; }  
+
+        public Identification(int id, string name, string indexKey)
+        {
+            ID = id;
+            Name = name;
+        }
+
+        public Identification() { }
     }
 }

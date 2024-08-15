@@ -10,6 +10,9 @@
     <Compile Update="forms\Form_Floors.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="forms\Form_Reservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="forms\Form_RoomsAccessories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -47,6 +50,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="user_controls\Floor_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\Reservations_DetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="user_controls\RoomAcc_UpdateForm.cs">

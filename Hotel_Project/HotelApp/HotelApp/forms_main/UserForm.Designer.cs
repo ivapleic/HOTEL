@@ -165,7 +165,7 @@
             pnl_settings.BackColor = Color.FromArgb(235, 239, 241);
             pnl_settings.Controls.Add(btn_settings);
             pnl_settings.ForeColor = Color.Gray;
-            pnl_settings.Location = new Point(3, 270);
+            pnl_settings.Location = new Point(3, 565);
             pnl_settings.Name = "pnl_settings";
             pnl_settings.Size = new Size(265, 56);
             pnl_settings.TabIndex = 3;
@@ -192,7 +192,7 @@
             pnl_about.BackColor = Color.FromArgb(235, 239, 241);
             pnl_about.Controls.Add(btn_about);
             pnl_about.ForeColor = Color.Gray;
-            pnl_about.Location = new Point(3, 208);
+            pnl_about.Location = new Point(3, 503);
             pnl_about.Name = "pnl_about";
             pnl_about.Size = new Size(265, 56);
             pnl_about.TabIndex = 2;
@@ -220,7 +220,7 @@
             pnl_logout.BackColor = Color.FromArgb(235, 239, 241);
             pnl_logout.Controls.Add(btn_logout);
             pnl_logout.ForeColor = Color.Gray;
-            pnl_logout.Location = new Point(3, 332);
+            pnl_logout.Location = new Point(3, 627);
             pnl_logout.Name = "pnl_logout";
             pnl_logout.Size = new Size(265, 56);
             pnl_logout.TabIndex = 1;
@@ -307,7 +307,7 @@
             pnl_reservations.Controls.Add(btn_reservations);
             pnl_reservations.Location = new Point(3, 65);
             pnl_reservations.Name = "pnl_reservations";
-            pnl_reservations.Size = new Size(265, 63);
+            pnl_reservations.Size = new Size(265, 358);
             pnl_reservations.TabIndex = 0;
             // 
             // btn_closed_reservations
@@ -373,6 +373,7 @@
             btn_reservation_list.TabIndex = 3;
             btn_reservation_list.Text = "Reservation list";
             btn_reservation_list.UseVisualStyleBackColor = false;
+            btn_reservation_list.Click += btn_reservation_list_Click;
             // 
             // btn_create_reservation
             // 
@@ -420,7 +421,7 @@
             pnl_management.Controls.Add(btn_seasonal_prices);
             pnl_management.Controls.Add(btn_RoomTypes_Prices);
             pnl_management.ForeColor = Color.Gray;
-            pnl_management.Location = new Point(3, 134);
+            pnl_management.Location = new Point(3, 429);
             pnl_management.Name = "pnl_management";
             pnl_management.Size = new Size(265, 68);
             pnl_management.TabIndex = 4;
@@ -511,7 +512,7 @@
             pnl_exit.BackColor = Color.FromArgb(235, 239, 241);
             pnl_exit.Controls.Add(btn_exit);
             pnl_exit.ForeColor = Color.Gray;
-            pnl_exit.Location = new Point(3, 394);
+            pnl_exit.Location = new Point(3, 689);
             pnl_exit.Name = "pnl_exit";
             pnl_exit.Size = new Size(265, 56);
             pnl_exit.TabIndex = 5;
