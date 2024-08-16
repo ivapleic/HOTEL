@@ -33,18 +33,6 @@ namespace HotelApp.forms
                 // Učitavanje podataka o sobama
                 DataTable roomsTable = dbConnection.ExecuteStoredProcedure("Get_ROOMS", new SqlParameter[0]);
 
-                // Učitavanje podataka o katovima
-                DataTable floorsTable = dbConnection.ExecuteStoredProcedure("Get_FLOORS", new SqlParameter[0]);
-
-                // Kreiranje mape ID-eva katova na brojeve katova
-                floorNumberMap = new Dictionary<int, int>();
-                foreach (DataRow floorRow in floorsTable.Rows)
-                {
-                    int floorId = (int)floorRow["fl_id_pk"];
-                    int floorNumber = (int)floorRow["fl_number"];
-                    floorNumberMap[floorId] = floorNumber;
-                }
-
                 // Osvježavanje podataka u DataGridView
                 dataGridViewRooms.Rows.Clear();
                 label_num_of_rooms.Text = $"{roomsTable.Rows.Count}";
@@ -59,7 +47,8 @@ namespace HotelApp.forms
                         Number = (int)roomRow["rm_nr"],
                         RoomTypeID = (int)roomRow["rm_rt_id_fk"],
                         RoomTypeName = roomRow["rt_name"].ToString(),
-                        FloorID = floorId,
+                        FloorID = (int)roomRow["rm_fl_id_fk"],
+                        FloorNumber = (int)roomRow["fl_number"],
                         Is_Active = (bool)roomRow["rm_active"],
                         Description = roomRow["rm_description"].ToString(),
                         ImagePath1 = roomRow["rm_image_1"].ToString(),
@@ -74,12 +63,11 @@ namespace HotelApp.forms
                         room.ID,
                         room.Number,
                         room.RoomTypeName,
-                        floorNumberMap.ContainsKey(floorId) ? floorNumberMap[floorId].ToString() : "N/A",
+                        room.FloorNumber,
                         room.Is_Active ? "Yes" : "No",
                         room.Description
                     );
 
-                    // Store the room object in the row's Tag property for later use
                     dataGridViewRooms.Rows[rowIndex].Tag = room;
                 }
             }
@@ -130,7 +118,7 @@ namespace HotelApp.forms
 
                 if (room != null)
                 {
-                    RoomDetailsForm roomDetailsForm = new RoomDetailsForm(room, floorNumberMap);
+                    RoomDetailsForm roomDetailsForm = new RoomDetailsForm(room);
                     roomDetailsForm.ShowDialog();
                 }
             }
@@ -138,7 +126,6 @@ namespace HotelApp.forms
 
         private void btn_room_details_Click(object sender, EventArgs e)
         {
-            // Provjeri je li odabran redak
             if (dataGridViewRooms.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Molimo odaberite sobu koju zelite detaljnije vidjeti.");
@@ -147,19 +134,14 @@ namespace HotelApp.forms
 
             try
             {
-                // Get the selected row
                 DataGridViewRow selectedRow = dataGridViewRooms.SelectedRows[0];
 
-                // Get the Room object from the selected row's Tag property
                 Room selectedRoom = (Room)selectedRow.Tag;
 
-                // Check if the selectedRoom is not null
                 if (selectedRoom != null)
                 {
-                    // Create an instance of RoomDetailsForm and pass the selectedRoom to it
-                    RoomDetailsForm roomDetailsForm = new RoomDetailsForm(selectedRoom, floorNumberMap);
+                    RoomDetailsForm roomDetailsForm = new RoomDetailsForm(selectedRoom);
 
-                    // Show the RoomDetailsForm as a dialog
                     roomDetailsForm.ShowDialog();
                 }
                 else

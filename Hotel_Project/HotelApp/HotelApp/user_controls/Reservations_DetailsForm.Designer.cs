@@ -64,13 +64,14 @@
             btn_exit = new Button();
             pnl_add_services = new Panel();
             label27 = new Label();
-            dataGridView1 = new DataGridView();
+            dataGridViewAddServices = new DataGridView();
             ServiceName = new DataGridViewTextBoxColumn();
             Amount = new DataGridViewTextBoxColumn();
             ReservationDate = new DataGridViewTextBoxColumn();
             ConsumationDate = new DataGridViewTextBoxColumn();
             pnl_guests = new Panel();
             dataGridViewGuests = new DataGridView();
+            GuestID = new DataGridViewTextBoxColumn();
             FirstName = new DataGridViewTextBoxColumn();
             LastName = new DataGridViewTextBoxColumn();
             StartDate = new DataGridViewTextBoxColumn();
@@ -79,7 +80,7 @@
             panel4 = new Panel();
             label26 = new Label();
             pnl_room = new Panel();
-            button1 = new Button();
+            btn_room_details = new Button();
             label_room_number = new Label();
             label24 = new Label();
             label_room_type = new Label();
@@ -93,7 +94,7 @@
             pnl_basics.SuspendLayout();
             panel3.SuspendLayout();
             pnl_add_services.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAddServices).BeginInit();
             pnl_guests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewGuests).BeginInit();
             panel4.SuspendLayout();
@@ -308,7 +309,7 @@
             // 
             label_reservation_date.AutoSize = true;
             label_reservation_date.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label_reservation_date.Location = new Point(202, 73);
+            label_reservation_date.Location = new Point(216, 73);
             label_reservation_date.Name = "label_reservation_date";
             label_reservation_date.Size = new Size(189, 23);
             label_reservation_date.TabIndex = 2;
@@ -428,7 +429,7 @@
             pnl_add_services.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             pnl_add_services.BackColor = Color.Gainsboro;
             pnl_add_services.Controls.Add(label27);
-            pnl_add_services.Controls.Add(dataGridView1);
+            pnl_add_services.Controls.Add(dataGridViewAddServices);
             pnl_add_services.Location = new Point(14, 507);
             pnl_add_services.Name = "pnl_add_services";
             pnl_add_services.Size = new Size(827, 265);
@@ -445,16 +446,16 @@
             label27.TabIndex = 9;
             label27.Text = "Additional services";
             // 
-            // dataGridView1
+            // dataGridViewAddServices
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewAddServices.AllowUserToAddRows = false;
+            dataGridViewAddServices.AllowUserToDeleteRows = false;
+            dataGridViewAddServices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridViewAddServices.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewAddServices.BackgroundColor = Color.White;
+            dataGridViewAddServices.BorderStyle = BorderStyle.None;
+            dataGridViewAddServices.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridViewAddServices.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -462,9 +463,9 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeight = 38;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ServiceName, Amount, ReservationDate, ConsumationDate });
+            dataGridViewAddServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewAddServices.ColumnHeadersHeight = 38;
+            dataGridViewAddServices.Columns.AddRange(new DataGridViewColumn[] { ServiceName, Amount, ReservationDate, ConsumationDate });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -472,16 +473,16 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.LightGray;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.Location = new Point(1, 33);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(824, 231);
-            dataGridView1.TabIndex = 2;
+            dataGridViewAddServices.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewAddServices.EnableHeadersVisualStyles = false;
+            dataGridViewAddServices.Location = new Point(1, 33);
+            dataGridViewAddServices.Name = "dataGridViewAddServices";
+            dataGridViewAddServices.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewAddServices.RowHeadersVisible = false;
+            dataGridViewAddServices.RowHeadersWidth = 62;
+            dataGridViewAddServices.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewAddServices.Size = new Size(824, 231);
+            dataGridViewAddServices.TabIndex = 2;
             // 
             // ServiceName
             // 
@@ -537,7 +538,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewGuests.ColumnHeadersHeight = 38;
-            dataGridViewGuests.Columns.AddRange(new DataGridViewColumn[] { FirstName, LastName, StartDate, EndDate, AddPerson });
+            dataGridViewGuests.Columns.AddRange(new DataGridViewColumn[] { GuestID, FirstName, LastName, StartDate, EndDate, AddPerson });
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = SystemColors.Window;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
@@ -555,6 +556,13 @@
             dataGridViewGuests.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewGuests.Size = new Size(824, 287);
             dataGridViewGuests.TabIndex = 1;
+            // 
+            // GuestID
+            // 
+            GuestID.HeaderText = "Guest ID";
+            GuestID.MinimumWidth = 8;
+            GuestID.Name = "GuestID";
+            GuestID.Visible = false;
             // 
             // FirstName
             // 
@@ -612,7 +620,7 @@
             // 
             pnl_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             pnl_room.BackColor = Color.Gainsboro;
-            pnl_room.Controls.Add(button1);
+            pnl_room.Controls.Add(btn_room_details);
             pnl_room.Controls.Add(label_room_number);
             pnl_room.Controls.Add(label24);
             pnl_room.Controls.Add(label_room_type);
@@ -623,14 +631,15 @@
             pnl_room.Size = new Size(827, 161);
             pnl_room.TabIndex = 1;
             // 
-            // button1
+            // btn_room_details
             // 
-            button1.Location = new Point(359, 112);
-            button1.Name = "button1";
-            button1.Size = new Size(149, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Details room";
-            button1.UseVisualStyleBackColor = true;
+            btn_room_details.Location = new Point(359, 112);
+            btn_room_details.Name = "btn_room_details";
+            btn_room_details.Size = new Size(149, 34);
+            btn_room_details.TabIndex = 0;
+            btn_room_details.Text = "Details room";
+            btn_room_details.UseVisualStyleBackColor = true;
+            btn_room_details.Click += btn_room_details_Click;
             // 
             // label_room_number
             // 
@@ -686,6 +695,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1621, 924);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -707,7 +717,7 @@
             panel3.ResumeLayout(false);
             pnl_add_services.ResumeLayout(false);
             pnl_add_services.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAddServices).EndInit();
             pnl_guests.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewGuests).EndInit();
             panel4.ResumeLayout(false);
@@ -758,19 +768,20 @@
         private Label label20;
         private Panel panel4;
         private Label label26;
-        private Button button1;
+        private Button btn_room_details;
         private Label label_room_number;
         private DataGridView dataGridViewGuests;
+        private Label label27;
+        private DataGridView dataGridViewAddServices;
+        private DataGridViewTextBoxColumn ServiceName;
+        private DataGridViewTextBoxColumn Amount;
+        private DataGridViewTextBoxColumn ReservationDate;
+        private DataGridViewTextBoxColumn ConsumationDate;
+        private DataGridViewTextBoxColumn GuestID;
         private DataGridViewTextBoxColumn FirstName;
         private DataGridViewTextBoxColumn LastName;
         private DataGridViewTextBoxColumn StartDate;
         private DataGridViewTextBoxColumn EndDate;
         private DataGridViewCheckBoxColumn AddPerson;
-        private Label label27;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ServiceName;
-        private DataGridViewTextBoxColumn Amount;
-        private DataGridViewTextBoxColumn ReservationDate;
-        private DataGridViewTextBoxColumn ConsumationDate;
     }
 }

@@ -12,6 +12,7 @@ namespace HotelApp.classes_main
         public int RoomTypeID { get; set; }
         public string RoomTypeName { get; set; }
         public int FloorID { get; set; }
+        public int FloorNumber { get; set; }
         public bool Is_Active { get; set; }
         public string Description { get; set; }
         public string ImagePath1 { get; set; }
@@ -28,6 +29,7 @@ namespace HotelApp.classes_main
             RoomTypeID = -1;
             RoomTypeName = "";
             FloorID = -1;
+            FloorNumber = 0;
             Is_Active = true;
             Description = "";
             ImagePath1 = "";

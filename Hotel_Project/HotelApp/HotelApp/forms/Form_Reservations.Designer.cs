@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
@@ -49,6 +49,7 @@
             CheckOutDate = new DataGridViewTextBoxColumn();
             ReservationStatus = new DataGridViewTextBoxColumn();
             btn_details_reservations = new Button();
+            btn_add_new_reservation = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -134,24 +135,24 @@
             dataGridViewReservations.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewReservations.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             dataGridViewReservations.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle4.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridViewReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewReservations.ColumnHeadersHeight = 55;
             dataGridViewReservations.Columns.AddRange(new DataGridViewColumn[] { ReservationID, ReservationNumber, RoomType, RoomNumber, EmployeName, StartDate, EndDate, CheckInDate, CheckOutDate, ReservationStatus });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridViewReservations.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridViewReservations.DefaultCellStyle = dataGridViewCellStyle5;
             dataGridViewReservations.EnableHeadersVisualStyles = false;
             dataGridViewReservations.GridColor = Color.White;
             dataGridViewReservations.Location = new Point(0, 0);
@@ -159,14 +160,14 @@
             dataGridViewReservations.Name = "dataGridViewReservations";
             dataGridViewReservations.ReadOnly = true;
             dataGridViewReservations.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridViewReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dataGridViewReservations.RowHeadersVisible = false;
             dataGridViewReservations.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewReservations.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -248,6 +249,7 @@
             // 
             // btn_details_reservations
             // 
+            btn_details_reservations.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn_details_reservations.Location = new Point(918, 630);
             btn_details_reservations.Name = "btn_details_reservations";
             btn_details_reservations.Size = new Size(133, 48);
@@ -256,12 +258,24 @@
             btn_details_reservations.UseVisualStyleBackColor = true;
             btn_details_reservations.Click += btn_details_reservations_Click;
             // 
+            // btn_add_new_reservation
+            // 
+            btn_add_new_reservation.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_add_new_reservation.Location = new Point(761, 630);
+            btn_add_new_reservation.Name = "btn_add_new_reservation";
+            btn_add_new_reservation.Size = new Size(133, 48);
+            btn_add_new_reservation.TabIndex = 6;
+            btn_add_new_reservation.Text = "Add new";
+            btn_add_new_reservation.UseVisualStyleBackColor = true;
+            btn_add_new_reservation.Click += btn_add_new_reservation_Click;
+            // 
             // Form_Reservations
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1320, 699);
+            Controls.Add(btn_add_new_reservation);
             Controls.Add(btn_details_reservations);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -299,5 +313,6 @@
         private DataGridViewTextBoxColumn CheckOutDate;
         private DataGridViewTextBoxColumn ReservationStatus;
         private Button btn_details_reservations;
+        private Button btn_add_new_reservation;
     }
 }

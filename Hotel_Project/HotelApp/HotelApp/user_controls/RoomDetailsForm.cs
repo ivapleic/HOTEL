@@ -16,7 +16,6 @@ namespace HotelApp.user_controls
         private Room room;
         private List<RoomAccessory> accessories;
         private DBConnection dbConnection;
-        private Dictionary<int, int> _floorNumberMap;
 
         public RoomDetailsForm()
         {
@@ -24,10 +23,9 @@ namespace HotelApp.user_controls
             dbConnection = new DBConnection();
         }
 
-        public RoomDetailsForm(Room room, Dictionary<int, int> floorNumberMap) : this()
+        public RoomDetailsForm(Room room) : this()
         {
             this.room = room;
-            _floorNumberMap = floorNumberMap;
             LoadRoomDetails();
         }
 
@@ -35,7 +33,7 @@ namespace HotelApp.user_controls
         {
             room_number_label.Text = room.Number.ToString();
             room_type_label.Text = room.RoomTypeName;
-            floor_number_label.Text = _floorNumberMap.ContainsKey(room.FloorID) ? _floorNumberMap[room.FloorID].ToString() : "N/A";
+            floor_number_label.Text = room.FloorNumber.ToString();
             room_available_label.Text = room.Is_Active ? "Yes" : "No";
             room_description_label.Text = room.Description;
 
@@ -77,7 +75,6 @@ namespace HotelApp.user_controls
             }
         }
 
-        // Metoda za prikaz slike u PictureBox-u
         private void DisplayImage(string imagePath, PictureBox pictureBox)
         {
             if (!string.IsNullOrWhiteSpace(imagePath))

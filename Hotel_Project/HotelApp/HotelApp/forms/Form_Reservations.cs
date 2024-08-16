@@ -19,10 +19,10 @@ namespace HotelApp.forms
         private DBConnection dbConnection;
         public Form_Reservations()
         {
-           InitializeComponent();
+            InitializeComponent();
 
         }
-        public Form_Reservations(Employee employee):this()
+        public Form_Reservations(Employee employee) : this()
         {
             dbConnection = new DBConnection();
 
@@ -58,17 +58,17 @@ namespace HotelApp.forms
                         ID = reservationID,
                         Number = reservationNumber,
                         EmployeeID = employeeID,
-                        EmployeeName=employeeFullName,
+                        EmployeeName = employeeFullName,
                         RoomID = roomID,
-                        RoomNumber=roomNumber,
-                        RoomTypeName =roomTypeName,
+                        RoomNumber = roomNumber,
+                        RoomTypeName = roomTypeName,
                         ReservationStatusID = reservationStatusID,
                         StartDate = startDate,
                         EndDate = endDate,
                         CheckInDate = checkInDate,
                         CheckOutDate = checkOutDate,
                         Description = reservationDescription,
-                        ReservationStatusName=reservationStatusName
+                        ReservationStatusName = reservationStatusName
                     };
 
                     int rowIndex = dataGridViewReservations.Rows.Add(
@@ -121,6 +121,12 @@ namespace HotelApp.forms
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void btn_add_new_reservation_Click(object sender, EventArgs e)
+        {
+            Reservations_AddNewForm addNewForm = new Reservations_AddNewForm();
+            addNewForm.ShowDialog();
         }
     }
 }
