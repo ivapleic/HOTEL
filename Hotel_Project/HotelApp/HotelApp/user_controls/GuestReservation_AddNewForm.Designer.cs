@@ -199,6 +199,7 @@
             Controls.Add(label34);
             Controls.Add(panel1);
             Name = "GuestReservation_AddNewForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "GuestReservation_AddNewForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

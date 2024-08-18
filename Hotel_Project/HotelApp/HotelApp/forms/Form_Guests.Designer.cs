@@ -232,6 +232,7 @@
             btn_details_guest.TabIndex = 10;
             btn_details_guest.Text = "Details";
             btn_details_guest.UseVisualStyleBackColor = true;
+            btn_details_guest.Click += btn_details_guest_Click;
             // 
             // btn_add
             // 

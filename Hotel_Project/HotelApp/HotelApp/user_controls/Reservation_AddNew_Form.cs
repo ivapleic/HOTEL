@@ -138,14 +138,93 @@ namespace HotelApp.user_controls
             Guest guest = new Guest();
             Guest selectedGuest = guest.GetGuestById(newReservationGuest.GuestID);
 
-            dataGridViewGuests.Rows.Add(selectedGuest.ID,selectedGuest.FirstName,selectedGuest.LastName,reservationGuest.DateStart,reservationGuest.DateEnd);
+            dataGridViewGuests.Rows.Add(selectedGuest.ID, selectedGuest.FirstName, selectedGuest.LastName, reservationGuest.DateStart, reservationGuest.DateEnd);
         }
+
         private void btn_add_guest_Click(object sender, EventArgs e)
         {
             Form_Guests guestsForm = new Form_Guests();
             guestsForm.Show();
-          
-            
+
+
+        }
+
+        private void btn_delete_guest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Provjeri je li neki redak odabran
+                if (dataGridViewGuests.SelectedRows.Count > 0)
+                {
+                    // Potvrdi s korisnikom
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this guest?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        // Ukloni odabrani redak iz DataGridView
+                        foreach (DataGridViewRow row in dataGridViewGuests.SelectedRows)
+                        {
+                            dataGridViewGuests.Rows.Remove(row);
+                        }
+
+                        MessageBox.Show("Guest deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a guest to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in deleting guest: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_update_guest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Provjeri je li neki redak odabran
+                if (dataGridViewGuests.SelectedRows.Count > 0)
+                {
+                    // Dohvati odabrani redak
+                    DataGridViewRow selectedRow = dataGridViewGuests.SelectedRows[0];
+
+                    // Prikupi podatke iz odabranog retka
+                    int rg_id_pk = Convert.ToInt32(selectedRow.Cells["rg_id_pk"].Value);
+                    int rg_rz_id_fk = Convert.ToInt32(selectedRow.Cells["rg_rz_id_fk"].Value);
+                    int rg_gu_id_fk = Convert.ToInt32(selectedRow.Cells["rg_gu_id_fk"].Value);
+                    DateTime rg_date_start = Convert.ToDateTime(selectedRow.Cells["rg_date_start"].Value);
+                    DateTime rg_date_end = Convert.ToDateTime(selectedRow.Cells["rg_date_end"].Value);
+                    bool rg_add_person = Convert.ToBoolean(selectedRow.Cells["rg_add_person"].Value);
+
+                    // Kreiraj objekt Reservation_Guest s podacima iz odabranog retka
+                    Reservation_Guest selectedReservationGuest = new Reservation_Guest
+                    {
+                        ID = rg_id_pk,
+                        ReservationID = rg_rz_id_fk,
+                        GuestID = rg_gu_id_fk,
+                        DateStart = rg_date_start,
+                        DateEnd= rg_date_end,
+                        IsAdditionalPerson = rg_add_person
+                    };
+
+                    // Kreiraj i prikaži novu formu za ažuriranje
+                    GuestReservation_UpdateForm updateForm = new GuestReservation_UpdateForm(selectedReservationGuest);
+                    updateForm.ShowDialog(); // Koristi ShowDialog za modalni prikaz forme
+
+                    // Osvježi DataGridView ako je potrebno nakon ažuriranja
+                    // Ovdje možeš dodati kod za osvježavanje prikaza ako je potrebno
+                }
+                else
+                {
+                    MessageBox.Show("Please select a guest to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in updating guest: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -17,7 +17,7 @@ namespace HotelApp.forms
     public partial class Form_Guests : Form
     {
         private DBConnection dbConnection;
-        public Guest selectedGuest ;
+        public Guest selectedGuest;
         public Form_Guests()
         {
             InitializeComponent();
@@ -195,6 +195,32 @@ namespace HotelApp.forms
             catch (Exception ex)
             {
                 MessageBox.Show("Error in selecting guest: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_details_guest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridViewGuests.SelectedRows.Count > 0)
+                {
+                    int GuestID = Convert.ToInt32(dataGridViewGuests.SelectedRows[0].Cells["GuestID"].Value);
+
+                    Guest guest = new Guest();
+                    Guest selectedGuest = guest.GetGuestById(GuestID);
+
+                    Guest_DetailsForm updateForm = new Guest_DetailsForm(selectedGuest);
+                    updateForm.ShowDialog();
+
+                }
+                else
+                {
+                    MessageBox.Show("Please select a guest to viwe details.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in guest details: " + ex.Message);
             }
         }
     }

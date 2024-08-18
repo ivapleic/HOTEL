@@ -564,6 +564,7 @@
             btn_update_guest.Size = new Size(65, 52);
             btn_update_guest.TabIndex = 14;
             btn_update_guest.UseVisualStyleBackColor = true;
+            btn_update_guest.Click += btn_update_guest_Click;
             // 
             // btn_delete_guest
             // 
@@ -574,6 +575,7 @@
             btn_delete_guest.Size = new Size(66, 52);
             btn_delete_guest.TabIndex = 13;
             btn_delete_guest.UseVisualStyleBackColor = true;
+            btn_delete_guest.Click += btn_delete_guest_Click;
             // 
             // btn_add_guest
             // 

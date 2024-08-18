@@ -58,10 +58,16 @@
     <Compile Update="user_controls\GuestReservation_AddNewForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="user_controls\GuestReservation_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="user_controls\Guests_AddNewForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="user_controls\Guests_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\Guest_DetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="user_controls\Reservations_DetailsForm.cs">
