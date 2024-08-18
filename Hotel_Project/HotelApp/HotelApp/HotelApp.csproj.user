@@ -10,6 +10,9 @@
     <Compile Update="forms\Form_Floors.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="forms\Form_Guests.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="forms\Form_Reservations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,10 +55,19 @@
     <Compile Update="user_controls\Floor_UpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="user_controls\Reservations_AddNewForm.cs">
+    <Compile Update="user_controls\GuestReservation_AddNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\Guests_AddNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\Guests_UpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="user_controls\Reservations_DetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\Reservation_AddNew_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="user_controls\RoomAcc_UpdateForm.cs">

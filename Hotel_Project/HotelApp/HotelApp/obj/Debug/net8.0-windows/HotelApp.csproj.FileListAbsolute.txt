@@ -94,4 +94,8 @@ C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.RoomTypeSeasonalPrices_UpdateForm.resources
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.Form_Reservations.resources
 C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.Reservations_DetailsForm.resources
-C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.Reservations_AddNewForm.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.Reservation_AddNew_Form.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.forms.Form_Guests.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.Guests_AddNewForm.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.Guests_UpdateForm.resources
+C:\Users\Korisnik\Desktop\HOTEL\Hotel_Project\HotelApp\HotelApp\obj\Debug\net8.0-windows\HotelApp.user_controls.GuestReservation_AddNewForm.resources

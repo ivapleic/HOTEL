@@ -28,7 +28,7 @@ namespace HotelApp.forms_main
 
         public UserForm(Employee employee) : this()
         {
-            employee = employee;
+            this.employee = employee;
         }
 
         bool managementExpand = false;

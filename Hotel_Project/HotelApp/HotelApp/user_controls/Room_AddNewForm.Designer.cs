@@ -503,6 +503,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Room_AddNewForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Room_AddNewForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -17,6 +17,7 @@ namespace HotelApp.forms
     public partial class Form_Reservations : Form
     {
         private DBConnection dbConnection;
+        Employee employee;
         public Form_Reservations()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace HotelApp.forms
         public Form_Reservations(Employee employee) : this()
         {
             dbConnection = new DBConnection();
-
+            this.employee = employee;
             DisplayReservations();
         }
         public void DisplayReservations()
@@ -125,7 +126,7 @@ namespace HotelApp.forms
 
         private void btn_add_new_reservation_Click(object sender, EventArgs e)
         {
-            Reservations_AddNewForm addNewForm = new Reservations_AddNewForm();
+            Reservation_AddNew_Form addNewForm = new Reservation_AddNew_Form(employee);
             addNewForm.ShowDialog();
         }
     }
