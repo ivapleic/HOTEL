@@ -29,6 +29,18 @@ namespace HotelApp.forms
             this.employee = employee;
             DisplayReservations();
         }
+
+        public void RefreshReservationsList()
+        {
+            try
+            {
+                DisplayReservations();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error refreshing reservation list: {ex.Message}");
+            }
+        }
         public void DisplayReservations()
         {
             try

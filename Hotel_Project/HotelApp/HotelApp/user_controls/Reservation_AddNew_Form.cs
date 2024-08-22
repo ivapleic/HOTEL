@@ -410,7 +410,7 @@ namespace HotelApp.user_controls
 
                     // Kreiraj i prikaži novu formu za ažuriranje
                     ReservationServices_DetailsForm updateForm = new ReservationServices_DetailsForm(selectedReservationSevice);
-                    updateForm.ShowDialog(); 
+                    updateForm.ShowDialog();
 
                     // Osvježi DataGridView ako je potrebno nakon ažuriranja
                     // Ovdje možeš dodati kod za osvježavanje prikaza ako je potrebno
@@ -423,6 +423,137 @@ namespace HotelApp.user_controls
             catch (Exception ex)
             {
                 MessageBox.Show("Error in updating service: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_add_new_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Prvo, validiraj sve unose
+                if (!ValidateInputs())
+                {
+                    MessageBox.Show("Please fill in all required fields correctly.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Dobij vrednosti iz forme
+                int reservationStatusId = (int)comboBox_status.SelectedValue;
+                int employeeId = employee.ID;
+                int roomId = (int)comboBox_rooms.SelectedValue;
+                DateTime reservationDate = DateTime.Now;
+                DateTime startDate = dateTimePicker_start_date.Value;
+                DateTime endDate = dateTimePicker_end_date.Value;
+                DateTime? checkInDate = null;
+                DateTime? checkOutDate = null;
+
+                // Ako korisnik unese vrijednost za check-in datum, postavi je
+                if (dateTimePicker_check_in.Enabled && dateTimePicker_check_in.Value != DateTime.MinValue)
+                {
+                    checkInDate = dateTimePicker_check_in.Value;
+                }
+
+                // Ako korisnik unese vrijednost za check-out datum, postavi je
+                if (dateTimePicker_check_out.Enabled && dateTimePicker_check_out.Value != DateTime.MinValue)
+                {
+                    checkOutDate = dateTimePicker_check_out.Value;
+                }
+
+                string description = textBox_description.Text;
+
+                // Poziv stored procedure za dodavanje rezervacije
+                SqlParameter[] reservationParameters = {
+            new SqlParameter("@RetVal_ResID", SqlDbType.Int) { Direction = ParameterDirection.Output },
+            new SqlParameter("@RetVal_ResNr", SqlDbType.Int) { Direction = ParameterDirection.Output },
+            new SqlParameter("@rz_em_id_fk", employeeId),
+            new SqlParameter("@rz_rm_id_fk", roomId),
+            new SqlParameter("@rz_rs_id_fk", reservationStatusId),
+            new SqlParameter("@rz_date_reservation", reservationDate),
+            new SqlParameter("@rz_date_start", startDate),
+            new SqlParameter("@rz_date_end", endDate),
+            new SqlParameter("@rz_date_check_in", checkInDate ?? (object)DBNull.Value),
+            new SqlParameter("@rz_date_check_out", checkOutDate ?? (object)DBNull.Value),
+            new SqlParameter("@rz_description", description)
+        };
+
+                dbConnection.ExecuteStoredProcedure("Insert_RESERVATION", reservationParameters);
+
+                int reservationId = (int)reservationParameters[0].Value;
+
+                // Sada dodaj goste povezane s ovom rezervacijom
+                foreach (DataGridViewRow row in dataGridViewGuests.Rows)
+                {
+                    if (row.Cells["GuestID"].Value != null)
+                    {
+                        int guestId = Convert.ToInt32(row.Cells["GuestID"].Value);
+                        DateTime guestStartDate = Convert.ToDateTime(row.Cells["StartDate"].Value);
+                        DateTime guestEndDate = Convert.ToDateTime(row.Cells["EndDate"].Value);
+                        bool isAdditionalPerson = Convert.ToBoolean(row.Cells["AddPerson"].Value);
+
+                        SqlParameter[] guestParameters = {
+                    new SqlParameter("@rg_rz_id_fk", reservationId),
+                    new SqlParameter("@rg_gu_id_fk", guestId),
+                    new SqlParameter("@rg_date_start", guestStartDate),
+                    new SqlParameter("@rg_date_end", guestEndDate),
+                    new SqlParameter("@rg_add_person", isAdditionalPerson)
+                };
+
+                        dbConnection.ExecuteStoredProcedure("Insert_RESERVATIONS_GUESTS", guestParameters);
+                    }
+                }
+
+                // Sada dodaj dodatne usluge povezane s ovom rezervacijom
+                foreach (DataGridViewRow row in dataGridView_AddServices.Rows)
+                {
+                    if (row.Cells["ServiceID"].Value != null)
+                    {
+                        int serviceId = Convert.ToInt32(row.Cells["ServiceID"].Value);
+                        decimal quantity = Convert.ToDecimal(row.Cells["Amount"].Value);
+                        DateTime serviceReservationDate = Convert.ToDateTime(row.Cells["ReservationDate"].Value);
+                        DateTime serviceConsumptionDate = Convert.ToDateTime(row.Cells["ConsumationDate"].Value);
+
+                        SqlParameter[] serviceParameters = {
+                    new SqlParameter("@ra_rz_id_fk", reservationId),
+                    new SqlParameter("@ra_as_id_fk", serviceId),
+                    new SqlParameter("@ra_kolicina", quantity),
+                    new SqlParameter("@ra_date_reservation", serviceReservationDate),
+                    new SqlParameter("@ra_date_consumption", serviceConsumptionDate)
+                };
+
+                        dbConnection.ExecuteStoredProcedure("Insert_RESERVATION_ADD_SERVICE", serviceParameters);
+                    }
+                }
+
+                MessageBox.Show("Reservation successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Resetuj formu ili zatvori
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while adding reservation: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private bool ValidateInputs()
+        {
+            // Implementiraj validaciju za obavezna polja
+            if (comboBox_status.SelectedValue == null ||
+                comboBox_rooms.SelectedValue == null ||
+                dateTimePicker_start_date.Value == null ||
+                dateTimePicker_end_date.Value == null ||
+                string.IsNullOrWhiteSpace(textBox_description.Text))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void Reservation_AddNew_Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["Form_Reservation"] is Form_Reservations reservationForm)
+            {
+                reservationForm.RefreshReservationsList();
             }
         }
     }

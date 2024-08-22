@@ -37,11 +37,11 @@
             panel1 = new Panel();
             panel8 = new Panel();
             panel5 = new Panel();
-            textBox1 = new TextBox();
+            textBox_description = new TextBox();
             label7 = new Label();
             panel6 = new Panel();
-            dateTimePicker5 = new DateTimePicker();
-            dateTimePicker4 = new DateTimePicker();
+            dateTimePicker_check_out = new DateTimePicker();
+            dateTimePicker_check_in = new DateTimePicker();
             label16 = new Label();
             label17 = new Label();
             label19 = new Label();
@@ -148,20 +148,20 @@
             // 
             panel5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             panel5.BackColor = Color.Gainsboro;
-            panel5.Controls.Add(textBox1);
+            panel5.Controls.Add(textBox_description);
             panel5.Controls.Add(label7);
             panel5.Location = new Point(12, 616);
             panel5.Name = "panel5";
             panel5.Size = new Size(750, 173);
             panel5.TabIndex = 8;
             // 
-            // textBox1
+            // textBox_description
             // 
-            textBox1.Location = new Point(16, 61);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(716, 70);
-            textBox1.TabIndex = 12;
+            textBox_description.Location = new Point(16, 61);
+            textBox_description.Multiline = true;
+            textBox_description.Name = "textBox_description";
+            textBox_description.Size = new Size(716, 70);
+            textBox_description.TabIndex = 12;
             // 
             // label7
             // 
@@ -177,8 +177,8 @@
             // 
             panel6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             panel6.BackColor = Color.Gainsboro;
-            panel6.Controls.Add(dateTimePicker5);
-            panel6.Controls.Add(dateTimePicker4);
+            panel6.Controls.Add(dateTimePicker_check_out);
+            panel6.Controls.Add(dateTimePicker_check_in);
             panel6.Controls.Add(label16);
             panel6.Controls.Add(label17);
             panel6.Controls.Add(label19);
@@ -187,19 +187,19 @@
             panel6.Size = new Size(750, 184);
             panel6.TabIndex = 7;
             // 
-            // dateTimePicker5
+            // dateTimePicker_check_out
             // 
-            dateTimePicker5.Location = new Point(201, 118);
-            dateTimePicker5.Name = "dateTimePicker5";
-            dateTimePicker5.Size = new Size(300, 31);
-            dateTimePicker5.TabIndex = 10;
+            dateTimePicker_check_out.Location = new Point(201, 118);
+            dateTimePicker_check_out.Name = "dateTimePicker_check_out";
+            dateTimePicker_check_out.Size = new Size(300, 31);
+            dateTimePicker_check_out.TabIndex = 10;
             // 
-            // dateTimePicker4
+            // dateTimePicker_check_in
             // 
-            dateTimePicker4.Location = new Point(179, 69);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(300, 31);
-            dateTimePicker4.TabIndex = 9;
+            dateTimePicker_check_in.Location = new Point(179, 69);
+            dateTimePicker_check_in.Name = "dateTimePicker_check_in";
+            dateTimePicker_check_in.Size = new Size(300, 31);
+            dateTimePicker_check_in.TabIndex = 9;
             // 
             // label16
             // 
@@ -404,6 +404,7 @@
             btn_add_new.TabIndex = 12;
             btn_add_new.Text = "Add new";
             btn_add_new.UseVisualStyleBackColor = true;
+            btn_add_new.Click += btn_add_new_Click;
             // 
             // panel9
             // 
@@ -787,6 +788,7 @@
             Name = "Reservation_AddNew_Form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Reservation_AddNew_Form";
+            FormClosed += Reservation_AddNew_Form_FormClosed;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel8.ResumeLayout(false);
@@ -831,13 +833,13 @@
         private Label label29;
         private Label label31;
         private Panel panel6;
-        private DateTimePicker dateTimePicker5;
-        private DateTimePicker dateTimePicker4;
+        private DateTimePicker dateTimePicker_check_out;
+        private DateTimePicker dateTimePicker_check_in;
         private Label label16;
         private Label label17;
         private Label label19;
         private Panel panel5;
-        private TextBox textBox1;
+        private TextBox textBox_description;
         private Label label7;
         private Panel panel12;
         private ComboBox comboBox_rooms;
