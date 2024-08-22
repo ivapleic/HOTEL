@@ -61,9 +61,9 @@
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(27, 23);
             label1.Name = "label1";
-            label1.Size = new Size(267, 43);
+            label1.Size = new Size(446, 43);
             label1.TabIndex = 0;
-            label1.Text = "GUEST DETAILS";
+            label1.Text = "ADD NEW GUEST DETAILS";
             // 
             // labelFirstName
             // 

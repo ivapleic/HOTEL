@@ -21,6 +21,7 @@ namespace HotelApp.user_controls
         private DBConnection dbConnection;
         ReservationStatus reservationStatus;
         public Reservation_Guest reservationGuest;
+        public Reservation_Service reservationService;
         public Employee employee;
 
         public Reservation_AddNew_Form()
@@ -100,7 +101,6 @@ namespace HotelApp.user_controls
             }
         }
 
-
         private void btn_close_form_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -138,7 +138,7 @@ namespace HotelApp.user_controls
             Guest guest = new Guest();
             Guest selectedGuest = guest.GetGuestById(newReservationGuest.GuestID);
 
-            dataGridViewGuests.Rows.Add(selectedGuest.ID, selectedGuest.FirstName, selectedGuest.LastName, reservationGuest.DateStart, reservationGuest.DateEnd);
+            dataGridViewGuests.Rows.Add(newReservationGuest.ID, selectedGuest.ID, selectedGuest.FirstName, selectedGuest.LastName, reservationGuest.DateStart, reservationGuest.DateEnd);
         }
 
         private void btn_add_guest_Click(object sender, EventArgs e)
@@ -191,26 +191,77 @@ namespace HotelApp.user_controls
                     DataGridViewRow selectedRow = dataGridViewGuests.SelectedRows[0];
 
                     // Prikupi podatke iz odabranog retka
-                    int rg_id_pk = Convert.ToInt32(selectedRow.Cells["rg_id_pk"].Value);
-                    int rg_rz_id_fk = Convert.ToInt32(selectedRow.Cells["rg_rz_id_fk"].Value);
-                    int rg_gu_id_fk = Convert.ToInt32(selectedRow.Cells["rg_gu_id_fk"].Value);
-                    DateTime rg_date_start = Convert.ToDateTime(selectedRow.Cells["rg_date_start"].Value);
-                    DateTime rg_date_end = Convert.ToDateTime(selectedRow.Cells["rg_date_end"].Value);
-                    bool rg_add_person = Convert.ToBoolean(selectedRow.Cells["rg_add_person"].Value);
+                    int rg_id_pk = Convert.ToInt32(selectedRow.Cells["GuestResID"].Value);
+                    int rg_gu_id_fk = Convert.ToInt32(selectedRow.Cells["GuestID"].Value);
+                    DateTime rg_date_start = Convert.ToDateTime(selectedRow.Cells["StartDate"].Value);
+                    DateTime rg_date_end = Convert.ToDateTime(selectedRow.Cells["EndDate"].Value);
+                    bool rg_add_person = Convert.ToBoolean(selectedRow.Cells["AddPerson"].Value);
 
                     // Kreiraj objekt Reservation_Guest s podacima iz odabranog retka
                     Reservation_Guest selectedReservationGuest = new Reservation_Guest
                     {
                         ID = rg_id_pk,
-                        ReservationID = rg_rz_id_fk,
                         GuestID = rg_gu_id_fk,
                         DateStart = rg_date_start,
-                        DateEnd= rg_date_end,
+                        DateEnd = rg_date_end,
                         IsAdditionalPerson = rg_add_person
                     };
 
                     // Kreiraj i prikaži novu formu za ažuriranje
                     GuestReservation_UpdateForm updateForm = new GuestReservation_UpdateForm(selectedReservationGuest);
+                    updateForm.ShowDialog(); // Koristi ShowDialog za modalni prikaz forme
+
+                    // Nakon što je forma zatvorena, provjeri je li došlo do promjene u objektu
+                    if (updateForm.DialogResult == DialogResult.OK)
+                    {
+                        // Osvježi odabrani redak u DataGridView s novim podacima
+                        selectedRow.Cells["StartDate"].Value = updateForm.SelectedRes_Guest.DateStart;
+                        selectedRow.Cells["EndDate"].Value = updateForm.SelectedRes_Guest.DateEnd;
+                        selectedRow.Cells["AddPerson"].Value = updateForm.SelectedRes_Guest.IsAdditionalPerson;
+
+                        // Ako je potrebno, ažurirajte i ostale podatke u retku
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a guest to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in updating guest: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_details_guest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Provjeri je li neki redak odabran
+                if (dataGridViewGuests.SelectedRows.Count > 0)
+                {
+                    // Dohvati odabrani redak
+                    DataGridViewRow selectedRow = dataGridViewGuests.SelectedRows[0];
+
+                    // Prikupi podatke iz odabranog retka
+                    int rg_id_pk = Convert.ToInt32(selectedRow.Cells["GuestResID"].Value);
+                    int rg_gu_id_fk = Convert.ToInt32(selectedRow.Cells["GuestID"].Value);
+                    DateTime rg_date_start = Convert.ToDateTime(selectedRow.Cells["StartDate"].Value);
+                    DateTime rg_date_end = Convert.ToDateTime(selectedRow.Cells["EndDate"].Value);
+                    bool rg_add_person = Convert.ToBoolean(selectedRow.Cells["AddPerson"].Value);
+
+                    // Kreiraj objekt Reservation_Guest s podacima iz odabranog retka
+                    Reservation_Guest selectedReservationGuest = new Reservation_Guest
+                    {
+                        ID = rg_id_pk,
+                        GuestID = rg_gu_id_fk,
+                        DateStart = rg_date_start,
+                        DateEnd = rg_date_end,
+                        IsAdditionalPerson = rg_add_person
+                    };
+
+                    // Kreiraj i prikaži novu formu za ažuriranje
+                    GuestReservation_DetailsForm updateForm = new GuestReservation_DetailsForm(selectedReservationGuest);
                     updateForm.ShowDialog(); // Koristi ShowDialog za modalni prikaz forme
 
                     // Osvježi DataGridView ako je potrebno nakon ažuriranja
@@ -224,6 +275,154 @@ namespace HotelApp.user_controls
             catch (Exception ex)
             {
                 MessageBox.Show("Error in updating guest: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_add_services_Click(object sender, EventArgs e)
+        {
+            ReservationServices_AddNewForm servicesForm = new ReservationServices_AddNewForm();
+            servicesForm.Show();
+        }
+
+        public void AddServiceToReservation(Reservation_Service newReservationService)
+        {
+            AdditionalServices service = new AdditionalServices();
+            AdditionalServices selectedService = service.GetServiceById(newReservationService.ServiceID);
+
+            dataGridView_AddServices.Rows.Add(newReservationService.ID, selectedService.ID, selectedService.Name, newReservationService.Quantity, newReservationService.DateReservation, newReservationService.DateConsumption);
+
+        }
+
+        private void btn_delete_service_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Provjeri je li neki redak odabran
+                if (dataGridView_AddServices.SelectedRows.Count > 0)
+                {
+                    // Potvrdi s korisnikom
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this service?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        // Ukloni odabrani redak iz DataGridView
+                        foreach (DataGridViewRow row in dataGridView_AddServices.SelectedRows)
+                        {
+                            dataGridView_AddServices.Rows.Remove(row);
+                        }
+
+                        MessageBox.Show("Service deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a service to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in deleting service: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_update_service_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Provjeri je li neki redak odabran
+                if (dataGridView_AddServices.SelectedRows.Count > 0)
+                {
+                    // Dohvati odabrani redak
+                    DataGridViewRow selectedRow = dataGridView_AddServices.SelectedRows[0];
+
+                    // Prikupi podatke iz odabranog retka
+                    int ra_id_pk = Convert.ToInt32(selectedRow.Cells["ReservationServiceID"].Value);
+                    int ServiceID = Convert.ToInt32(selectedRow.Cells["ServiceID"].Value);
+                    string ServiceName = Convert.ToString(selectedRow.Cells["ServiceName"].Value);
+                    int amount = Convert.ToInt32(selectedRow.Cells["Amount"].Value);
+                    DateTime rg_date_consumation = Convert.ToDateTime(selectedRow.Cells["ConsumationDate"].Value);
+                    DateTime rg_date_reservation = Convert.ToDateTime(selectedRow.Cells["ReservationDate"].Value);
+
+
+                    // Kreiraj objekt Reservation_Guest s podacima iz odabranog retka
+                    Reservation_Service selectedReservationSevice = new Reservation_Service
+                    {
+                        ID = ra_id_pk,
+                        ServiceID = ServiceID,
+                        Quantity = amount,
+                        DateReservation = rg_date_reservation,
+                        DateConsumption = rg_date_consumation
+                    };
+
+                    // Kreiraj i prikaži novu formu za ažuriranje
+                    ReservationService_UpdateForm updateForm = new ReservationService_UpdateForm(selectedReservationSevice);
+                    updateForm.ShowDialog(); // Koristi ShowDialog za modalni prikaz forme
+
+                    // Nakon što je forma zatvorena, provjeri je li došlo do promjene u objektu
+                    if (updateForm.DialogResult == DialogResult.OK)
+                    {
+                        // Osvježi odabrani redak u DataGridView s novim podacima
+                        selectedRow.Cells["ReservationDate"].Value = updateForm.selectedResService.DateReservation;
+                        selectedRow.Cells["ConsumationDate"].Value = updateForm.selectedResService.DateConsumption;
+                        selectedRow.Cells["Amount"].Value = updateForm.selectedResService.Quantity;
+
+                        // Ako je potrebno, ažurirajte i ostale podatke u retku
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a service to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in updating service: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_details_service_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView_AddServices.SelectedRows.Count > 0)
+                {
+                    // Dohvati odabrani redak
+                    DataGridViewRow selectedRow = dataGridView_AddServices.SelectedRows[0];
+
+                    // Prikupi podatke iz odabranog retka
+                    int ra_id_pk = Convert.ToInt32(selectedRow.Cells["ReservationServiceID"].Value);
+                    int ServiceID = Convert.ToInt32(selectedRow.Cells["ServiceID"].Value);
+                    string ServiceName = Convert.ToString(selectedRow.Cells["ServiceName"].Value);
+                    int amount = Convert.ToInt32(selectedRow.Cells["Amount"].Value);
+                    DateTime rg_date_consumation = Convert.ToDateTime(selectedRow.Cells["ConsumationDate"].Value);
+                    DateTime rg_date_reservation = Convert.ToDateTime(selectedRow.Cells["ReservationDate"].Value);
+
+
+                    // Kreiraj objekt Reservation_Guest s podacima iz odabranog retka
+                    Reservation_Service selectedReservationSevice = new Reservation_Service
+                    {
+                        ID = ra_id_pk,
+                        ServiceID = ServiceID,
+                        Quantity = amount,
+                        DateReservation = rg_date_reservation,
+                        DateConsumption = rg_date_consumation
+                    };
+
+
+                    // Kreiraj i prikaži novu formu za ažuriranje
+                    ReservationServices_DetailsForm updateForm = new ReservationServices_DetailsForm(selectedReservationSevice);
+                    updateForm.ShowDialog(); 
+
+                    // Osvježi DataGridView ako je potrebno nakon ažuriranja
+                    // Ovdje možeš dodati kod za osvježavanje prikaza ako je potrebno
+                }
+                else
+                {
+                    MessageBox.Show("Please select a service to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in updating service: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

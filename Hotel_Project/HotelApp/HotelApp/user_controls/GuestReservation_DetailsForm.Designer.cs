@@ -1,6 +1,6 @@
 ﻿namespace HotelApp.user_controls
 {
-    partial class GuestReservation_UpdateForm
+    partial class GuestReservation_DetailsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,18 @@
         {
             panel1 = new Panel();
             label1 = new Label();
-            checkBox_add_person = new CheckBox();
             label18 = new Label();
             btn_close_form = new Button();
-            btn_update_res_guest = new Button();
-            dateTimePicker_end = new DateTimePicker();
-            dateTimePicker_start = new DateTimePicker();
             label16 = new Label();
             label17 = new Label();
             labelLastName = new Label();
             label3 = new Label();
             labelFirstName = new Label();
             label34 = new Label();
+            label_date_end = new Label();
+            label_date_start = new Label();
+            label_add_person = new Label();
+            btn_guest_details = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,26 +61,16 @@
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(27, 23);
             label1.Name = "label1";
-            label1.Size = new Size(528, 43);
+            label1.Size = new Size(267, 43);
             label1.TabIndex = 0;
-            label1.Text = "UPDATE RESERVATION GUESTS";
-            // 
-            // checkBox_add_person
-            // 
-            checkBox_add_person.AutoSize = true;
-            checkBox_add_person.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox_add_person.Location = new Point(344, 373);
-            checkBox_add_person.Name = "checkBox_add_person";
-            checkBox_add_person.Size = new Size(22, 21);
-            checkBox_add_person.TabIndex = 57;
-            checkBox_add_person.UseVisualStyleBackColor = true;
+            label1.Text = "GUEST DETAILS";
             // 
             // label18
             // 
             label18.Anchor = AnchorStyles.None;
             label18.AutoSize = true;
             label18.Font = new Font("Century Gothic", 10F);
-            label18.Location = new Point(106, 371);
+            label18.Location = new Point(144, 355);
             label18.Name = "label18";
             label18.Size = new Size(193, 23);
             label18.TabIndex = 56;
@@ -88,42 +78,19 @@
             // 
             // btn_close_form
             // 
-            btn_close_form.Location = new Point(732, 429);
+            btn_close_form.Location = new Point(731, 431);
             btn_close_form.Name = "btn_close_form";
             btn_close_form.Size = new Size(135, 52);
             btn_close_form.TabIndex = 55;
             btn_close_form.Text = "Exit";
             btn_close_form.UseVisualStyleBackColor = true;
-            // 
-            // btn_update_res_guest
-            // 
-            btn_update_res_guest.Location = new Point(576, 429);
-            btn_update_res_guest.Name = "btn_update_res_guest";
-            btn_update_res_guest.Size = new Size(135, 52);
-            btn_update_res_guest.TabIndex = 54;
-            btn_update_res_guest.Text = "Update";
-            btn_update_res_guest.UseVisualStyleBackColor = true;
-            btn_update_res_guest.Click += btn_update_res_guest_Click;
-            // 
-            // dateTimePicker_end
-            // 
-            dateTimePicker_end.Location = new Point(329, 307);
-            dateTimePicker_end.Name = "dateTimePicker_end";
-            dateTimePicker_end.Size = new Size(300, 31);
-            dateTimePicker_end.TabIndex = 53;
-            // 
-            // dateTimePicker_start
-            // 
-            dateTimePicker_start.Location = new Point(344, 250);
-            dateTimePicker_start.Name = "dateTimePicker_start";
-            dateTimePicker_start.Size = new Size(300, 31);
-            dateTimePicker_start.TabIndex = 52;
+            btn_close_form.Click += btn_close_form_Click;
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label16.Location = new Point(186, 297);
+            label16.Location = new Point(222, 299);
             label16.Name = "label16";
             label16.Size = new Size(115, 23);
             label16.TabIndex = 51;
@@ -133,7 +100,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label17.Location = new Point(181, 248);
+            label17.Location = new Point(222, 238);
             label17.Name = "label17";
             label17.Size = new Size(118, 23);
             label17.TabIndex = 50;
@@ -143,7 +110,7 @@
             // 
             labelLastName.AutoSize = true;
             labelLastName.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelLastName.Location = new Point(351, 180);
+            labelLastName.Location = new Point(350, 182);
             labelLastName.Name = "labelLastName";
             labelLastName.Size = new Size(87, 23);
             labelLastName.TabIndex = 49;
@@ -153,7 +120,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(219, 180);
+            label3.Location = new Point(218, 182);
             label3.Name = "label3";
             label3.Size = new Size(126, 23);
             label3.TabIndex = 48;
@@ -163,7 +130,7 @@
             // 
             labelFirstName.AutoSize = true;
             labelFirstName.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelFirstName.Location = new Point(345, 120);
+            labelFirstName.Location = new Point(344, 122);
             labelFirstName.Name = "labelFirstName";
             labelFirstName.Size = new Size(45, 23);
             labelFirstName.TabIndex = 47;
@@ -173,23 +140,63 @@
             // 
             label34.AutoSize = true;
             label34.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label34.Location = new Point(219, 120);
+            label34.Location = new Point(218, 122);
             label34.Name = "label34";
             label34.Size = new Size(122, 23);
             label34.TabIndex = 46;
             label34.Text = "First Name :";
             // 
-            // GuestReservation_UpdateForm
+            // label_date_end
+            // 
+            label_date_end.AutoSize = true;
+            label_date_end.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_date_end.Location = new Point(344, 299);
+            label_date_end.Name = "label_date_end";
+            label_date_end.Size = new Size(103, 23);
+            label_date_end.TabIndex = 58;
+            label_date_end.Text = "date end";
+            // 
+            // label_date_start
+            // 
+            label_date_start.AutoSize = true;
+            label_date_start.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_date_start.Location = new Point(344, 238);
+            label_date_start.Name = "label_date_start";
+            label_date_start.Size = new Size(106, 23);
+            label_date_start.TabIndex = 59;
+            label_date_start.Text = "start date";
+            // 
+            // label_add_person
+            // 
+            label_add_person.AutoSize = true;
+            label_add_person.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_add_person.Location = new Point(344, 355);
+            label_add_person.Name = "label_add_person";
+            label_add_person.Size = new Size(124, 23);
+            label_add_person.TabIndex = 60;
+            label_add_person.Text = "add person";
+            // 
+            // btn_guest_details
+            // 
+            btn_guest_details.Location = new Point(474, 122);
+            btn_guest_details.Name = "btn_guest_details";
+            btn_guest_details.Size = new Size(135, 31);
+            btn_guest_details.TabIndex = 61;
+            btn_guest_details.Text = "Details";
+            btn_guest_details.UseVisualStyleBackColor = true;
+            btn_guest_details.Click += btn_guest_details_Click;
+            // 
+            // GuestReservation_DetailsForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(886, 500);
-            Controls.Add(checkBox_add_person);
+            Controls.Add(btn_guest_details);
+            Controls.Add(label_add_person);
+            Controls.Add(label_date_start);
+            Controls.Add(label_date_end);
             Controls.Add(label18);
             Controls.Add(btn_close_form);
-            Controls.Add(btn_update_res_guest);
-            Controls.Add(dateTimePicker_end);
-            Controls.Add(dateTimePicker_start);
             Controls.Add(label16);
             Controls.Add(label17);
             Controls.Add(labelLastName);
@@ -197,8 +204,9 @@
             Controls.Add(labelFirstName);
             Controls.Add(label34);
             Controls.Add(panel1);
-            Name = "GuestReservation_UpdateForm";
-            Text = "GuestReservation_UpdateForm";
+            Name = "GuestReservation_DetailsForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "GuestReservation_DetailsForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -209,17 +217,17 @@
 
         private Panel panel1;
         private Label label1;
-        private CheckBox checkBox_add_person;
         private Label label18;
         private Button btn_close_form;
-        private Button btn_update_res_guest;
-        private DateTimePicker dateTimePicker_end;
-        private DateTimePicker dateTimePicker_start;
         private Label label16;
         private Label label17;
         private Label labelLastName;
         private Label label3;
         private Label labelFirstName;
         private Label label34;
+        private Label label_date_end;
+        private Label label_date_start;
+        private Label label_add_person;
+        private Button btn_guest_details;
     }
 }

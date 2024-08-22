@@ -534,6 +534,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Guest_DetailsForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Guest_DetailsForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

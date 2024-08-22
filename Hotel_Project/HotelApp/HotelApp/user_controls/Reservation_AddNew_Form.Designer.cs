@@ -63,28 +63,31 @@
             btn_close_form = new Button();
             btn_add_new = new Button();
             panel9 = new Panel();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
+            btn_details_service = new Button();
+            btn_update_service = new Button();
+            btn_delete_service = new Button();
             btn_add_services = new Button();
             label2 = new Label();
-            dataGridView1 = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridView_AddServices = new DataGridView();
+            ReservationServiceID = new DataGridViewTextBoxColumn();
+            ServiceID = new DataGridViewTextBoxColumn();
+            ServiceName = new DataGridViewTextBoxColumn();
+            Amount = new DataGridViewTextBoxColumn();
+            ReservationDate = new DataGridViewTextBoxColumn();
+            ConsumationDate = new DataGridViewTextBoxColumn();
             panel10 = new Panel();
             btn_details_guest = new Button();
             btn_update_guest = new Button();
             btn_delete_guest = new Button();
             btn_add_guest = new Button();
             dataGridViewGuests = new DataGridView();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            dataGridViewCheckBoxColumn1 = new DataGridViewCheckBoxColumn();
+            GuestResID = new DataGridViewTextBoxColumn();
+            GuestID = new DataGridViewTextBoxColumn();
+            FirstName = new DataGridViewTextBoxColumn();
+            LastName = new DataGridViewTextBoxColumn();
+            StartDate = new DataGridViewTextBoxColumn();
+            EndDate = new DataGridViewTextBoxColumn();
+            AddPerson = new DataGridViewCheckBoxColumn();
             panel11 = new Panel();
             label3 = new Label();
             panel12 = new Panel();
@@ -101,7 +104,7 @@
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_AddServices).BeginInit();
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewGuests).BeginInit();
             panel11.SuspendLayout();
@@ -406,46 +409,49 @@
             // 
             panel9.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             panel9.BackColor = Color.Gainsboro;
-            panel9.Controls.Add(button8);
-            panel9.Controls.Add(button9);
-            panel9.Controls.Add(button10);
+            panel9.Controls.Add(btn_details_service);
+            panel9.Controls.Add(btn_update_service);
+            panel9.Controls.Add(btn_delete_service);
             panel9.Controls.Add(btn_add_services);
             panel9.Controls.Add(label2);
-            panel9.Controls.Add(dataGridView1);
+            panel9.Controls.Add(dataGridView_AddServices);
             panel9.Location = new Point(15, 522);
             panel9.Name = "panel9";
             panel9.Size = new Size(827, 267);
             panel9.TabIndex = 10;
             // 
-            // button8
+            // btn_details_service
             // 
-            button8.BackgroundImage = (Image)resources.GetObject("button8.BackgroundImage");
-            button8.BackgroundImageLayout = ImageLayout.Zoom;
-            button8.Location = new Point(762, 218);
-            button8.Name = "button8";
-            button8.Size = new Size(65, 52);
-            button8.TabIndex = 19;
-            button8.UseVisualStyleBackColor = true;
+            btn_details_service.BackgroundImage = (Image)resources.GetObject("btn_details_service.BackgroundImage");
+            btn_details_service.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_details_service.Location = new Point(762, 218);
+            btn_details_service.Name = "btn_details_service";
+            btn_details_service.Size = new Size(65, 52);
+            btn_details_service.TabIndex = 19;
+            btn_details_service.UseVisualStyleBackColor = true;
+            btn_details_service.Click += btn_details_service_Click;
             // 
-            // button9
+            // btn_update_service
             // 
-            button9.BackgroundImage = (Image)resources.GetObject("button9.BackgroundImage");
-            button9.BackgroundImageLayout = ImageLayout.Zoom;
-            button9.Location = new Point(762, 160);
-            button9.Name = "button9";
-            button9.Size = new Size(65, 52);
-            button9.TabIndex = 18;
-            button9.UseVisualStyleBackColor = true;
+            btn_update_service.BackgroundImage = (Image)resources.GetObject("btn_update_service.BackgroundImage");
+            btn_update_service.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_update_service.Location = new Point(762, 160);
+            btn_update_service.Name = "btn_update_service";
+            btn_update_service.Size = new Size(65, 52);
+            btn_update_service.TabIndex = 18;
+            btn_update_service.UseVisualStyleBackColor = true;
+            btn_update_service.Click += btn_update_service_Click;
             // 
-            // button10
+            // btn_delete_service
             // 
-            button10.BackgroundImage = (Image)resources.GetObject("button10.BackgroundImage");
-            button10.BackgroundImageLayout = ImageLayout.Zoom;
-            button10.Location = new Point(762, 102);
-            button10.Name = "button10";
-            button10.Size = new Size(66, 52);
-            button10.TabIndex = 17;
-            button10.UseVisualStyleBackColor = true;
+            btn_delete_service.BackgroundImage = (Image)resources.GetObject("btn_delete_service.BackgroundImage");
+            btn_delete_service.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_delete_service.Location = new Point(762, 102);
+            btn_delete_service.Name = "btn_delete_service";
+            btn_delete_service.Size = new Size(66, 52);
+            btn_delete_service.TabIndex = 17;
+            btn_delete_service.UseVisualStyleBackColor = true;
+            btn_delete_service.Click += btn_delete_service_Click;
             // 
             // btn_add_services
             // 
@@ -456,6 +462,7 @@
             btn_add_services.Size = new Size(65, 46);
             btn_add_services.TabIndex = 16;
             btn_add_services.UseVisualStyleBackColor = true;
+            btn_add_services.Click += btn_add_services_Click;
             // 
             // label2
             // 
@@ -468,16 +475,16 @@
             label2.TabIndex = 9;
             label2.Text = "Additional services";
             // 
-            // dataGridView1
+            // dataGridView_AddServices
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView_AddServices.AllowUserToAddRows = false;
+            dataGridView_AddServices.AllowUserToDeleteRows = false;
+            dataGridView_AddServices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView_AddServices.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView_AddServices.BackgroundColor = Color.White;
+            dataGridView_AddServices.BorderStyle = BorderStyle.None;
+            dataGridView_AddServices.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridView_AddServices.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -485,9 +492,9 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeight = 38;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
+            dataGridView_AddServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView_AddServices.ColumnHeadersHeight = 38;
+            dataGridView_AddServices.Columns.AddRange(new DataGridViewColumn[] { ReservationServiceID, ServiceID, ServiceName, Amount, ReservationDate, ConsumationDate });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -495,40 +502,54 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.LightGray;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.Location = new Point(-3, 33);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(765, 234);
-            dataGridView1.TabIndex = 2;
+            dataGridView_AddServices.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView_AddServices.EnableHeadersVisualStyles = false;
+            dataGridView_AddServices.Location = new Point(-3, 33);
+            dataGridView_AddServices.Name = "dataGridView_AddServices";
+            dataGridView_AddServices.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView_AddServices.RowHeadersVisible = false;
+            dataGridView_AddServices.RowHeadersWidth = 62;
+            dataGridView_AddServices.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_AddServices.Size = new Size(765, 234);
+            dataGridView_AddServices.TabIndex = 2;
             // 
-            // dataGridViewTextBoxColumn1
+            // ReservationServiceID
             // 
-            dataGridViewTextBoxColumn1.HeaderText = "Service Name";
-            dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            ReservationServiceID.HeaderText = "ReservationServiceID";
+            ReservationServiceID.MinimumWidth = 8;
+            ReservationServiceID.Name = "ReservationServiceID";
+            ReservationServiceID.Visible = false;
             // 
-            // dataGridViewTextBoxColumn2
+            // ServiceID
             // 
-            dataGridViewTextBoxColumn2.HeaderText = "Amount";
-            dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            ServiceID.HeaderText = "Service ID";
+            ServiceID.MinimumWidth = 8;
+            ServiceID.Name = "ServiceID";
+            ServiceID.Visible = false;
             // 
-            // dataGridViewTextBoxColumn3
+            // ServiceName
             // 
-            dataGridViewTextBoxColumn3.HeaderText = "Reservation Date";
-            dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            ServiceName.HeaderText = "Service Name";
+            ServiceName.MinimumWidth = 8;
+            ServiceName.Name = "ServiceName";
             // 
-            // dataGridViewTextBoxColumn4
+            // Amount
             // 
-            dataGridViewTextBoxColumn4.HeaderText = "Consumation Date";
-            dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            Amount.HeaderText = "Amount";
+            Amount.MinimumWidth = 8;
+            Amount.Name = "Amount";
+            // 
+            // ReservationDate
+            // 
+            ReservationDate.HeaderText = "Reservation Date";
+            ReservationDate.MinimumWidth = 8;
+            ReservationDate.Name = "ReservationDate";
+            // 
+            // ConsumationDate
+            // 
+            ConsumationDate.HeaderText = "Consumation Date";
+            ConsumationDate.MinimumWidth = 8;
+            ConsumationDate.Name = "ConsumationDate";
             // 
             // panel10
             // 
@@ -554,6 +575,7 @@
             btn_details_guest.Size = new Size(65, 52);
             btn_details_guest.TabIndex = 15;
             btn_details_guest.UseVisualStyleBackColor = true;
+            btn_details_guest.Click += btn_details_guest_Click;
             // 
             // btn_update_guest
             // 
@@ -606,7 +628,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewGuests.ColumnHeadersHeight = 38;
-            dataGridViewGuests.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewCheckBoxColumn1 });
+            dataGridViewGuests.Columns.AddRange(new DataGridViewColumn[] { GuestResID, GuestID, FirstName, LastName, StartDate, EndDate, AddPerson });
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = SystemColors.Window;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
@@ -626,44 +648,51 @@
             dataGridViewGuests.Size = new Size(763, 240);
             dataGridViewGuests.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn5
+            // GuestResID
             // 
-            dataGridViewTextBoxColumn5.HeaderText = "Guest ID";
-            dataGridViewTextBoxColumn5.MinimumWidth = 8;
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.Visible = false;
+            GuestResID.HeaderText = "Guest Reservation ID";
+            GuestResID.MinimumWidth = 8;
+            GuestResID.Name = "GuestResID";
+            GuestResID.Visible = false;
             // 
-            // dataGridViewTextBoxColumn6
+            // GuestID
             // 
-            dataGridViewTextBoxColumn6.HeaderText = "First Name";
-            dataGridViewTextBoxColumn6.MinimumWidth = 8;
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            GuestID.HeaderText = "Guest ID";
+            GuestID.MinimumWidth = 8;
+            GuestID.Name = "GuestID";
+            GuestID.Visible = false;
             // 
-            // dataGridViewTextBoxColumn7
+            // FirstName
             // 
-            dataGridViewTextBoxColumn7.HeaderText = "Last Name";
-            dataGridViewTextBoxColumn7.MinimumWidth = 8;
-            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            FirstName.HeaderText = "First Name";
+            FirstName.MinimumWidth = 8;
+            FirstName.Name = "FirstName";
             // 
-            // dataGridViewTextBoxColumn8
+            // LastName
             // 
-            dataGridViewTextBoxColumn8.HeaderText = "Start Date";
-            dataGridViewTextBoxColumn8.MinimumWidth = 8;
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            LastName.HeaderText = "Last Name";
+            LastName.MinimumWidth = 8;
+            LastName.Name = "LastName";
             // 
-            // dataGridViewTextBoxColumn9
+            // StartDate
             // 
-            dataGridViewTextBoxColumn9.HeaderText = "End Date";
-            dataGridViewTextBoxColumn9.MinimumWidth = 8;
-            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            StartDate.HeaderText = "Start Date";
+            StartDate.MinimumWidth = 8;
+            StartDate.Name = "StartDate";
             // 
-            // dataGridViewCheckBoxColumn1
+            // EndDate
             // 
-            dataGridViewCheckBoxColumn1.HeaderText = "Add Person";
-            dataGridViewCheckBoxColumn1.MinimumWidth = 8;
-            dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            dataGridViewCheckBoxColumn1.Resizable = DataGridViewTriState.True;
-            dataGridViewCheckBoxColumn1.SortMode = DataGridViewColumnSortMode.Automatic;
+            EndDate.HeaderText = "End Date";
+            EndDate.MinimumWidth = 8;
+            EndDate.Name = "EndDate";
+            // 
+            // AddPerson
+            // 
+            AddPerson.HeaderText = "Add Person";
+            AddPerson.MinimumWidth = 8;
+            AddPerson.Name = "AddPerson";
+            AddPerson.Resizable = DataGridViewTriState.True;
+            AddPerson.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // panel11
             // 
@@ -772,7 +801,7 @@
             panel2.ResumeLayout(false);
             panel9.ResumeLayout(false);
             panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_AddServices).EndInit();
             panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewGuests).EndInit();
             panel11.ResumeLayout(false);
@@ -822,26 +851,29 @@
         private Button btn_delete_guest;
         private Button btn_add_guest;
         private DataGridView dataGridViewGuests;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private Panel panel11;
         private Label label3;
         private Panel panel9;
-        private Button button8;
-        private Button button9;
-        private Button button10;
+        private Button btn_details_service;
+        private Button btn_update_service;
+        private Button btn_delete_service;
         private Button btn_add_services;
         private Label label2;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridView dataGridView_AddServices;
         private Button btn_close_form;
         private Button btn_add_new;
+        private DataGridViewTextBoxColumn GuestResID;
+        private DataGridViewTextBoxColumn GuestID;
+        private DataGridViewTextBoxColumn FirstName;
+        private DataGridViewTextBoxColumn LastName;
+        private DataGridViewTextBoxColumn StartDate;
+        private DataGridViewTextBoxColumn EndDate;
+        private DataGridViewCheckBoxColumn AddPerson;
+        private DataGridViewTextBoxColumn ReservationServiceID;
+        private DataGridViewTextBoxColumn ServiceID;
+        private DataGridViewTextBoxColumn ServiceName;
+        private DataGridViewTextBoxColumn Amount;
+        private DataGridViewTextBoxColumn ReservationDate;
+        private DataGridViewTextBoxColumn ConsumationDate;
     }
 }

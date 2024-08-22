@@ -40,8 +40,7 @@ namespace HotelApp.user_controls
         {
             try
             {
-                // Prikupi podatke iz forme
-                int guestID = SelectedGuest.ID; // Ovo bi trebalo biti ID gosta koji je proslijeđen u konstruktoru forme
+                int guestID = SelectedGuest.ID; 
                 DateTime startDate = dateTimePicker_start.Value;
                 DateTime endDate = dateTimePicker_end.Value;
                 bool isAdditionalPerson = checkBox_add_person.Checked;
