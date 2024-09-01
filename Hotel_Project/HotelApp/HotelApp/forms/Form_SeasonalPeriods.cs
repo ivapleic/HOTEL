@@ -22,6 +22,7 @@ namespace HotelApp.forms
             InitializeComponent();
             dbConnection = new DBConnection();
             DisplaySeasonalPeriods();
+            dataGridViewSeasons.ClearSelection();
         }
 
         public void RefreshSeasonalPeriodsList()

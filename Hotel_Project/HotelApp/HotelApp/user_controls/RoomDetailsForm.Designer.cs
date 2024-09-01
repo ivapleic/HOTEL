@@ -50,6 +50,7 @@
             room_image2 = new PictureBox();
             room_image1 = new PictureBox();
             label11 = new Label();
+            btn_close = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -63,19 +64,22 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(room_number_label);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(29, 23);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1400, 104);
+            panel1.Size = new Size(1474, 104);
             panel1.TabIndex = 0;
             // 
             // room_number_label
             // 
             room_number_label.AutoSize = true;
             room_number_label.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            room_number_label.ForeColor = Color.FromArgb(40, 86, 182);
-            room_number_label.Location = new Point(371, 18);
+            room_number_label.ForeColor = Color.White;
+            room_number_label.Location = new Point(383, 18);
             room_number_label.Name = "room_number_label";
             room_number_label.Size = new Size(167, 56);
             room_number_label.TabIndex = 1;
@@ -85,7 +89,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(0, 18);
             label1.Name = "label1";
             label1.Size = new Size(392, 56);
@@ -105,7 +109,7 @@
             panel2.Controls.Add(label3);
             panel2.Location = new Point(29, 133);
             panel2.Name = "panel2";
-            panel2.Size = new Size(779, 339);
+            panel2.Size = new Size(779, 365);
             panel2.TabIndex = 1;
             // 
             // room_available_label
@@ -192,9 +196,9 @@
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panel3.Controls.Add(accessories_listBox);
             panel3.Controls.Add(label12);
-            panel3.Location = new Point(812, 133);
+            panel3.Location = new Point(830, 133);
             panel3.Name = "panel3";
-            panel3.Size = new Size(617, 339);
+            panel3.Size = new Size(617, 365);
             panel3.TabIndex = 2;
             // 
             // accessories_listBox
@@ -228,14 +232,14 @@
             panel4.Controls.Add(room_image2);
             panel4.Controls.Add(room_image1);
             panel4.Controls.Add(label11);
-            panel4.Location = new Point(29, 478);
+            panel4.Location = new Point(29, 504);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1400, 337);
+            panel4.Size = new Size(1418, 315);
             panel4.TabIndex = 3;
             // 
             // room_image5
             // 
-            room_image5.Location = new Point(1116, 80);
+            room_image5.Location = new Point(1116, 54);
             room_image5.Name = "room_image5";
             room_image5.Size = new Size(270, 235);
             room_image5.TabIndex = 5;
@@ -243,7 +247,7 @@
             // 
             // room_image4
             // 
-            room_image4.Location = new Point(840, 80);
+            room_image4.Location = new Point(840, 54);
             room_image4.Name = "room_image4";
             room_image4.Size = new Size(270, 235);
             room_image4.TabIndex = 4;
@@ -252,7 +256,7 @@
             // 
             // room_image3
             // 
-            room_image3.Location = new Point(564, 79);
+            room_image3.Location = new Point(564, 53);
             room_image3.Name = "room_image3";
             room_image3.Size = new Size(270, 235);
             room_image3.TabIndex = 3;
@@ -260,7 +264,7 @@
             // 
             // room_image2
             // 
-            room_image2.Location = new Point(288, 79);
+            room_image2.Location = new Point(288, 53);
             room_image2.Name = "room_image2";
             room_image2.Size = new Size(270, 235);
             room_image2.TabIndex = 2;
@@ -269,7 +273,7 @@
             // room_image1
             // 
             room_image1.BackColor = Color.Transparent;
-            room_image1.Location = new Point(12, 79);
+            room_image1.Location = new Point(12, 53);
             room_image1.Name = "room_image1";
             room_image1.Size = new Size(270, 235);
             room_image1.TabIndex = 1;
@@ -285,12 +289,25 @@
             label11.TabIndex = 0;
             label11.Text = "Room Images";
             // 
+            // btn_close
+            // 
+            btn_close.BackColor = Color.FromArgb(155, 31, 33);
+            btn_close.ForeColor = Color.White;
+            btn_close.Location = new Point(1300, 830);
+            btn_close.Name = "btn_close";
+            btn_close.Size = new Size(147, 50);
+            btn_close.TabIndex = 6;
+            btn_close.Text = "Close";
+            btn_close.UseVisualStyleBackColor = false;
+            btn_close.Click += btn_close_Click;
+            // 
             // RoomDetailsForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1456, 866);
+            ClientSize = new Size(1474, 892);
+            Controls.Add(btn_close);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -337,5 +354,6 @@
         private Label label11;
         private ListBox accessories_listBox;
         private PictureBox room_image5;
+        private Button btn_close;
     }
 }

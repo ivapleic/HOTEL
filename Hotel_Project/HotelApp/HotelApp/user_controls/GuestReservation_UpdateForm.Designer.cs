@@ -47,9 +47,10 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
+            panel1.ForeColor = Color.White;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(886, 86);
@@ -88,21 +89,25 @@
             // 
             // btn_close_form
             // 
+            btn_close_form.BackColor = Color.FromArgb(155, 31, 33);
+            btn_close_form.ForeColor = Color.White;
             btn_close_form.Location = new Point(732, 429);
             btn_close_form.Name = "btn_close_form";
             btn_close_form.Size = new Size(135, 52);
             btn_close_form.TabIndex = 55;
             btn_close_form.Text = "Exit";
-            btn_close_form.UseVisualStyleBackColor = true;
+            btn_close_form.UseVisualStyleBackColor = false;
             // 
             // btn_update_res_guest
             // 
+            btn_update_res_guest.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update_res_guest.ForeColor = Color.White;
             btn_update_res_guest.Location = new Point(576, 429);
             btn_update_res_guest.Name = "btn_update_res_guest";
             btn_update_res_guest.Size = new Size(135, 52);
             btn_update_res_guest.TabIndex = 54;
             btn_update_res_guest.Text = "Update";
-            btn_update_res_guest.UseVisualStyleBackColor = true;
+            btn_update_res_guest.UseVisualStyleBackColor = false;
             btn_update_res_guest.Click += btn_update_res_guest_Click;
             // 
             // dateTimePicker_end
@@ -183,6 +188,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(886, 500);
             Controls.Add(checkBox_add_person);
             Controls.Add(label18);

@@ -25,6 +25,7 @@ namespace HotelApp.forms
             // Dodajte DataBindingComplete događaj
             dataGridViewAccessories.DataBindingComplete += dataGridViewAccessories_DataBindingComplete;
             dataGridViewAccessories.CellClick += dataGridViewAccessories_CellClick;
+
         }
 
         public void RefreshAccessoryList()
@@ -42,8 +43,8 @@ namespace HotelApp.forms
         private void Form_RoomsAccessories_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
-            dataGridViewAccessories.ClearSelection();
             DisplayAccessories();
+            dataGridViewAccessories.ClearSelection();
         }
 
         private void DisplayAccessories()

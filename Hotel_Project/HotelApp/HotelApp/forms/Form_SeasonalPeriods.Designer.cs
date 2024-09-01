@@ -62,7 +62,7 @@
             label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.ForeColor = Color.FromArgb(155, 31, 33);
             label1.Location = new Point(600, 32);
             label1.Name = "label1";
             label1.Size = new Size(387, 56);
@@ -83,9 +83,9 @@
             dataGridViewSeasons.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewSeasons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -93,9 +93,9 @@
             dataGridViewSeasons.Columns.AddRange(new DataGridViewColumn[] { SeasonID, SeasonName, StartDate, EndDate });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridViewSeasons.DefaultCellStyle = dataGridViewCellStyle2;
@@ -163,34 +163,40 @@
             // btn_update_season
             // 
             btn_update_season.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_update_season.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update_season.ForeColor = Color.White;
             btn_update_season.Location = new Point(1101, 443);
             btn_update_season.Name = "btn_update_season";
             btn_update_season.Size = new Size(163, 60);
             btn_update_season.TabIndex = 10;
             btn_update_season.Text = "Update";
-            btn_update_season.UseVisualStyleBackColor = true;
+            btn_update_season.UseVisualStyleBackColor = false;
             btn_update_season.Click += btn_update_season_Click;
             // 
             // btn_delete_season
             // 
             btn_delete_season.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_delete_season.BackColor = Color.FromArgb(155, 31, 33);
+            btn_delete_season.ForeColor = Color.White;
             btn_delete_season.Location = new Point(1101, 341);
             btn_delete_season.Name = "btn_delete_season";
             btn_delete_season.Size = new Size(163, 62);
             btn_delete_season.TabIndex = 9;
             btn_delete_season.Text = "Delete";
-            btn_delete_season.UseVisualStyleBackColor = true;
+            btn_delete_season.UseVisualStyleBackColor = false;
             btn_delete_season.Click += btn_delete_season_Click;
             // 
             // btn_add_season
             // 
             btn_add_season.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_add_season.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_season.ForeColor = Color.White;
             btn_add_season.Location = new Point(1100, 246);
             btn_add_season.Name = "btn_add_season";
             btn_add_season.Size = new Size(164, 58);
             btn_add_season.TabIndex = 8;
             btn_add_season.Text = "Add New";
-            btn_add_season.UseVisualStyleBackColor = true;
+            btn_add_season.UseVisualStyleBackColor = false;
             btn_add_season.Click += btn_add_season_Click;
             // 
             // Form_SeasonalPeriods

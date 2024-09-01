@@ -58,7 +58,7 @@
             label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.ForeColor = Color.FromArgb(155, 31, 33);
             label1.Location = new Point(600, 32);
             label1.Name = "label1";
             label1.Size = new Size(680, 56);
@@ -79,18 +79,18 @@
             dataGridViewPrices.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewPrices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewPrices.ColumnHeadersHeight = 38;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridViewPrices.DefaultCellStyle = dataGridViewCellStyle2;
@@ -130,34 +130,40 @@
             // btn_add_prices
             // 
             btn_add_prices.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_add_prices.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_prices.ForeColor = Color.White;
             btn_add_prices.Location = new Point(1127, 211);
             btn_add_prices.Name = "btn_add_prices";
             btn_add_prices.Size = new Size(164, 58);
             btn_add_prices.TabIndex = 8;
             btn_add_prices.Text = "Add New";
-            btn_add_prices.UseVisualStyleBackColor = true;
+            btn_add_prices.UseVisualStyleBackColor = false;
             btn_add_prices.Click += btn_add_prices_Click;
             // 
             // btn_update_price
             // 
             btn_update_price.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_update_price.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update_price.ForeColor = Color.White;
             btn_update_price.Location = new Point(1127, 304);
             btn_update_price.Name = "btn_update_price";
             btn_update_price.Size = new Size(164, 58);
             btn_update_price.TabIndex = 9;
             btn_update_price.Text = "Update";
-            btn_update_price.UseVisualStyleBackColor = true;
+            btn_update_price.UseVisualStyleBackColor = false;
             btn_update_price.Click += btn_update_price_Click;
             // 
             // btn_delete_price
             // 
             btn_delete_price.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_delete_price.BackColor = Color.FromArgb(155, 31, 33);
+            btn_delete_price.ForeColor = Color.White;
             btn_delete_price.Location = new Point(1127, 405);
             btn_delete_price.Name = "btn_delete_price";
             btn_delete_price.Size = new Size(164, 58);
             btn_delete_price.TabIndex = 10;
             btn_delete_price.Text = "Delete";
-            btn_delete_price.UseVisualStyleBackColor = true;
+            btn_delete_price.UseVisualStyleBackColor = false;
             btn_delete_price.Click += btn_delete_price_Click;
             // 
             // Form_RoomTypeSeasonPrice

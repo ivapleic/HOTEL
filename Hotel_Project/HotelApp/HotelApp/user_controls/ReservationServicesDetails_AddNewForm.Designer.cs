@@ -106,29 +106,34 @@
             // btn_exit
             // 
             btn_exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_exit.BackColor = Color.FromArgb(155, 31, 33);
+            btn_exit.ForeColor = Color.White;
             btn_exit.Location = new Point(649, 484);
             btn_exit.Name = "btn_exit";
             btn_exit.Size = new Size(133, 51);
             btn_exit.TabIndex = 27;
             btn_exit.Text = "Exit";
-            btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.UseVisualStyleBackColor = false;
             // 
             // btn_add_new
             // 
             btn_add_new.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_add_new.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_new.ForeColor = Color.White;
             btn_add_new.Location = new Point(498, 484);
             btn_add_new.Name = "btn_add_new";
             btn_add_new.Size = new Size(128, 51);
             btn_add_new.TabIndex = 26;
             btn_add_new.Text = "Add New";
-            btn_add_new.UseVisualStyleBackColor = true;
+            btn_add_new.UseVisualStyleBackColor = false;
             btn_add_new.Click += btn_add_new_Click;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;
+            panel1.ForeColor = Color.White;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 86);
@@ -185,6 +190,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(800, 547);
             Controls.Add(textBox_amount);
             Controls.Add(label3);

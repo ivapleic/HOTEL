@@ -30,6 +30,7 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
@@ -58,9 +59,10 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
+            panel1.ForeColor = Color.White;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1294, 99);
@@ -78,8 +80,10 @@
             // 
             // panel2
             // 
+            panel2.BackColor = Color.FromArgb(155, 31, 33);
             panel2.Controls.Add(lbl_number_of_guests);
             panel2.Controls.Add(label2);
+            panel2.ForeColor = Color.White;
             panel2.Location = new Point(59, 114);
             panel2.Name = "panel2";
             panel2.Size = new Size(1185, 56);
@@ -126,7 +130,7 @@
             dataGridViewCellStyle1.BackColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -145,6 +149,14 @@
             dataGridViewGuests.Location = new Point(0, 0);
             dataGridViewGuests.Name = "dataGridViewGuests";
             dataGridViewGuests.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridViewGuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewGuests.RowHeadersVisible = false;
             dataGridViewGuests.RowHeadersWidth = 62;
             dataGridViewGuests.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -196,69 +208,82 @@
             // 
             // btn_add_new_guest
             // 
-            btn_add_new_guest.Location = new Point(76, 829);
+            btn_add_new_guest.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_new_guest.ForeColor = Color.White;
+            btn_add_new_guest.Location = new Point(56, 847);
             btn_add_new_guest.Name = "btn_add_new_guest";
             btn_add_new_guest.Size = new Size(136, 52);
             btn_add_new_guest.TabIndex = 7;
             btn_add_new_guest.Text = "Add New";
-            btn_add_new_guest.UseVisualStyleBackColor = true;
+            btn_add_new_guest.UseVisualStyleBackColor = false;
             btn_add_new_guest.Click += btn_add_new_guest_Click;
             // 
             // btn_delete_guest
             // 
-            btn_delete_guest.Location = new Point(228, 829);
+            btn_delete_guest.BackColor = Color.FromArgb(155, 31, 33);
+            btn_delete_guest.ForeColor = Color.White;
+            btn_delete_guest.Location = new Point(208, 847);
             btn_delete_guest.Name = "btn_delete_guest";
             btn_delete_guest.Size = new Size(136, 52);
             btn_delete_guest.TabIndex = 8;
             btn_delete_guest.Text = "Delete";
-            btn_delete_guest.UseVisualStyleBackColor = true;
+            btn_delete_guest.UseVisualStyleBackColor = false;
             btn_delete_guest.Click += btn_delete_guest_Click;
             // 
             // btn_update_guest
             // 
-            btn_update_guest.Location = new Point(381, 829);
+            btn_update_guest.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update_guest.ForeColor = Color.White;
+            btn_update_guest.Location = new Point(361, 847);
             btn_update_guest.Name = "btn_update_guest";
             btn_update_guest.Size = new Size(136, 52);
             btn_update_guest.TabIndex = 9;
             btn_update_guest.Text = "Update";
-            btn_update_guest.UseVisualStyleBackColor = true;
+            btn_update_guest.UseVisualStyleBackColor = false;
             btn_update_guest.Click += btn_update_guest_Click;
             // 
             // btn_details_guest
             // 
-            btn_details_guest.Location = new Point(536, 829);
+            btn_details_guest.BackColor = Color.FromArgb(155, 31, 33);
+            btn_details_guest.ForeColor = Color.White;
+            btn_details_guest.Location = new Point(516, 847);
             btn_details_guest.Name = "btn_details_guest";
             btn_details_guest.Size = new Size(136, 52);
             btn_details_guest.TabIndex = 10;
             btn_details_guest.Text = "Details";
-            btn_details_guest.UseVisualStyleBackColor = true;
+            btn_details_guest.UseVisualStyleBackColor = false;
             btn_details_guest.Click += btn_details_guest_Click;
             // 
             // btn_add
             // 
-            btn_add.Location = new Point(948, 829);
+            btn_add.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add.ForeColor = Color.White;
+            btn_add.Location = new Point(946, 847);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(136, 52);
             btn_add.TabIndex = 11;
             btn_add.Text = "Add";
-            btn_add.UseVisualStyleBackColor = true;
+            btn_add.UseVisualStyleBackColor = false;
             btn_add.Click += btn_add_Click;
             // 
             // btn_exit
             // 
-            btn_exit.Location = new Point(1108, 829);
+            btn_exit.BackColor = Color.FromArgb(155, 31, 33);
+            btn_exit.ForeColor = Color.White;
+            btn_exit.Location = new Point(1106, 847);
             btn_exit.Name = "btn_exit";
             btn_exit.Size = new Size(136, 52);
             btn_exit.TabIndex = 12;
             btn_exit.Text = "Exit";
-            btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.UseVisualStyleBackColor = false;
             btn_exit.Click += btn_exit_Click;
             // 
             // Form_Guests
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1294, 907);
+            BackColor = Color.White;
+            ClientSize = new Size(1294, 921);
             Controls.Add(btn_exit);
             Controls.Add(btn_add);
             Controls.Add(btn_details_guest);

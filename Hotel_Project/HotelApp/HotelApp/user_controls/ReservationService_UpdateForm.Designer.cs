@@ -48,9 +48,10 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
+            panel1.ForeColor = Color.White;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(798, 86);
@@ -96,23 +97,27 @@
             // btn_exit
             // 
             btn_exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_exit.BackColor = Color.FromArgb(155, 31, 33);
+            btn_exit.ForeColor = Color.White;
             btn_exit.Location = new Point(653, 563);
             btn_exit.Name = "btn_exit";
             btn_exit.Size = new Size(133, 51);
             btn_exit.TabIndex = 40;
             btn_exit.Text = "Exit";
-            btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.UseVisualStyleBackColor = false;
             btn_exit.Click += btn_exit_Click;
             // 
             // btn_update_services
             // 
             btn_update_services.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_update_services.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update_services.ForeColor = Color.White;
             btn_update_services.Location = new Point(500, 563);
             btn_update_services.Name = "btn_update_services";
             btn_update_services.Size = new Size(128, 51);
             btn_update_services.TabIndex = 39;
             btn_update_services.Text = "Update";
-            btn_update_services.UseVisualStyleBackColor = true;
+            btn_update_services.UseVisualStyleBackColor = false;
             btn_update_services.Click += btn_update_services_Click;
             // 
             // label2
@@ -197,6 +202,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(798, 636);
             Controls.Add(lbl_service_name);
             Controls.Add(textBox_amount);

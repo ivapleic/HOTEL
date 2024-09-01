@@ -80,6 +80,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -91,7 +92,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(24, 21);
             label1.Name = "label1";
             label1.Size = new Size(331, 56);
@@ -138,9 +139,8 @@
             checkBox_available.AutoSize = true;
             checkBox_available.Location = new Point(148, 201);
             checkBox_available.Name = "checkBox_available";
-            checkBox_available.Size = new Size(121, 29);
+            checkBox_available.Size = new Size(22, 21);
             checkBox_available.TabIndex = 14;
-            checkBox_available.Text = "checkBox1";
             checkBox_available.UseVisualStyleBackColor = true;
             // 
             // room_description_input
@@ -231,12 +231,14 @@
             // 
             // remove_acc_btn
             // 
-            remove_acc_btn.Location = new Point(398, 74);
+            remove_acc_btn.BackColor = Color.White;
+            remove_acc_btn.BackgroundImage = (Image)resources.GetObject("remove_acc_btn.BackgroundImage");
+            remove_acc_btn.BackgroundImageLayout = ImageLayout.Zoom;
+            remove_acc_btn.Location = new Point(460, 137);
             remove_acc_btn.Name = "remove_acc_btn";
-            remove_acc_btn.Size = new Size(112, 34);
+            remove_acc_btn.Size = new Size(40, 40);
             remove_acc_btn.TabIndex = 4;
-            remove_acc_btn.Text = "Remove item";
-            remove_acc_btn.UseVisualStyleBackColor = true;
+            remove_acc_btn.UseVisualStyleBackColor = false;
             remove_acc_btn.Click += remove_acc_btn_Click;
             // 
             // acessories_choose
@@ -250,13 +252,13 @@
             // 
             // accessories_listBox
             // 
-            accessories_listBox.BorderStyle = BorderStyle.None;
+            accessories_listBox.BorderStyle = BorderStyle.FixedSingle;
             accessories_listBox.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             accessories_listBox.FormattingEnabled = true;
             accessories_listBox.ItemHeight = 26;
             accessories_listBox.Location = new Point(21, 137);
             accessories_listBox.Name = "accessories_listBox";
-            accessories_listBox.Size = new Size(433, 208);
+            accessories_listBox.Size = new Size(433, 184);
             accessories_listBox.TabIndex = 1;
             // 
             // label12
@@ -472,22 +474,26 @@
             // 
             // btn_cancel
             // 
+            btn_cancel.BackColor = Color.FromArgb(155, 31, 33);
+            btn_cancel.ForeColor = Color.White;
             btn_cancel.Location = new Point(1285, 889);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(147, 50);
             btn_cancel.TabIndex = 8;
             btn_cancel.Text = "Cancel";
-            btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.UseVisualStyleBackColor = false;
             btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_update_room
             // 
+            btn_update_room.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update_room.ForeColor = Color.White;
             btn_update_room.Location = new Point(1122, 889);
             btn_update_room.Name = "btn_update_room";
             btn_update_room.Size = new Size(147, 50);
             btn_update_room.TabIndex = 7;
             btn_update_room.Text = "Update";
-            btn_update_room.UseVisualStyleBackColor = true;
+            btn_update_room.UseVisualStyleBackColor = false;
             btn_update_room.Click += btn_update_room_Click;
             // 
             // Room_UpdateForm

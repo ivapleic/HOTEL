@@ -59,7 +59,7 @@
             label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.ForeColor = Color.FromArgb(155, 31, 33);
             label1.Location = new Point(600, 30);
             label1.Name = "label1";
             label1.Size = new Size(305, 56);
@@ -80,7 +80,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            panel2.BackColor = Color.FromArgb(40, 86, 182);
+            panel2.BackColor = Color.FromArgb(155, 31, 33);
             panel2.Controls.Add(label_num_of_rooms);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(34, 111);
@@ -115,45 +115,53 @@
             // btn_add_room
             // 
             btn_add_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_add_room.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_room.ForeColor = Color.White;
             btn_add_room.Location = new Point(1153, 259);
             btn_add_room.Name = "btn_add_room";
             btn_add_room.Size = new Size(164, 58);
             btn_add_room.TabIndex = 4;
             btn_add_room.Text = "Add New";
-            btn_add_room.UseVisualStyleBackColor = true;
+            btn_add_room.UseVisualStyleBackColor = false;
             btn_add_room.Click += btn_add_room_Click;
             // 
             // btn_delete_room
             // 
             btn_delete_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_delete_room.BackColor = Color.FromArgb(155, 31, 33);
+            btn_delete_room.ForeColor = Color.White;
             btn_delete_room.Location = new Point(1154, 354);
             btn_delete_room.Name = "btn_delete_room";
             btn_delete_room.Size = new Size(163, 62);
             btn_delete_room.TabIndex = 5;
             btn_delete_room.Text = "Delete";
-            btn_delete_room.UseVisualStyleBackColor = true;
+            btn_delete_room.UseVisualStyleBackColor = false;
             btn_delete_room.Click += btn_delete_room_Click;
             // 
             // btn_update_room
             // 
             btn_update_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_update_room.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update_room.ForeColor = Color.White;
             btn_update_room.Location = new Point(1154, 456);
             btn_update_room.Name = "btn_update_room";
             btn_update_room.Size = new Size(163, 60);
             btn_update_room.TabIndex = 6;
             btn_update_room.Text = "Update";
-            btn_update_room.UseVisualStyleBackColor = true;
+            btn_update_room.UseVisualStyleBackColor = false;
             btn_update_room.Click += btn_update_room_Click;
             // 
             // btn_room_details
             // 
             btn_room_details.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_room_details.BackColor = Color.FromArgb(155, 31, 33);
+            btn_room_details.ForeColor = Color.White;
             btn_room_details.Location = new Point(1154, 553);
             btn_room_details.Name = "btn_room_details";
             btn_room_details.Size = new Size(163, 61);
             btn_room_details.TabIndex = 7;
             btn_room_details.Text = "Details";
-            btn_room_details.UseVisualStyleBackColor = true;
+            btn_room_details.UseVisualStyleBackColor = false;
             btn_room_details.Click += btn_room_details_Click;
             // 
             // dataGridViewRooms
@@ -171,7 +179,7 @@
             dataGridViewCellStyle1.BackColor = SystemColors.ControlLight;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -181,7 +189,7 @@
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridViewRooms.DefaultCellStyle = dataGridViewCellStyle2;

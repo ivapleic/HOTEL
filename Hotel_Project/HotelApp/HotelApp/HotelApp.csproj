@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="forms_items\" />
     <Folder Include="resources\" />
   </ItemGroup>
 

@@ -47,7 +47,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -59,6 +59,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(27, 23);
             label1.Name = "label1";
             label1.Size = new Size(446, 43);
@@ -141,22 +142,26 @@
             // 
             // btn_close_form
             // 
+            btn_close_form.BackColor = Color.FromArgb(155, 31, 33);
+            btn_close_form.ForeColor = Color.White;
             btn_close_form.Location = new Point(739, 436);
             btn_close_form.Name = "btn_close_form";
             btn_close_form.Size = new Size(135, 52);
             btn_close_form.TabIndex = 16;
             btn_close_form.Text = "Exit";
-            btn_close_form.UseVisualStyleBackColor = true;
+            btn_close_form.UseVisualStyleBackColor = false;
             btn_close_form.Click += btn_close_form_Click;
             // 
             // btn_add_res_guest
             // 
+            btn_add_res_guest.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_res_guest.ForeColor = Color.White;
             btn_add_res_guest.Location = new Point(583, 436);
             btn_add_res_guest.Name = "btn_add_res_guest";
             btn_add_res_guest.Size = new Size(135, 52);
             btn_add_res_guest.TabIndex = 15;
             btn_add_res_guest.Text = "Add";
-            btn_add_res_guest.UseVisualStyleBackColor = true;
+            btn_add_res_guest.UseVisualStyleBackColor = false;
             btn_add_res_guest.Click += btn_add_res_guest_Click;
             // 
             // checkBox_add_person
@@ -184,6 +189,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(886, 500);
             Controls.Add(checkBox_add_person);
             Controls.Add(label18);

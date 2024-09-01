@@ -22,6 +22,7 @@ namespace HotelApp.forms
             InitializeComponent();
             dbConnection = new DBConnection();
             DisplayAddServices();
+            dataGridViewAddServices.ClearSelection();
         }
 
         public void RefreshAddServicesList()

@@ -41,7 +41,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -53,7 +53,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(165, 20);
             label1.Name = "label1";
             label1.Size = new Size(578, 47);
@@ -99,22 +99,26 @@
             // 
             // btn_cancel
             // 
+            btn_cancel.BackColor = Color.FromArgb(155, 31, 33);
+            btn_cancel.ForeColor = Color.White;
             btn_cancel.Location = new Point(724, 450);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(148, 57);
             btn_cancel.TabIndex = 15;
             btn_cancel.Text = "Cancel";
-            btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.UseVisualStyleBackColor = false;
             btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_save
             // 
+            btn_save.BackColor = Color.FromArgb(155, 31, 33);
+            btn_save.ForeColor = Color.White;
             btn_save.Location = new Point(557, 450);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(147, 57);
             btn_save.TabIndex = 14;
             btn_save.Text = "Save";
-            btn_save.UseVisualStyleBackColor = true;
+            btn_save.UseVisualStyleBackColor = false;
             btn_save.Click += btn_save_Click;
             // 
             // RoomAcc_UpdateForm

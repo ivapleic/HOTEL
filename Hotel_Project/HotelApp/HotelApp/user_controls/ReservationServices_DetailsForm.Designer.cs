@@ -47,9 +47,10 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
+            panel1.ForeColor = Color.White;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(798, 86);
@@ -107,12 +108,14 @@
             // btn_exit
             // 
             btn_exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_exit.BackColor = Color.FromArgb(155, 31, 33);
+            btn_exit.ForeColor = Color.White;
             btn_exit.Location = new Point(645, 566);
             btn_exit.Name = "btn_exit";
             btn_exit.Size = new Size(133, 51);
             btn_exit.TabIndex = 53;
             btn_exit.Text = "Exit";
-            btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.UseVisualStyleBackColor = false;
             btn_exit.Click += btn_exit_Click;
             // 
             // label2
@@ -189,6 +192,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(798, 636);
             Controls.Add(label_res_date);
             Controls.Add(label_con_date);

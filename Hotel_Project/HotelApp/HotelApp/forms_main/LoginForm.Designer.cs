@@ -61,7 +61,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(41, 128, 185);
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
@@ -200,7 +200,7 @@
             // 
             // loginButton
             // 
-            loginButton.BackColor = Color.FromArgb(41, 128, 185);
+            loginButton.BackColor = Color.FromArgb(155, 31, 33);
             loginButton.Cursor = Cursors.Hand;
             loginButton.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             loginButton.ForeColor = Color.White;
@@ -226,7 +226,7 @@
             // 
             pswdTextBox.BorderStyle = BorderStyle.None;
             pswdTextBox.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            pswdTextBox.ForeColor = Color.FromArgb(41, 128, 185);
+            pswdTextBox.ForeColor = Color.FromArgb(155, 31, 33);
             pswdTextBox.Location = new Point(75, 19);
             pswdTextBox.Name = "pswdTextBox";
             pswdTextBox.Size = new Size(420, 25);
@@ -236,6 +236,7 @@
             // pictureBox3
             // 
             pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImageLayout = ImageLayout.Center;
             pictureBox3.Location = new Point(-1, 0);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(70, 57);
@@ -256,7 +257,7 @@
             // 
             usernameTextBox.BorderStyle = BorderStyle.None;
             usernameTextBox.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            usernameTextBox.ForeColor = Color.FromArgb(41, 128, 185);
+            usernameTextBox.ForeColor = Color.FromArgb(155, 31, 33);
             usernameTextBox.Location = new Point(75, 16);
             usernameTextBox.Name = "usernameTextBox";
             usernameTextBox.Size = new Size(420, 25);
@@ -265,6 +266,8 @@
             // pictureBox2
             // 
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox2.InitialImage = null;
             pictureBox2.Location = new Point(-1, 0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(70, 57);
@@ -275,7 +278,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.FromArgb(41, 128, 185);
+            label6.ForeColor = Color.FromArgb(155, 31, 33);
             label6.Location = new Point(96, 127);
             label6.Name = "label6";
             label6.Size = new Size(316, 34);
@@ -288,7 +291,7 @@
             close_btn.FlatAppearance.BorderSize = 0;
             close_btn.FlatStyle = FlatStyle.Flat;
             close_btn.Font = new Font("Verdana", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            close_btn.ForeColor = Color.FromArgb(41, 128, 185);
+            close_btn.ForeColor = Color.FromArgb(155, 31, 33);
             close_btn.Location = new Point(482, 0);
             close_btn.Name = "close_btn";
             close_btn.Size = new Size(40, 40);

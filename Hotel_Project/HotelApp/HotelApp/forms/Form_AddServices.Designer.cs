@@ -63,7 +63,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold);
-            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.ForeColor = Color.FromArgb(155, 31, 33);
             label1.Location = new Point(600, 30);
             label1.Name = "label1";
             label1.Size = new Size(610, 56);
@@ -147,7 +147,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            panel2.BackColor = Color.FromArgb(40, 86, 182);
+            panel2.BackColor = Color.FromArgb(155, 31, 33);
             panel2.Controls.Add(label_num_of_add_services);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(87, 127);
@@ -184,34 +184,40 @@
             // btn_delete_add_service
             // 
             btn_delete_add_service.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_delete_add_service.BackColor = Color.FromArgb(155, 31, 33);
+            btn_delete_add_service.ForeColor = Color.White;
             btn_delete_add_service.Location = new Point(1120, 483);
             btn_delete_add_service.Name = "btn_delete_add_service";
             btn_delete_add_service.Size = new Size(162, 60);
             btn_delete_add_service.TabIndex = 9;
             btn_delete_add_service.Text = "Delete";
-            btn_delete_add_service.UseVisualStyleBackColor = true;
+            btn_delete_add_service.UseVisualStyleBackColor = false;
             btn_delete_add_service.Click += btn_delete_add_service_Click;
             // 
             // btn_update_add_service
             // 
             btn_update_add_service.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_update_add_service.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update_add_service.ForeColor = Color.White;
             btn_update_add_service.Location = new Point(1120, 344);
             btn_update_add_service.Name = "btn_update_add_service";
             btn_update_add_service.Size = new Size(162, 60);
             btn_update_add_service.TabIndex = 8;
             btn_update_add_service.Text = "Update";
-            btn_update_add_service.UseVisualStyleBackColor = true;
+            btn_update_add_service.UseVisualStyleBackColor = false;
             btn_update_add_service.Click += btn_update_add_service_Click;
             // 
             // btn_add_new_add_service
             // 
             btn_add_new_add_service.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_add_new_add_service.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_new_add_service.ForeColor = Color.White;
             btn_add_new_add_service.Location = new Point(1120, 205);
             btn_add_new_add_service.Name = "btn_add_new_add_service";
             btn_add_new_add_service.Size = new Size(164, 64);
             btn_add_new_add_service.TabIndex = 7;
             btn_add_new_add_service.Text = "Add New";
-            btn_add_new_add_service.UseVisualStyleBackColor = true;
+            btn_add_new_add_service.UseVisualStyleBackColor = false;
             btn_add_new_add_service.Click += btn_add_new_add_service_Click;
             // 
             // Form_AddServices

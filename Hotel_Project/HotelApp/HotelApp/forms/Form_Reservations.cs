@@ -28,6 +28,7 @@ namespace HotelApp.forms
             dbConnection = new DBConnection();
             this.employee = employee;
             DisplayReservations();
+            dataGridViewReservations.ClearSelection();
         }
 
         public void RefreshReservationsList()

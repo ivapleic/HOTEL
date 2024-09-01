@@ -103,7 +103,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label_res_number);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -116,6 +116,7 @@
             // 
             label_res_number.AutoSize = true;
             label_res_number.Font = new Font("Century Gothic", 12F);
+            label_res_number.ForeColor = Color.White;
             label_res_number.Location = new Point(309, 31);
             label_res_number.Name = "label_res_number";
             label_res_number.Size = new Size(179, 30);
@@ -126,6 +127,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 12F);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(33, 31);
             label1.Name = "label1";
             label1.Size = new Size(270, 30);
@@ -134,6 +136,7 @@
             // 
             // panel2
             // 
+            panel2.BackColor = Color.White;
             panel2.Controls.Add(pnl_description);
             panel2.Controls.Add(pnl_check_in_out);
             panel2.Controls.Add(pnl_reservation);
@@ -147,7 +150,7 @@
             // pnl_description
             // 
             pnl_description.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            pnl_description.BackColor = Color.Gainsboro;
+            pnl_description.BackColor = Color.White;
             pnl_description.Controls.Add(label_description);
             pnl_description.Controls.Add(label18);
             pnl_description.Location = new Point(12, 630);
@@ -169,6 +172,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.ForeColor = Color.FromArgb(155, 31, 33);
             label18.Location = new Point(12, 21);
             label18.Name = "label18";
             label18.Size = new Size(143, 26);
@@ -178,7 +182,7 @@
             // pnl_check_in_out
             // 
             pnl_check_in_out.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            pnl_check_in_out.BackColor = Color.Gainsboro;
+            pnl_check_in_out.BackColor = Color.White;
             pnl_check_in_out.Controls.Add(label_check_out_date);
             pnl_check_in_out.Controls.Add(label_check_in_date);
             pnl_check_in_out.Controls.Add(label15);
@@ -233,6 +237,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.FromArgb(155, 31, 33);
             label13.Location = new Point(12, 19);
             label13.Name = "label13";
             label13.Size = new Size(163, 26);
@@ -242,7 +247,7 @@
             // pnl_reservation
             // 
             pnl_reservation.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            pnl_reservation.BackColor = Color.Gainsboro;
+            pnl_reservation.BackColor = Color.White;
             pnl_reservation.Controls.Add(label_end_date);
             pnl_reservation.Controls.Add(label_start_date);
             pnl_reservation.Controls.Add(label10);
@@ -319,6 +324,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(155, 31, 33);
             label6.Location = new Point(12, 21);
             label6.Name = "label6";
             label6.Size = new Size(136, 26);
@@ -328,7 +334,7 @@
             // pnl_basics
             // 
             pnl_basics.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            pnl_basics.BackColor = Color.Gainsboro;
+            pnl_basics.BackColor = Color.White;
             pnl_basics.Controls.Add(label_status);
             pnl_basics.Controls.Add(label_employee_name);
             pnl_basics.Controls.Add(label4);
@@ -383,6 +389,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(155, 31, 33);
             label2.Location = new Point(12, 15);
             label2.Name = "label2";
             label2.Size = new Size(79, 26);
@@ -391,6 +398,7 @@
             // 
             // panel3
             // 
+            panel3.BackColor = Color.White;
             panel3.Controls.Add(btn_close);
             panel3.Controls.Add(btn_exit);
             panel3.Controls.Add(pnl_add_services);
@@ -405,12 +413,14 @@
             // btn_close
             // 
             btn_close.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_close.BackColor = Color.FromArgb(155, 31, 33);
+            btn_close.ForeColor = Color.White;
             btn_close.Location = new Point(701, 778);
             btn_close.Name = "btn_close";
             btn_close.Size = new Size(137, 48);
             btn_close.TabIndex = 6;
             btn_close.Text = "Close";
-            btn_close.UseVisualStyleBackColor = true;
+            btn_close.UseVisualStyleBackColor = false;
             btn_close.Click += btn_close_Click;
             // 
             // btn_exit
@@ -427,7 +437,7 @@
             // pnl_add_services
             // 
             pnl_add_services.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            pnl_add_services.BackColor = Color.Gainsboro;
+            pnl_add_services.BackColor = Color.White;
             pnl_add_services.Controls.Add(label27);
             pnl_add_services.Controls.Add(dataGridViewAddServices);
             pnl_add_services.Location = new Point(14, 507);
@@ -438,11 +448,12 @@
             // label27
             // 
             label27.AutoSize = true;
-            label27.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label27.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label27.ForeColor = Color.FromArgb(155, 31, 33);
             label27.Location = new Point(334, 3);
             label27.Name = "label27";
             label27.Padding = new Padding(0, 3, 0, 3);
-            label27.Size = new Size(174, 27);
+            label27.Size = new Size(176, 28);
             label27.TabIndex = 9;
             label27.Text = "Additional services";
             // 
@@ -460,7 +471,7 @@
             dataGridViewCellStyle1.BackColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewAddServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -533,7 +544,7 @@
             dataGridViewCellStyle3.BackColor = Color.WhiteSmoke;
             dataGridViewCellStyle3.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -543,7 +554,7 @@
             dataGridViewCellStyle4.BackColor = SystemColors.Window;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dataGridViewGuests.DefaultCellStyle = dataGridViewCellStyle4;
@@ -598,7 +609,7 @@
             // 
             // panel4
             // 
-            panel4.BackColor = Color.Silver;
+            panel4.BackColor = Color.White;
             panel4.Controls.Add(label26);
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
@@ -608,18 +619,19 @@
             // label26
             // 
             label26.AutoSize = true;
-            label26.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label26.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label26.ForeColor = Color.FromArgb(155, 31, 33);
             label26.Location = new Point(371, 0);
             label26.Name = "label26";
             label26.Padding = new Padding(0, 3, 0, 3);
-            label26.Size = new Size(70, 27);
+            label26.Size = new Size(69, 28);
             label26.TabIndex = 8;
             label26.Text = "Guests";
             // 
             // pnl_room
             // 
             pnl_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            pnl_room.BackColor = Color.Gainsboro;
+            pnl_room.BackColor = Color.White;
             pnl_room.Controls.Add(btn_room_details);
             pnl_room.Controls.Add(label_room_number);
             pnl_room.Controls.Add(label24);
@@ -633,12 +645,14 @@
             // 
             // btn_room_details
             // 
-            btn_room_details.Location = new Point(359, 112);
+            btn_room_details.BackColor = Color.FromArgb(155, 31, 33);
+            btn_room_details.ForeColor = Color.White;
+            btn_room_details.Location = new Point(444, 15);
             btn_room_details.Name = "btn_room_details";
-            btn_room_details.Size = new Size(149, 34);
+            btn_room_details.Size = new Size(149, 43);
             btn_room_details.TabIndex = 0;
             btn_room_details.Text = "Details room";
-            btn_room_details.UseVisualStyleBackColor = true;
+            btn_room_details.UseVisualStyleBackColor = false;
             btn_room_details.Click += btn_room_details_Click;
             // 
             // label_room_number
@@ -685,6 +699,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.FromArgb(155, 31, 33);
             label20.Location = new Point(19, 15);
             label20.Name = "label20";
             label20.Size = new Size(74, 26);

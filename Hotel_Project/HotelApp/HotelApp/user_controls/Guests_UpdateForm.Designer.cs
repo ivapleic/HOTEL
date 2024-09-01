@@ -77,9 +77,10 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
+            panel1.ForeColor = Color.White;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1252, 99);
@@ -97,7 +98,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.LightGray;
+            panel2.BackColor = Color.White;
             panel2.Controls.Add(btn_exit);
             panel2.Controls.Add(btn_update);
             panel2.Dock = DockStyle.Bottom;
@@ -109,28 +110,32 @@
             // btn_exit
             // 
             btn_exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_exit.BackColor = Color.FromArgb(155, 31, 33);
+            btn_exit.ForeColor = Color.White;
             btn_exit.Location = new Point(1106, 20);
             btn_exit.Name = "btn_exit";
             btn_exit.Size = new Size(133, 51);
             btn_exit.TabIndex = 6;
             btn_exit.Text = "Exit";
-            btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.UseVisualStyleBackColor = false;
             btn_exit.Click += btn_exit_Click;
             // 
             // btn_update
             // 
             btn_update.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_update.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update.ForeColor = Color.White;
             btn_update.Location = new Point(955, 20);
             btn_update.Name = "btn_update";
             btn_update.Size = new Size(128, 51);
             btn_update.TabIndex = 5;
             btn_update.Text = "Update";
-            btn_update.UseVisualStyleBackColor = true;
+            btn_update.UseVisualStyleBackColor = false;
             btn_update.Click += btn_update_Click;
             // 
             // panel3
             // 
-            panel3.BackColor = Color.LightGray;
+            panel3.BackColor = Color.White;
             panel3.Controls.Add(textBox_description);
             panel3.Controls.Add(label16);
             panel3.Controls.Add(checkBox_active);

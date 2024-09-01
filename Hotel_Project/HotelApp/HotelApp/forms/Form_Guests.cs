@@ -24,6 +24,7 @@ namespace HotelApp.forms
             dbConnection = new DBConnection();
             selectedGuest = new Guest();
             DisplayGuests();
+            dataGridViewGuests.ClearSelection();
         }
 
         public void RefreshGuestList()

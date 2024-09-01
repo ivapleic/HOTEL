@@ -33,20 +33,11 @@ namespace HotelApp
 
                 if (employee != null)
                 {
-                    if (employee.IsAdmin)
-                    {
-                        MessageBox.Show("Uspješna prijava kao admin.");
-                        AdminForm adminForm = new AdminForm(employee);
-                        adminForm.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
+                  
                         MessageBox.Show("Uspješna prijava kao zaposlenik.");
                         UserForm userForm = new UserForm(employee);
                         userForm.Show();
                         this.Hide();
-                    }
                 }
                 else
                 {

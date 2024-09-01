@@ -33,12 +33,18 @@
             panel2 = new Panel();
             checkBox_active = new CheckBox();
             label18 = new Label();
+            textBox_city = new TextBox();
             label17 = new Label();
             textBox_email = new TextBox();
             label2 = new Label();
             textBox_nationality = new TextBox();
             textBox_birth_place = new TextBox();
             textBox_id_text = new TextBox();
+            textBox_mobile = new TextBox();
+            textBox_phone = new TextBox();
+            textBox_address = new TextBox();
+            textBox_oib = new TextBox();
+            textBox_last_name = new TextBox();
             textBox_description = new TextBox();
             label16 = new Label();
             label15 = new Label();
@@ -52,30 +58,24 @@
             label10 = new Label();
             label8 = new Label();
             label9 = new Label();
+            comboBox_country = new ComboBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
+            comboBox_gender = new ComboBox();
             label4 = new Label();
             label3 = new Label();
+            textBox_first_name = new TextBox();
             label_name = new Label();
             btn_add_new = new Button();
             btn_exit = new Button();
-            textBox_mobile = new TextBox();
-            textBox_phone = new TextBox();
-            textBox_city = new TextBox();
-            comboBox_country = new ComboBox();
-            textBox_address = new TextBox();
-            textBox_oib = new TextBox();
-            comboBox_gender = new ComboBox();
-            textBox_last_name = new TextBox();
-            textBox_first_name = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -87,6 +87,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(23, 24);
             label1.Name = "label1";
             label1.Size = new Size(399, 56);
@@ -96,7 +97,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.None;
-            panel2.BackColor = Color.LightGray;
+            panel2.BackColor = Color.White;
             panel2.Controls.Add(checkBox_active);
             panel2.Controls.Add(label18);
             panel2.Controls.Add(textBox_city);
@@ -159,6 +160,16 @@
             label18.TabIndex = 42;
             label18.Text = "Active :";
             // 
+            // textBox_city
+            // 
+            textBox_city.Anchor = AnchorStyles.None;
+            textBox_city.Font = new Font("Century Gothic", 10F);
+            textBox_city.Location = new Point(176, 407);
+            textBox_city.Multiline = true;
+            textBox_city.Name = "textBox_city";
+            textBox_city.Size = new Size(303, 35);
+            textBox_city.TabIndex = 41;
+            // 
             // label17
             // 
             label17.Anchor = AnchorStyles.None;
@@ -220,6 +231,56 @@
             textBox_id_text.Name = "textBox_id_text";
             textBox_id_text.Size = new Size(272, 35);
             textBox_id_text.TabIndex = 35;
+            // 
+            // textBox_mobile
+            // 
+            textBox_mobile.Anchor = AnchorStyles.None;
+            textBox_mobile.Font = new Font("Century Gothic", 10F);
+            textBox_mobile.Location = new Point(181, 539);
+            textBox_mobile.Multiline = true;
+            textBox_mobile.Name = "textBox_mobile";
+            textBox_mobile.Size = new Size(297, 35);
+            textBox_mobile.TabIndex = 34;
+            // 
+            // textBox_phone
+            // 
+            textBox_phone.Anchor = AnchorStyles.None;
+            textBox_phone.Font = new Font("Century Gothic", 10F);
+            textBox_phone.Location = new Point(180, 474);
+            textBox_phone.Multiline = true;
+            textBox_phone.Name = "textBox_phone";
+            textBox_phone.Size = new Size(297, 35);
+            textBox_phone.TabIndex = 33;
+            // 
+            // textBox_address
+            // 
+            textBox_address.Anchor = AnchorStyles.None;
+            textBox_address.Font = new Font("Century Gothic", 10F);
+            textBox_address.Location = new Point(181, 279);
+            textBox_address.Multiline = true;
+            textBox_address.Name = "textBox_address";
+            textBox_address.Size = new Size(303, 35);
+            textBox_address.TabIndex = 32;
+            // 
+            // textBox_oib
+            // 
+            textBox_oib.Anchor = AnchorStyles.None;
+            textBox_oib.Font = new Font("Century Gothic", 10F);
+            textBox_oib.Location = new Point(181, 217);
+            textBox_oib.Multiline = true;
+            textBox_oib.Name = "textBox_oib";
+            textBox_oib.Size = new Size(307, 35);
+            textBox_oib.TabIndex = 31;
+            // 
+            // textBox_last_name
+            // 
+            textBox_last_name.Anchor = AnchorStyles.None;
+            textBox_last_name.Font = new Font("Century Gothic", 10F);
+            textBox_last_name.Location = new Point(181, 97);
+            textBox_last_name.Multiline = true;
+            textBox_last_name.Name = "textBox_last_name";
+            textBox_last_name.Size = new Size(268, 35);
+            textBox_last_name.TabIndex = 30;
             // 
             // textBox_description
             // 
@@ -359,6 +420,16 @@
             label9.TabIndex = 12;
             label9.Text = "Phone :";
             // 
+            // comboBox_country
+            // 
+            comboBox_country.Anchor = AnchorStyles.None;
+            comboBox_country.Font = new Font("Century Gothic", 10F);
+            comboBox_country.FormattingEnabled = true;
+            comboBox_country.Location = new Point(180, 345);
+            comboBox_country.Name = "comboBox_country";
+            comboBox_country.Size = new Size(285, 31);
+            comboBox_country.TabIndex = 11;
+            // 
             // label7
             // 
             label7.Anchor = AnchorStyles.None;
@@ -392,6 +463,16 @@
             label5.TabIndex = 6;
             label5.Text = "OIB :";
             // 
+            // comboBox_gender
+            // 
+            comboBox_gender.Anchor = AnchorStyles.None;
+            comboBox_gender.Font = new Font("Century Gothic", 10F);
+            comboBox_gender.FormattingEnabled = true;
+            comboBox_gender.Location = new Point(181, 161);
+            comboBox_gender.Name = "comboBox_gender";
+            comboBox_gender.Size = new Size(261, 31);
+            comboBox_gender.TabIndex = 5;
+            // 
             // label4
             // 
             label4.Anchor = AnchorStyles.None;
@@ -414,6 +495,16 @@
             label3.TabIndex = 2;
             label3.Text = "Last Name :";
             // 
+            // textBox_first_name
+            // 
+            textBox_first_name.Anchor = AnchorStyles.None;
+            textBox_first_name.Font = new Font("Century Gothic", 10F);
+            textBox_first_name.Location = new Point(181, 31);
+            textBox_first_name.Multiline = true;
+            textBox_first_name.Name = "textBox_first_name";
+            textBox_first_name.Size = new Size(272, 35);
+            textBox_first_name.TabIndex = 1;
+            // 
             // label_name
             // 
             label_name.Anchor = AnchorStyles.None;
@@ -428,119 +519,34 @@
             // btn_add_new
             // 
             btn_add_new.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_add_new.Location = new Point(960, 887);
+            btn_add_new.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_new.ForeColor = Color.White;
+            btn_add_new.Location = new Point(954, 878);
             btn_add_new.Name = "btn_add_new";
-            btn_add_new.Size = new Size(128, 51);
+            btn_add_new.Size = new Size(146, 60);
             btn_add_new.TabIndex = 3;
             btn_add_new.Text = "Add New";
-            btn_add_new.UseVisualStyleBackColor = true;
+            btn_add_new.UseVisualStyleBackColor = false;
             btn_add_new.Click += btn_add_new_Click;
             // 
             // btn_exit
             // 
             btn_exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_exit.Location = new Point(1111, 887);
+            btn_exit.BackColor = Color.FromArgb(155, 31, 33);
+            btn_exit.ForeColor = Color.White;
+            btn_exit.Location = new Point(1110, 878);
             btn_exit.Name = "btn_exit";
-            btn_exit.Size = new Size(133, 51);
+            btn_exit.Size = new Size(134, 60);
             btn_exit.TabIndex = 4;
             btn_exit.Text = "Exit";
-            btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.UseVisualStyleBackColor = false;
             btn_exit.Click += btn_exit_Click;
-            // 
-            // textBox_mobile
-            // 
-            textBox_mobile.Anchor = AnchorStyles.None;
-            textBox_mobile.Font = new Font("Century Gothic", 10F);
-            textBox_mobile.Location = new Point(181, 539);
-            textBox_mobile.Multiline = true;
-            textBox_mobile.Name = "textBox_mobile";
-            textBox_mobile.Size = new Size(297, 35);
-            textBox_mobile.TabIndex = 34;
-            // 
-            // textBox_phone
-            // 
-            textBox_phone.Anchor = AnchorStyles.None;
-            textBox_phone.Font = new Font("Century Gothic", 10F);
-            textBox_phone.Location = new Point(180, 474);
-            textBox_phone.Multiline = true;
-            textBox_phone.Name = "textBox_phone";
-            textBox_phone.Size = new Size(297, 35);
-            textBox_phone.TabIndex = 33;
-            // 
-            // textBox_city
-            // 
-            textBox_city.Anchor = AnchorStyles.None;
-            textBox_city.Font = new Font("Century Gothic", 10F);
-            textBox_city.Location = new Point(176, 407);
-            textBox_city.Multiline = true;
-            textBox_city.Name = "textBox_city";
-            textBox_city.Size = new Size(303, 35);
-            textBox_city.TabIndex = 41;
-            // 
-            // comboBox_country
-            // 
-            comboBox_country.Anchor = AnchorStyles.None;
-            comboBox_country.Font = new Font("Century Gothic", 10F);
-            comboBox_country.FormattingEnabled = true;
-            comboBox_country.Location = new Point(180, 345);
-            comboBox_country.Name = "comboBox_country";
-            comboBox_country.Size = new Size(285, 31);
-            comboBox_country.TabIndex = 11;
-            // 
-            // textBox_address
-            // 
-            textBox_address.Anchor = AnchorStyles.None;
-            textBox_address.Font = new Font("Century Gothic", 10F);
-            textBox_address.Location = new Point(181, 279);
-            textBox_address.Multiline = true;
-            textBox_address.Name = "textBox_address";
-            textBox_address.Size = new Size(303, 35);
-            textBox_address.TabIndex = 32;
-            // 
-            // textBox_oib
-            // 
-            textBox_oib.Anchor = AnchorStyles.None;
-            textBox_oib.Font = new Font("Century Gothic", 10F);
-            textBox_oib.Location = new Point(181, 217);
-            textBox_oib.Multiline = true;
-            textBox_oib.Name = "textBox_oib";
-            textBox_oib.Size = new Size(307, 35);
-            textBox_oib.TabIndex = 31;
-            // 
-            // comboBox_gender
-            // 
-            comboBox_gender.Anchor = AnchorStyles.None;
-            comboBox_gender.Font = new Font("Century Gothic", 10F);
-            comboBox_gender.FormattingEnabled = true;
-            comboBox_gender.Location = new Point(181, 161);
-            comboBox_gender.Name = "comboBox_gender";
-            comboBox_gender.Size = new Size(261, 31);
-            comboBox_gender.TabIndex = 5;
-            // 
-            // textBox_last_name
-            // 
-            textBox_last_name.Anchor = AnchorStyles.None;
-            textBox_last_name.Font = new Font("Century Gothic", 10F);
-            textBox_last_name.Location = new Point(181, 97);
-            textBox_last_name.Multiline = true;
-            textBox_last_name.Name = "textBox_last_name";
-            textBox_last_name.Size = new Size(268, 35);
-            textBox_last_name.TabIndex = 30;
-            // 
-            // textBox_first_name
-            // 
-            textBox_first_name.Anchor = AnchorStyles.None;
-            textBox_first_name.Font = new Font("Century Gothic", 10F);
-            textBox_first_name.Location = new Point(181, 31);
-            textBox_first_name.Multiline = true;
-            textBox_first_name.Name = "textBox_first_name";
-            textBox_first_name.Size = new Size(272, 35);
-            textBox_first_name.TabIndex = 1;
             // 
             // Guests_AddNewForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1252, 941);
             Controls.Add(btn_exit);
             Controls.Add(btn_add_new);

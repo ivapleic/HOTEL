@@ -74,7 +74,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -86,6 +86,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(23, 24);
             label1.Name = "label1";
             label1.Size = new Size(352, 56);
@@ -94,7 +95,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.LightGray;
+            panel2.BackColor = Color.White;
             panel2.Controls.Add(label_description);
             panel2.Controls.Add(label_active);
             panel2.Controls.Add(label_email);
@@ -508,6 +509,7 @@
             label_name.Anchor = AnchorStyles.None;
             label_name.AutoSize = true;
             label_name.Font = new Font("Century Gothic", 10F);
+            label_name.ForeColor = Color.Black;
             label_name.Location = new Point(51, 30);
             label_name.Name = "label_name";
             label_name.Size = new Size(122, 23);
@@ -517,12 +519,14 @@
             // btn_close
             // 
             btn_close.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_close.BackColor = Color.FromArgb(155, 31, 33);
+            btn_close.ForeColor = Color.White;
             btn_close.Location = new Point(968, 893);
             btn_close.Name = "btn_close";
             btn_close.Size = new Size(137, 48);
             btn_close.TabIndex = 7;
             btn_close.Text = "Close";
-            btn_close.UseVisualStyleBackColor = true;
+            btn_close.UseVisualStyleBackColor = false;
             btn_close.Click += btn_close_Click;
             // 
             // Guest_DetailsForm

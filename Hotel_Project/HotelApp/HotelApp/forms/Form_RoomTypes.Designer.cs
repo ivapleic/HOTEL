@@ -65,7 +65,7 @@
             label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.ForeColor = Color.FromArgb(155, 31, 33);
             label1.Location = new Point(600, 32);
             label1.Name = "label1";
             label1.Size = new Size(423, 56);
@@ -76,7 +76,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            panel2.BackColor = Color.FromArgb(40, 86, 182);
+            panel2.BackColor = Color.FromArgb(155, 31, 33);
             panel2.Controls.Add(label_num_of_room_types);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(34, 133);
@@ -186,34 +186,40 @@
             // btn_update_room
             // 
             btn_update_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_update_room.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update_room.ForeColor = Color.White;
             btn_update_room.Location = new Point(1127, 393);
             btn_update_room.Name = "btn_update_room";
             btn_update_room.Size = new Size(163, 60);
             btn_update_room.TabIndex = 10;
             btn_update_room.Text = "Update";
-            btn_update_room.UseVisualStyleBackColor = true;
+            btn_update_room.UseVisualStyleBackColor = false;
             btn_update_room.Click += btn_update_room_Click;
             // 
             // btn_delete_room
             // 
             btn_delete_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_delete_room.BackColor = Color.FromArgb(155, 31, 33);
+            btn_delete_room.ForeColor = Color.White;
             btn_delete_room.Location = new Point(1127, 512);
             btn_delete_room.Name = "btn_delete_room";
             btn_delete_room.Size = new Size(163, 62);
             btn_delete_room.TabIndex = 9;
             btn_delete_room.Text = "Delete";
-            btn_delete_room.UseVisualStyleBackColor = true;
+            btn_delete_room.UseVisualStyleBackColor = false;
             btn_delete_room.Click += btn_delete_room_Click;
             // 
             // btn_add_room
             // 
             btn_add_room.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_add_room.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_room.ForeColor = Color.White;
             btn_add_room.Location = new Point(1126, 277);
             btn_add_room.Name = "btn_add_room";
             btn_add_room.Size = new Size(164, 58);
             btn_add_room.TabIndex = 8;
             btn_add_room.Text = "Add New";
-            btn_add_room.UseVisualStyleBackColor = true;
+            btn_add_room.UseVisualStyleBackColor = false;
             btn_add_room.Click += btn_add_room_Click;
             // 
             // RoomTypesForm

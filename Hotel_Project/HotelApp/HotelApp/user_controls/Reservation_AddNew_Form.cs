@@ -36,6 +36,19 @@ namespace HotelApp.user_controls
             label_employee_name.Text = $"{employee.FirstName} {employee.LastName}";
             PopulateReservationStatuses();
             PopulateRoomTypes();
+
+            dateTimePicker_start_date.Format = DateTimePickerFormat.Custom;
+            dateTimePicker_start_date.CustomFormat = " ";
+
+            dateTimePicker_end_date.Format = DateTimePickerFormat.Custom;
+            dateTimePicker_end_date.CustomFormat = " ";
+
+            dateTimePicker_check_in.Format= DateTimePickerFormat.Custom;
+            dateTimePicker_check_in.CustomFormat = " ";
+
+
+            dateTimePicker_check_out.Format = DateTimePickerFormat.Custom;
+            dateTimePicker_check_out.CustomFormat = " ";
         }
 
         public void PopulateReservationStatuses()

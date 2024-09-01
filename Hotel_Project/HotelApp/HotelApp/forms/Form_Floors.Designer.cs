@@ -62,7 +62,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold);
-            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.ForeColor = Color.FromArgb(155, 31, 33);
             label1.Location = new Point(600, 30);
             label1.Name = "label1";
             label1.Size = new Size(295, 56);
@@ -73,7 +73,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            panel2.BackColor = Color.FromArgb(40, 86, 182);
+            panel2.BackColor = Color.FromArgb(155, 31, 33);
             panel2.Controls.Add(label_num_of_floors);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(80, 122);
@@ -110,34 +110,40 @@
             // btn_add_new_floor
             // 
             btn_add_new_floor.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_add_new_floor.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_new_floor.ForeColor = Color.White;
             btn_add_new_floor.Location = new Point(1059, 149);
             btn_add_new_floor.Name = "btn_add_new_floor";
             btn_add_new_floor.Size = new Size(164, 64);
             btn_add_new_floor.TabIndex = 3;
             btn_add_new_floor.Text = "Add New";
-            btn_add_new_floor.UseVisualStyleBackColor = true;
+            btn_add_new_floor.UseVisualStyleBackColor = false;
             btn_add_new_floor.Click += btn_add_new_floor_Click;
             // 
             // btn_update_floor
             // 
             btn_update_floor.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_update_floor.BackColor = Color.FromArgb(155, 31, 33);
+            btn_update_floor.ForeColor = Color.White;
             btn_update_floor.Location = new Point(1059, 288);
             btn_update_floor.Name = "btn_update_floor";
             btn_update_floor.Size = new Size(162, 60);
             btn_update_floor.TabIndex = 5;
             btn_update_floor.Text = "Update";
-            btn_update_floor.UseVisualStyleBackColor = true;
+            btn_update_floor.UseVisualStyleBackColor = false;
             btn_update_floor.Click += btn_update_floor_Click;
             // 
             // btn_delete_floor
             // 
             btn_delete_floor.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_delete_floor.BackColor = Color.FromArgb(155, 31, 33);
+            btn_delete_floor.ForeColor = Color.White;
             btn_delete_floor.Location = new Point(1059, 427);
             btn_delete_floor.Name = "btn_delete_floor";
             btn_delete_floor.Size = new Size(162, 60);
             btn_delete_floor.TabIndex = 6;
             btn_delete_floor.Text = "Delete";
-            btn_delete_floor.UseVisualStyleBackColor = true;
+            btn_delete_floor.UseVisualStyleBackColor = false;
             btn_delete_floor.Click += btn_delete_floor_Click;
             // 
             // dataGridViewFloors

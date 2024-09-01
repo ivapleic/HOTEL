@@ -60,8 +60,6 @@
             btn_add_services = new Button();
             btn_seasonal_prices = new Button();
             btn_RoomTypes_Prices = new Button();
-            pnl_exit = new Panel();
-            btn_exit = new Button();
             main_panel = new Panel();
             reservationTransition = new System.Windows.Forms.Timer(components);
             pnl_navbar.SuspendLayout();
@@ -72,12 +70,11 @@
             pnl_sidebar.SuspendLayout();
             pnl_reservations.SuspendLayout();
             pnl_management.SuspendLayout();
-            pnl_exit.SuspendLayout();
             SuspendLayout();
             // 
             // pnl_navbar
             // 
-            pnl_navbar.BackColor = Color.FromArgb(40, 86, 182);
+            pnl_navbar.BackColor = Color.FromArgb(155, 31, 33);
             pnl_navbar.Controls.Add(label1);
             pnl_navbar.Controls.Add(btn_ham);
             pnl_navbar.Dock = DockStyle.Top;
@@ -148,7 +145,7 @@
             btn_management.FlatAppearance.BorderSize = 0;
             btn_management.FlatStyle = FlatStyle.Flat;
             btn_management.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_management.ForeColor = Color.Gray;
+            btn_management.ForeColor = Color.DimGray;
             btn_management.Image = (Image)resources.GetObject("btn_management.Image");
             btn_management.ImageAlign = ContentAlignment.MiddleLeft;
             btn_management.Location = new Point(3, 3);
@@ -165,7 +162,7 @@
             pnl_settings.BackColor = Color.FromArgb(235, 239, 241);
             pnl_settings.Controls.Add(btn_settings);
             pnl_settings.ForeColor = Color.Gray;
-            pnl_settings.Location = new Point(3, 565);
+            pnl_settings.Location = new Point(3, 267);
             pnl_settings.Name = "pnl_settings";
             pnl_settings.Size = new Size(265, 56);
             pnl_settings.TabIndex = 3;
@@ -192,7 +189,7 @@
             pnl_about.BackColor = Color.FromArgb(235, 239, 241);
             pnl_about.Controls.Add(btn_about);
             pnl_about.ForeColor = Color.Gray;
-            pnl_about.Location = new Point(3, 503);
+            pnl_about.Location = new Point(3, 205);
             pnl_about.Name = "pnl_about";
             pnl_about.Size = new Size(265, 56);
             pnl_about.TabIndex = 2;
@@ -203,7 +200,7 @@
             btn_about.FlatAppearance.BorderSize = 0;
             btn_about.FlatStyle = FlatStyle.Flat;
             btn_about.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_about.ForeColor = Color.Gray;
+            btn_about.ForeColor = Color.DimGray;
             btn_about.Image = (Image)resources.GetObject("btn_about.Image");
             btn_about.ImageAlign = ContentAlignment.MiddleLeft;
             btn_about.Location = new Point(0, 3);
@@ -220,7 +217,7 @@
             pnl_logout.BackColor = Color.FromArgb(235, 239, 241);
             pnl_logout.Controls.Add(btn_logout);
             pnl_logout.ForeColor = Color.Gray;
-            pnl_logout.Location = new Point(3, 627);
+            pnl_logout.Location = new Point(3, 329);
             pnl_logout.Name = "pnl_logout";
             pnl_logout.Size = new Size(265, 56);
             pnl_logout.TabIndex = 1;
@@ -258,7 +255,7 @@
             btn_dashboard.FlatAppearance.BorderSize = 0;
             btn_dashboard.FlatStyle = FlatStyle.Flat;
             btn_dashboard.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_dashboard.ForeColor = Color.Gray;
+            btn_dashboard.ForeColor = Color.DimGray;
             btn_dashboard.Image = (Image)resources.GetObject("btn_dashboard.Image");
             btn_dashboard.ImageAlign = ContentAlignment.MiddleLeft;
             btn_dashboard.Location = new Point(3, 0);
@@ -289,7 +286,6 @@
             pnl_sidebar.Controls.Add(pnl_about);
             pnl_sidebar.Controls.Add(pnl_settings);
             pnl_sidebar.Controls.Add(pnl_logout);
-            pnl_sidebar.Controls.Add(pnl_exit);
             pnl_sidebar.Dock = DockStyle.Left;
             pnl_sidebar.Location = new Point(0, 61);
             pnl_sidebar.Name = "pnl_sidebar";
@@ -307,7 +303,7 @@
             pnl_reservations.Controls.Add(btn_reservations);
             pnl_reservations.Location = new Point(3, 65);
             pnl_reservations.Name = "pnl_reservations";
-            pnl_reservations.Size = new Size(265, 358);
+            pnl_reservations.Size = new Size(265, 60);
             pnl_reservations.TabIndex = 0;
             // 
             // btn_closed_reservations
@@ -397,7 +393,7 @@
             btn_reservations.FlatAppearance.BorderSize = 0;
             btn_reservations.FlatStyle = FlatStyle.Flat;
             btn_reservations.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_reservations.ForeColor = Color.Gray;
+            btn_reservations.ForeColor = Color.DimGray;
             btn_reservations.Image = (Image)resources.GetObject("btn_reservations.Image");
             btn_reservations.ImageAlign = ContentAlignment.MiddleLeft;
             btn_reservations.Location = new Point(3, 3);
@@ -421,7 +417,7 @@
             pnl_management.Controls.Add(btn_seasonal_prices);
             pnl_management.Controls.Add(btn_RoomTypes_Prices);
             pnl_management.ForeColor = Color.Gray;
-            pnl_management.Location = new Point(3, 429);
+            pnl_management.Location = new Point(3, 131);
             pnl_management.Name = "pnl_management";
             pnl_management.Size = new Size(265, 68);
             pnl_management.TabIndex = 4;
@@ -506,35 +502,6 @@
             btn_RoomTypes_Prices.UseVisualStyleBackColor = true;
             btn_RoomTypes_Prices.Click += btn_RoomTypes_Prices_Click;
             // 
-            // pnl_exit
-            // 
-            pnl_exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            pnl_exit.BackColor = Color.FromArgb(235, 239, 241);
-            pnl_exit.Controls.Add(btn_exit);
-            pnl_exit.ForeColor = Color.Gray;
-            pnl_exit.Location = new Point(3, 689);
-            pnl_exit.Name = "pnl_exit";
-            pnl_exit.Size = new Size(265, 56);
-            pnl_exit.TabIndex = 5;
-            // 
-            // btn_exit
-            // 
-            btn_exit.BackColor = Color.FromArgb(235, 239, 241);
-            btn_exit.FlatAppearance.BorderSize = 0;
-            btn_exit.FlatStyle = FlatStyle.Flat;
-            btn_exit.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_exit.ForeColor = Color.Gray;
-            btn_exit.Image = (Image)resources.GetObject("btn_exit.Image");
-            btn_exit.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_exit.Location = new Point(0, 3);
-            btn_exit.Name = "btn_exit";
-            btn_exit.Padding = new Padding(10, 0, 0, 0);
-            btn_exit.Size = new Size(265, 56);
-            btn_exit.TabIndex = 0;
-            btn_exit.Text = "Exit";
-            btn_exit.UseVisualStyleBackColor = false;
-            btn_exit.Click += btn_exit_Click;
-            // 
             // main_panel
             // 
             main_panel.Dock = DockStyle.Fill;
@@ -574,7 +541,6 @@
             pnl_sidebar.ResumeLayout(false);
             pnl_reservations.ResumeLayout(false);
             pnl_management.ResumeLayout(false);
-            pnl_exit.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -597,8 +563,6 @@
         private System.Windows.Forms.Timer sidebarTransition;
         private FlowLayoutPanel pnl_sidebar;
         private FlowLayoutPanel pnl_management;
-        private Panel pnl_exit;
-        private Button btn_exit;
         private Button btn_room_acc;
         private Button btn_room_types;
         private Label label1;

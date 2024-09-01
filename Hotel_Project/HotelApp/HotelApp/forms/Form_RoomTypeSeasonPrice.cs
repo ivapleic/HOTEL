@@ -25,6 +25,7 @@ namespace HotelApp.forms
             LoadSeasonalPeriods();
             LoadRoomTypes();
             LoadRoomPrices();
+            dataGridViewPrices.ClearSelection();
         }
 
         public void RefreshPricesTable()

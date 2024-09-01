@@ -123,9 +123,10 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
+            panel1.ForeColor = Color.White;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1621, 86);
@@ -133,7 +134,7 @@
             // 
             // panel8
             // 
-            panel8.BackColor = Color.Gainsboro;
+            panel8.BackColor = Color.White;
             panel8.Controls.Add(panel5);
             panel8.Controls.Add(panel6);
             panel8.Controls.Add(panel7);
@@ -147,12 +148,12 @@
             // panel5
             // 
             panel5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            panel5.BackColor = Color.Gainsboro;
+            panel5.BackColor = Color.White;
             panel5.Controls.Add(textBox_description);
             panel5.Controls.Add(label7);
-            panel5.Location = new Point(12, 616);
+            panel5.Location = new Point(12, 606);
             panel5.Name = "panel5";
-            panel5.Size = new Size(750, 173);
+            panel5.Size = new Size(750, 189);
             panel5.TabIndex = 8;
             // 
             // textBox_description
@@ -160,13 +161,14 @@
             textBox_description.Location = new Point(16, 61);
             textBox_description.Multiline = true;
             textBox_description.Name = "textBox_description";
-            textBox_description.Size = new Size(716, 70);
+            textBox_description.Size = new Size(716, 117);
             textBox_description.TabIndex = 12;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(155, 31, 33);
             label7.Location = new Point(12, 21);
             label7.Name = "label7";
             label7.Size = new Size(143, 26);
@@ -176,7 +178,7 @@
             // panel6
             // 
             panel6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            panel6.BackColor = Color.Gainsboro;
+            panel6.BackColor = Color.White;
             panel6.Controls.Add(dateTimePicker_check_out);
             panel6.Controls.Add(dateTimePicker_check_in);
             panel6.Controls.Add(label16);
@@ -189,14 +191,14 @@
             // 
             // dateTimePicker_check_out
             // 
-            dateTimePicker_check_out.Location = new Point(201, 118);
+            dateTimePicker_check_out.Location = new Point(194, 125);
             dateTimePicker_check_out.Name = "dateTimePicker_check_out";
             dateTimePicker_check_out.Size = new Size(300, 31);
             dateTimePicker_check_out.TabIndex = 10;
             // 
             // dateTimePicker_check_in
             // 
-            dateTimePicker_check_in.Location = new Point(179, 69);
+            dateTimePicker_check_in.Location = new Point(194, 67);
             dateTimePicker_check_in.Name = "dateTimePicker_check_in";
             dateTimePicker_check_in.Size = new Size(300, 31);
             dateTimePicker_check_in.TabIndex = 9;
@@ -205,7 +207,7 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label16.Location = new Point(21, 116);
+            label16.Location = new Point(14, 123);
             label16.Name = "label16";
             label16.Size = new Size(175, 23);
             label16.TabIndex = 8;
@@ -225,6 +227,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.FromArgb(155, 31, 33);
             label19.Location = new Point(12, 19);
             label19.Name = "label19";
             label19.Size = new Size(163, 26);
@@ -234,7 +237,7 @@
             // panel7
             // 
             panel7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            panel7.BackColor = Color.Gainsboro;
+            panel7.BackColor = Color.White;
             panel7.Controls.Add(dateTimePicker_end_date);
             panel7.Controls.Add(dateTimePicker_start_date);
             panel7.Controls.Add(dateTimePicker1);
@@ -242,14 +245,14 @@
             panel7.Controls.Add(label28);
             panel7.Controls.Add(label29);
             panel7.Controls.Add(label31);
-            panel7.Location = new Point(12, 204);
+            panel7.Location = new Point(12, 196);
             panel7.Name = "panel7";
-            panel7.Size = new Size(750, 216);
+            panel7.Size = new Size(750, 224);
             panel7.TabIndex = 6;
             // 
             // dateTimePicker_end_date
             // 
-            dateTimePicker_end_date.Location = new Point(141, 164);
+            dateTimePicker_end_date.Location = new Point(136, 157);
             dateTimePicker_end_date.Name = "dateTimePicker_end_date";
             dateTimePicker_end_date.Size = new Size(300, 31);
             dateTimePicker_end_date.TabIndex = 11;
@@ -257,7 +260,7 @@
             // 
             // dateTimePicker_start_date
             // 
-            dateTimePicker_start_date.Location = new Point(150, 117);
+            dateTimePicker_start_date.Location = new Point(145, 110);
             dateTimePicker_start_date.Name = "dateTimePicker_start_date";
             dateTimePicker_start_date.Size = new Size(300, 31);
             dateTimePicker_start_date.TabIndex = 10;
@@ -265,7 +268,7 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(216, 67);
+            dateTimePicker1.Location = new Point(211, 60);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(300, 31);
             dateTimePicker1.TabIndex = 9;
@@ -274,7 +277,7 @@
             // 
             label25.AutoSize = true;
             label25.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label25.Location = new Point(21, 73);
+            label25.Location = new Point(16, 66);
             label25.Name = "label25";
             label25.Size = new Size(189, 23);
             label25.TabIndex = 6;
@@ -284,7 +287,7 @@
             // 
             label28.AutoSize = true;
             label28.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label28.Location = new Point(21, 170);
+            label28.Location = new Point(16, 163);
             label28.Name = "label28";
             label28.Size = new Size(112, 23);
             label28.TabIndex = 4;
@@ -294,7 +297,7 @@
             // 
             label29.AutoSize = true;
             label29.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label29.Location = new Point(21, 122);
+            label29.Location = new Point(16, 115);
             label29.Name = "label29";
             label29.Size = new Size(119, 23);
             label29.TabIndex = 3;
@@ -304,6 +307,7 @@
             // 
             label31.AutoSize = true;
             label31.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label31.ForeColor = Color.FromArgb(155, 31, 33);
             label31.Location = new Point(12, 21);
             label31.Name = "label31";
             label31.Size = new Size(136, 26);
@@ -313,7 +317,7 @@
             // panel3
             // 
             panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            panel3.BackColor = Color.Gainsboro;
+            panel3.BackColor = Color.White;
             panel3.Controls.Add(comboBox_status);
             panel3.Controls.Add(label_employee_name);
             panel3.Controls.Add(label34);
@@ -366,6 +370,7 @@
             // 
             label36.AutoSize = true;
             label36.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label36.ForeColor = Color.FromArgb(155, 31, 33);
             label36.Location = new Point(12, 15);
             label36.Name = "label36";
             label36.Size = new Size(79, 26);
@@ -374,7 +379,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.Gainsboro;
+            panel2.BackColor = Color.White;
             panel2.Controls.Add(btn_close_form);
             panel2.Controls.Add(btn_add_new);
             panel2.Controls.Add(panel9);
@@ -388,28 +393,32 @@
             // 
             // btn_close_form
             // 
-            btn_close_form.Location = new Point(705, 801);
+            btn_close_form.BackColor = Color.FromArgb(155, 31, 33);
+            btn_close_form.ForeColor = Color.White;
+            btn_close_form.Location = new Point(706, 801);
             btn_close_form.Name = "btn_close_form";
             btn_close_form.Size = new Size(135, 52);
             btn_close_form.TabIndex = 13;
             btn_close_form.Text = "Exit";
-            btn_close_form.UseVisualStyleBackColor = true;
+            btn_close_form.UseVisualStyleBackColor = false;
             btn_close_form.Click += btn_close_form_Click;
             // 
             // btn_add_new
             // 
-            btn_add_new.Location = new Point(549, 801);
+            btn_add_new.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_new.ForeColor = Color.White;
+            btn_add_new.Location = new Point(550, 801);
             btn_add_new.Name = "btn_add_new";
             btn_add_new.Size = new Size(135, 52);
             btn_add_new.TabIndex = 12;
             btn_add_new.Text = "Add new";
-            btn_add_new.UseVisualStyleBackColor = true;
+            btn_add_new.UseVisualStyleBackColor = false;
             btn_add_new.Click += btn_add_new_Click;
             // 
             // panel9
             // 
             panel9.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            panel9.BackColor = Color.Gainsboro;
+            panel9.BackColor = Color.White;
             panel9.Controls.Add(btn_details_service);
             panel9.Controls.Add(btn_update_service);
             panel9.Controls.Add(btn_delete_service);
@@ -418,61 +427,66 @@
             panel9.Controls.Add(dataGridView_AddServices);
             panel9.Location = new Point(15, 522);
             panel9.Name = "panel9";
-            panel9.Size = new Size(827, 267);
+            panel9.Size = new Size(827, 263);
             panel9.TabIndex = 10;
             // 
             // btn_details_service
             // 
+            btn_details_service.BackColor = Color.White;
             btn_details_service.BackgroundImage = (Image)resources.GetObject("btn_details_service.BackgroundImage");
             btn_details_service.BackgroundImageLayout = ImageLayout.Zoom;
-            btn_details_service.Location = new Point(762, 218);
+            btn_details_service.Location = new Point(761, 209);
             btn_details_service.Name = "btn_details_service";
             btn_details_service.Size = new Size(65, 52);
             btn_details_service.TabIndex = 19;
-            btn_details_service.UseVisualStyleBackColor = true;
+            btn_details_service.UseVisualStyleBackColor = false;
             btn_details_service.Click += btn_details_service_Click;
             // 
             // btn_update_service
             // 
+            btn_update_service.BackColor = Color.White;
             btn_update_service.BackgroundImage = (Image)resources.GetObject("btn_update_service.BackgroundImage");
             btn_update_service.BackgroundImageLayout = ImageLayout.Zoom;
-            btn_update_service.Location = new Point(762, 160);
+            btn_update_service.Location = new Point(761, 152);
             btn_update_service.Name = "btn_update_service";
             btn_update_service.Size = new Size(65, 52);
             btn_update_service.TabIndex = 18;
-            btn_update_service.UseVisualStyleBackColor = true;
+            btn_update_service.UseVisualStyleBackColor = false;
             btn_update_service.Click += btn_update_service_Click;
             // 
             // btn_delete_service
             // 
+            btn_delete_service.BackColor = Color.White;
             btn_delete_service.BackgroundImage = (Image)resources.GetObject("btn_delete_service.BackgroundImage");
             btn_delete_service.BackgroundImageLayout = ImageLayout.Zoom;
-            btn_delete_service.Location = new Point(762, 102);
+            btn_delete_service.Location = new Point(760, 94);
             btn_delete_service.Name = "btn_delete_service";
             btn_delete_service.Size = new Size(66, 52);
             btn_delete_service.TabIndex = 17;
-            btn_delete_service.UseVisualStyleBackColor = true;
+            btn_delete_service.UseVisualStyleBackColor = false;
             btn_delete_service.Click += btn_delete_service_Click;
             // 
             // btn_add_services
             // 
+            btn_add_services.BackColor = Color.White;
             btn_add_services.BackgroundImage = (Image)resources.GetObject("btn_add_services.BackgroundImage");
             btn_add_services.BackgroundImageLayout = ImageLayout.Zoom;
-            btn_add_services.Location = new Point(762, 50);
+            btn_add_services.Location = new Point(761, 42);
             btn_add_services.Name = "btn_add_services";
             btn_add_services.Size = new Size(65, 46);
             btn_add_services.TabIndex = 16;
-            btn_add_services.UseVisualStyleBackColor = true;
+            btn_add_services.UseVisualStyleBackColor = false;
             btn_add_services.Click += btn_add_services_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(155, 31, 33);
             label2.Location = new Point(334, 3);
             label2.Name = "label2";
             label2.Padding = new Padding(0, 3, 0, 3);
-            label2.Size = new Size(174, 27);
+            label2.Size = new Size(176, 28);
             label2.TabIndex = 9;
             label2.Text = "Additional services";
             // 
@@ -511,7 +525,7 @@
             dataGridView_AddServices.RowHeadersVisible = false;
             dataGridView_AddServices.RowHeadersWidth = 62;
             dataGridView_AddServices.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView_AddServices.Size = new Size(765, 234);
+            dataGridView_AddServices.Size = new Size(765, 230);
             dataGridView_AddServices.TabIndex = 2;
             // 
             // ReservationServiceID
@@ -555,7 +569,7 @@
             // panel10
             // 
             panel10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            panel10.BackColor = Color.Gainsboro;
+            panel10.BackColor = Color.White;
             panel10.Controls.Add(btn_details_guest);
             panel10.Controls.Add(btn_update_guest);
             panel10.Controls.Add(btn_delete_guest);
@@ -569,46 +583,50 @@
             // 
             // btn_details_guest
             // 
+            btn_details_guest.BackColor = Color.White;
             btn_details_guest.BackgroundImage = (Image)resources.GetObject("btn_details_guest.BackgroundImage");
             btn_details_guest.BackgroundImageLayout = ImageLayout.Zoom;
             btn_details_guest.Location = new Point(762, 226);
             btn_details_guest.Name = "btn_details_guest";
             btn_details_guest.Size = new Size(65, 52);
             btn_details_guest.TabIndex = 15;
-            btn_details_guest.UseVisualStyleBackColor = true;
+            btn_details_guest.UseVisualStyleBackColor = false;
             btn_details_guest.Click += btn_details_guest_Click;
             // 
             // btn_update_guest
             // 
+            btn_update_guest.BackColor = Color.White;
             btn_update_guest.BackgroundImage = (Image)resources.GetObject("btn_update_guest.BackgroundImage");
             btn_update_guest.BackgroundImageLayout = ImageLayout.Zoom;
             btn_update_guest.Location = new Point(762, 168);
             btn_update_guest.Name = "btn_update_guest";
             btn_update_guest.Size = new Size(65, 52);
             btn_update_guest.TabIndex = 14;
-            btn_update_guest.UseVisualStyleBackColor = true;
+            btn_update_guest.UseVisualStyleBackColor = false;
             btn_update_guest.Click += btn_update_guest_Click;
             // 
             // btn_delete_guest
             // 
+            btn_delete_guest.BackColor = Color.White;
             btn_delete_guest.BackgroundImage = (Image)resources.GetObject("btn_delete_guest.BackgroundImage");
             btn_delete_guest.BackgroundImageLayout = ImageLayout.Zoom;
             btn_delete_guest.Location = new Point(762, 110);
             btn_delete_guest.Name = "btn_delete_guest";
             btn_delete_guest.Size = new Size(66, 52);
             btn_delete_guest.TabIndex = 13;
-            btn_delete_guest.UseVisualStyleBackColor = true;
+            btn_delete_guest.UseVisualStyleBackColor = false;
             btn_delete_guest.Click += btn_delete_guest_Click;
             // 
             // btn_add_guest
             // 
+            btn_add_guest.BackColor = Color.White;
             btn_add_guest.BackgroundImage = (Image)resources.GetObject("btn_add_guest.BackgroundImage");
             btn_add_guest.BackgroundImageLayout = ImageLayout.Zoom;
             btn_add_guest.Location = new Point(762, 58);
             btn_add_guest.Name = "btn_add_guest";
             btn_add_guest.Size = new Size(65, 46);
             btn_add_guest.TabIndex = 12;
-            btn_add_guest.UseVisualStyleBackColor = true;
+            btn_add_guest.UseVisualStyleBackColor = false;
             btn_add_guest.Click += btn_add_guest_Click;
             // 
             // dataGridViewGuests
@@ -697,9 +715,10 @@
             // 
             // panel11
             // 
-            panel11.BackColor = Color.Silver;
+            panel11.BackColor = Color.White;
             panel11.Controls.Add(label3);
             panel11.Dock = DockStyle.Top;
+            panel11.ForeColor = Color.White;
             panel11.Location = new Point(0, 0);
             panel11.Name = "panel11";
             panel11.Size = new Size(827, 38);
@@ -708,26 +727,27 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(155, 31, 33);
             label3.Location = new Point(366, 8);
             label3.Name = "label3";
             label3.Padding = new Padding(0, 3, 0, 3);
-            label3.Size = new Size(70, 27);
+            label3.Size = new Size(69, 28);
             label3.TabIndex = 8;
             label3.Text = "Guests";
             // 
             // panel12
             // 
             panel12.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            panel12.BackColor = Color.Gainsboro;
+            panel12.BackColor = Color.White;
             panel12.Controls.Add(comboBox_rooms);
             panel12.Controls.Add(comboBox_roomType);
             panel12.Controls.Add(label37);
             panel12.Controls.Add(label39);
             panel12.Controls.Add(label40);
-            panel12.Location = new Point(12, 23);
+            panel12.Location = new Point(14, 23);
             panel12.Name = "panel12";
-            panel12.Size = new Size(827, 197);
+            panel12.Size = new Size(828, 209);
             panel12.TabIndex = 8;
             // 
             // comboBox_rooms
@@ -771,6 +791,7 @@
             // 
             label40.AutoSize = true;
             label40.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label40.ForeColor = Color.FromArgb(155, 31, 33);
             label40.Location = new Point(19, 15);
             label40.Name = "label40";
             label40.Size = new Size(74, 26);

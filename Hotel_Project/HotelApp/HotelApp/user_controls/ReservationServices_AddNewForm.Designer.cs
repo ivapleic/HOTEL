@@ -47,9 +47,10 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
+            panel1.ForeColor = Color.White;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(798, 86);
@@ -139,22 +140,26 @@
             // 
             // btn_close_form
             // 
+            btn_close_form.BackColor = Color.FromArgb(155, 31, 33);
+            btn_close_form.ForeColor = Color.White;
             btn_close_form.Location = new Point(649, 572);
             btn_close_form.Name = "btn_close_form";
             btn_close_form.Size = new Size(135, 52);
             btn_close_form.TabIndex = 15;
             btn_close_form.Text = "Exit";
-            btn_close_form.UseVisualStyleBackColor = true;
+            btn_close_form.UseVisualStyleBackColor = false;
             btn_close_form.Click += btn_close_form_Click;
             // 
             // btn_add_service
             // 
+            btn_add_service.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add_service.ForeColor = Color.White;
             btn_add_service.Location = new Point(493, 572);
             btn_add_service.Name = "btn_add_service";
             btn_add_service.Size = new Size(135, 52);
             btn_add_service.TabIndex = 14;
             btn_add_service.Text = "Add";
-            btn_add_service.UseVisualStyleBackColor = true;
+            btn_add_service.UseVisualStyleBackColor = false;
             btn_add_service.Click += btn_add_service_Click;
             // 
             // ReservationServices_AddNewForm

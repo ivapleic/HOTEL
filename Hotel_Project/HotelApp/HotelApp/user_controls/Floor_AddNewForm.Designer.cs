@@ -42,6 +42,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(155, 31, 33);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -53,7 +54,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(40, 86, 182);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(263, 18);
             label1.Name = "label1";
             label1.Size = new Size(377, 51);
@@ -100,22 +101,26 @@
             // 
             // btn_add
             // 
+            btn_add.BackColor = Color.FromArgb(155, 31, 33);
+            btn_add.ForeColor = Color.White;
             btn_add.Location = new Point(586, 448);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(139, 57);
             btn_add.TabIndex = 5;
             btn_add.Text = "Add ";
-            btn_add.UseVisualStyleBackColor = true;
+            btn_add.UseVisualStyleBackColor = false;
             btn_add.Click += btn_add_Click;
             // 
             // btn_cancel
             // 
+            btn_cancel.BackColor = Color.FromArgb(155, 31, 33);
+            btn_cancel.ForeColor = Color.White;
             btn_cancel.Location = new Point(742, 448);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(139, 57);
             btn_cancel.TabIndex = 6;
             btn_cancel.Text = "Cancel";
-            btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.UseVisualStyleBackColor = false;
             btn_cancel.Click += btn_cancel_Click;
             // 
             // label4
